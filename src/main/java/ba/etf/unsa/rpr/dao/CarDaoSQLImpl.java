@@ -8,6 +8,12 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * CarDao interface SQL implementation
+ * @author Nedim Krupalija
+ */
+
+
 public class CarDaoSQLImpl implements CarDao {
     private Connection conn;
     public CarDaoSQLImpl()
