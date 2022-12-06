@@ -80,8 +80,37 @@ public class CarDaoSQLImpl implements CarDao {
         return null;
     }
 
+
+    /**
+     * Method that returns all information about a car from DB
+     * based on ID
+     * @param id of car
+     * @return
+     */
     @Override
     public Cars getById(int id) {
+        String query = "SELECT * FROM cars where id = ?";
+        try{
+            PreparedStatement stmt  = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Cars car = new Cars();
+                car.setId(rs.getInt("id"));
+                car.setMake(rs.getString("make"));
+                car.setModel(rs.getString("model"));
+                car.setYear(rs.getString("year"));
+                car.setColor(rs.getString("color"));
+                car.sethP(rs.getInt("hp"));
+                car.setCategory(getCategoryById(id));
+                car.setSalesman(getSalesmanById(id));
+                rs.close();
+                return car;
+            }
+            else return null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
