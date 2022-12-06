@@ -18,7 +18,4 @@ public interface CarDao extends Dao<Cars> {
      * @return list of cars of given category
      */
     List<Cars> seachByCategory(Category category);
-
-
-
 }
