@@ -2,6 +2,11 @@ package domain;
 
 import java.util.Objects;
 
+
+/**
+ * @author Nedim Krupalija
+ * Category class for representing type of vehicle e.g. sedan, sports car, SUV etc.
+ */
 public class Category {
     private int id;
     private String name;

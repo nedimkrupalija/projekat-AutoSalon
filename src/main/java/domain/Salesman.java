@@ -2,6 +2,12 @@ package domain;
 
 import java.util.Objects;
 
+/**
+ * @author Nedim Krupalija
+ * Class that represents person selling some car
+ */
+
+
 public class Salesman {
     private int id;
     private String name;
