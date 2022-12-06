@@ -23,9 +23,36 @@ public class CarDaoSQLImpl implements CarDao {
     }
 
 
+    /**
+     * Method that gives category for some id of car,
+     * usefull for other methods that need to set Category
+     * @param id of
+     * @return
+     */
+    public Category getCategoryById(int id){
+        String query = "SELECT * FROM Category where id = (SELECT c.category_fk FROM Cars c WHERE c.id = ?)";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Category category = new Category();
+                category.setId(rs.getInt("id"));
+                category.setName(rs.getString("name"));
+                rs.close();
+                return category;
+            }
+            else return null;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     @Override
     public Cars getById(int id) {
+
     }
 
     @Override
