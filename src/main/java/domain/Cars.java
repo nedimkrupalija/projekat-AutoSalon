@@ -2,6 +2,12 @@ package domain;
 
 import java.util.Objects;
 
+/**
+ * @author Nedim Krupalija
+ * Class for representing different cars
+ * pojo specification
+ */
+
 public class Cars {
     private int id;
     private String make;
