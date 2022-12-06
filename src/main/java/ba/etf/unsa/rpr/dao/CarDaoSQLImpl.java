@@ -5,6 +5,7 @@ import ba.etf.unsa.rpr.domain.Category;
 import ba.etf.unsa.rpr.domain.Salesman;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarDaoSQLImpl implements CarDao {
@@ -18,9 +19,40 @@ public class CarDaoSQLImpl implements CarDao {
         }
     }
 
+
+    /**
+     * Return array of cars based on category
+     * @param category
+     * @return
+     */
     @Override
     public List<Cars> seachByCategory(Category category) {
-        return null;
+        String query = "SELECT * FROM Cars where category_fk = ?";
+
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,category.getId());
+            ResultSet rs = stmt.executeQuery();
+            ArrayList<Cars> carsArrayList = new ArrayList<Cars>();
+            while(rs.next()){
+                Cars car = new Cars();
+                car.setModel(rs.getString("model"));
+                car.setMake(rs.getString("make"));
+                car.setId(rs.getInt("id"));
+                car.setCategory(category);
+                car.setSalesman(getSalesmanById(car.getId()));
+                car.setColor(rs.getString("color"));
+                car.sethP(rs.getInt("hp"));
+                car.setYear(rs.getString("year"));
+                carsArrayList.add(car);
+            }
+            rs.close();
+            return carsArrayList;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     /**
