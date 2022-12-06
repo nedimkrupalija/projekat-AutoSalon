@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Updated javaDoc">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Updated getCategory and searchCategory">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670360113332</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updated getCategory and searchCategory">
+      <created>1670360497623</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670360497623</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +240,7 @@
     <MESSAGE value="Implemented getById for car" />
     <MESSAGE value="Implemented searchByCategory" />
     <MESSAGE value="Updated javaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated javaDoc" />
+    <MESSAGE value="Updated getCategory and searchCategory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated getCategory and searchCategory" />
   </component>
 </project>

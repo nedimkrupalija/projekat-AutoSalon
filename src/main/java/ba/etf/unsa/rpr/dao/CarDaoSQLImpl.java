@@ -167,8 +167,35 @@ public class CarDaoSQLImpl implements CarDao {
 
     }
 
+    /**
+     * Note: Not very efficient
+     * @return All cars from database
+     */
     @Override
     public List<Cars> getAll() {
-
+        String query = "SELECT * FROM Cars";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            ArrayList<Cars> carsArrayList = new ArrayList<Cars>();
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+                Cars car = new Cars();
+                car.setId(rs.getInt("id"));
+                car.setMake(rs.getString("make"));
+                car.setModel(rs.getString("model"));
+                car.setYear(rs.getString("year"));
+                car.setColor(rs.getString("color"));
+                car.sethP(rs.getInt("hp"));
+                car.setCategory(getCategoryById(car.getId()));
+                car.setSalesman(getSalesmanById(car.getId()));
+                carsArrayList.add(car);
+            }
+            rs.close();
+            return carsArrayList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
+
 }
