@@ -56,9 +56,9 @@ public class CarDaoSQLImpl implements CarDao {
             return carsArrayList;
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-
+    return null;
     }
 
     /**
@@ -147,9 +147,9 @@ public class CarDaoSQLImpl implements CarDao {
             }
             else return null;
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-
+    return null;
     }
 
     @Override
@@ -169,6 +169,6 @@ public class CarDaoSQLImpl implements CarDao {
 
     @Override
     public List<Cars> getAll() {
-        return null;
+
     }
 }

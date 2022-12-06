@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented getById for car">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Updated javaDoc">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670359013159</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implemented searchByCategory">
+      <created>1670360055600</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670360055600</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updated javaDoc">
+      <created>1670360113332</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670360113332</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +231,8 @@
     <MESSAGE value="Implemented getCategoryById" />
     <MESSAGE value="Implemented getSalesmanById" />
     <MESSAGE value="Implemented getById for car" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented getById for car" />
+    <MESSAGE value="Implemented searchByCategory" />
+    <MESSAGE value="Updated javaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated javaDoc" />
   </component>
 </project>
