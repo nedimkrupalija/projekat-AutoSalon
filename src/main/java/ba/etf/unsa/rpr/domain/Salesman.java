@@ -1,4 +1,4 @@
-package domain;
+package ba.etf.unsa.rpr.domain;
 
 import java.util.Objects;
 

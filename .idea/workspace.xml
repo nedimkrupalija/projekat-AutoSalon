@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Salesman pojo">
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Salesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Salesman.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Cars javaDoc">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Cars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Salesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Salesman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670346232825</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Category javaDoc">
+      <created>1670346453910</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670346453910</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Cars javaDoc">
+      <created>1670346501884</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670346501884</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +146,9 @@
     <MESSAGE value="Added seller class" />
     <MESSAGE value="Added Salesman class" />
     <MESSAGE value="Salesman pojo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Salesman pojo" />
+    <MESSAGE value="JavaDoc salesman" />
+    <MESSAGE value="Category javaDoc" />
+    <MESSAGE value="Cars javaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cars javaDoc" />
   </component>
 </project>
