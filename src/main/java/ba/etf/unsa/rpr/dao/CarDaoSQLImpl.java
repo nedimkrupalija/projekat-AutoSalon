@@ -162,8 +162,21 @@ public class CarDaoSQLImpl implements CarDao {
         return null;
     }
 
+    /**
+     * Method for deleting car from database with matching id
+     * @param id
+     */
     @Override
     public void delete(int id) {
+        String query = "DELETE FROM Cars WHERE id = ?";
+        try {
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
