@@ -10,6 +10,15 @@ public class Cars {
     private Category category;
     private String color;
     private int hP;
+    private Salesman salesman;
+
+    public Salesman getSalesman() {
+        return salesman;
+    }
+
+    public void setSalesman(Salesman salesman) {
+        this.salesman = salesman;
+    }
 
     @Override
     public String toString() {

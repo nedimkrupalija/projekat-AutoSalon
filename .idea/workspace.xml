@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added javadoc plugin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Buyer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Cars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Category.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Cars pojo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Cars.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670344518108</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Domain structure">
+      <created>1670345313667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670345313667</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Category pojo">
+      <created>1670345490385</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670345490385</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Cars pojo">
+      <created>1670345572575</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670345572575</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +108,9 @@
     <MESSAGE value="Added surefire dependency" />
     <MESSAGE value="Added jar plugin" />
     <MESSAGE value="Added javadoc plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added javadoc plugin" />
+    <MESSAGE value="Domain structure" />
+    <MESSAGE value="Category pojo" />
+    <MESSAGE value="Cars pojo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cars pojo" />
   </component>
 </project>
