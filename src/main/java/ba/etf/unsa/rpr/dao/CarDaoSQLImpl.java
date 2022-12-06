@@ -2,6 +2,7 @@ package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.domain.Cars;
 import ba.etf.unsa.rpr.domain.Category;
+import ba.etf.unsa.rpr.domain.Salesman;
 
 import java.sql.*;
 import java.util.List;
@@ -21,6 +22,35 @@ public class CarDaoSQLImpl implements CarDao {
     public List<Cars> seachByCategory(Category category) {
         return null;
     }
+
+    /**
+     * Methods returns salesman for given id of car
+     * @param id of car
+     * @return
+     */
+    public Salesman getSalesmanById(int id){
+        String query = "SELECT * FROM Salesman where id = (SELECT c.salesman_fk FROM Cars c WHERE c.id = ?)";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Salesman salesman = new Salesman();
+                salesman.setId(rs.getInt("id"));
+                salesman.setName(rs.getString("name"));
+                salesman.setSurname(rs.getString("surname"));
+                salesman.setNumber(rs.getString("number"));
+                rs.close();
+                return salesman;
+            }
+            else return null;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
 
     /**

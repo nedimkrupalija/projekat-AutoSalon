@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented constructor car impl">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented getCategoryById">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" afterDir="false" />
@@ -163,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670357051757</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Implemented getCategoryById">
+      <created>1670358666363</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670358666363</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +202,7 @@
     <MESSAGE value="Added methods cardao" />
     <MESSAGE value="Added templates for DAO implmenetations" />
     <MESSAGE value="Implemented constructor car impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented constructor car impl" />
+    <MESSAGE value="Implemented getCategoryById" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented getCategoryById" />
   </component>
 </project>
