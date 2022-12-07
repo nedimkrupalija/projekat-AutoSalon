@@ -95,10 +95,31 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         }
     }
 
-
+    /**
+     * Method that gives List of all Salesmen in database
+     * @return list of Salesmen
+     */
     @Override
     public List<Salesman> getAll() {
-
+        String query = "SELECT * FROM Salesman";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            ArrayList<Salesman> salesmen = new ArrayList<Salesman>();
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+                Salesman salesman = new Salesman();
+                salesman.setId(rs.getInt("id"));
+                salesman.setName(rs.getString("name"));
+                salesman.setSurname(rs.getString("surname"));
+                salesman.setNumber("number");
+                salesmen.add(salesman);
+            }
+            rs.close();
+            return salesmen;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
