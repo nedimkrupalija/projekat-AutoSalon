@@ -25,7 +25,8 @@ public class CarDaoSQLImpl implements CarDao {
             FileReader reader = new FileReader("db.properties");
             Properties property = new Properties();
             property.load(reader);
-            this.conn = DriverManager.getConnection("jdbc://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),property.getProperty("username"),property.getProperty("password"));
+            //System.out.println(property.getProperty("username") + " -- " + property.getProperty("password"));
+            this.conn = DriverManager.getConnection("jdbc:mysql://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),property.getProperty("username"),property.getProperty("password"));
         } catch (Exception  e) {
             e.printStackTrace();
         }
@@ -133,7 +134,7 @@ public class CarDaoSQLImpl implements CarDao {
      */
     @Override
     public Cars getById(int id) {
-        String query = "SELECT * FROM cars where id = ?";
+        String query = "SELECT * FROM Cars where id = ?";
         try{
             PreparedStatement stmt  = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
@@ -158,9 +159,29 @@ public class CarDaoSQLImpl implements CarDao {
     return null;
     }
 
+
+    /**
+     * Method that inserts given car in database
+     * @param item for insertion in database
+     * @return inserted car
+     */
     @Override
     public Cars insert(Cars item) {
-        return null;
+        String query = "INSERT INTO Cars (make,model,year,color,hp,salesman_fk,category_fk) values (?, ?, ?, ?, ?, ?, ?)";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setString(1,item.getMake());
+            stmt.setString(2,item.getModel());
+            stmt.setString(3,item.getYear());
+            stmt.setString(4,item.getColor());
+            stmt.setInt(5,item.gethP());
+             stmt.setInt(6,item.getSalesman().getId());
+            stmt.setInt(7,item.getCategory().getId());
+            stmt.executeUpdate(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return item;
     }
 
     @Override
