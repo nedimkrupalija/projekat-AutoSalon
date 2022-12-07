@@ -11,14 +11,16 @@ public class CategoryDAOSQlImpl implements CategoryDao{
     }
 
     @Override
-    public Category insert(Category item) {
-        return null;
+    public void insert(Category item) {
+
     }
 
     @Override
-    public Category update(Category item) {
+    public Category update(Category item, int id) {
         return null;
     }
+
+
 
     @Override
     public void delete(int id) {

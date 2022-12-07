@@ -11,13 +11,7 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
     }
 
     @Override
-    public Salesman insert(Salesman item) {
-        return null;
-    }
-
-    @Override
-    public Salesman update(Salesman item) {
-        return null;
+    public void insert(Salesman item) {
     }
 
     @Override
@@ -27,6 +21,11 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
 
     @Override
     public List<Salesman> getAll() {
+        return null;
+    }
+
+    @Override
+    public Salesman update(Salesman item,int id) {
         return null;
     }
 }
