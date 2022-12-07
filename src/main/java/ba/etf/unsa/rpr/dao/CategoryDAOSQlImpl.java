@@ -6,6 +6,7 @@ import ba.etf.unsa.rpr.domain.Category;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -95,8 +96,28 @@ public class CategoryDAOSQlImpl implements CategoryDao{
         }
     }
 
+    /**
+     *
+     * @return list of all categories from
+     */
     @Override
     public List<Category> getAll() {
+        String query = "SELECT * FROM Category";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            ArrayList<Category> categories = new ArrayList<Category>();
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+                Category category = new Category();
+                category.setId(rs.getInt("id"));
+                category.setName(rs.getString("make"));
+                categories.add(category);
+            }
+            rs.close();
+            return categories;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
