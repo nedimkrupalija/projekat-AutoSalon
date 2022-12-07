@@ -79,10 +79,20 @@ public class CategoryDAOSQlImpl implements CategoryDao{
     }
 
 
-
+    /**
+     * Delete item from database based on id
+     * @param id
+     */
     @Override
     public void delete(int id) {
-
+        String query = "DELETE FROM Category WHERE id = ?";
+        try {
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
