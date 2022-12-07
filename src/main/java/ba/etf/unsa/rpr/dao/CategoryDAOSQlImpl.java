@@ -74,8 +74,24 @@ public class CategoryDAOSQlImpl implements CategoryDao{
 
     }
 
+    /**
+     * Updates specific Category item
+     * @param item from which attributes are taken
+     * @param id of item to change
+     * @return  updated item
+     */
     @Override
     public Category update(Category item, int id) {
+        String query = "UPDATE Category SET name = ? WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setString(1,item.getName());
+            stmt.setInt(2,id);
+            stmt.executeUpdate(query);
+            return getById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
