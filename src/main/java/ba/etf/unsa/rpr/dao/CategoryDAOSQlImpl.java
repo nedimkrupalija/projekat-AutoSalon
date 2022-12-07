@@ -1,11 +1,11 @@
 package ba.etf.unsa.rpr.dao;
 
+import ba.etf.unsa.rpr.domain.Cars;
 import ba.etf.unsa.rpr.domain.Category;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 import java.util.List;
 import java.util.Properties;
 
@@ -29,8 +29,29 @@ public class CategoryDAOSQlImpl implements CategoryDao{
 
     }
 
+    /**
+     *
+     * @param id to look for
+     * @return Specific category seached by id
+     */
     @Override
     public Category getById(int id) {
+        String query = "SELECT * FROM Category where id = ?";
+        try{
+            PreparedStatement stmt  = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Category category = new Category();
+                category.setId(rs.getInt("id"));
+                category.setName(rs.getString("name"));
+                rs.close();
+                return category;
+            }
+            else return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 

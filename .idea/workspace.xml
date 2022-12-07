@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented Update">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented constructor">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" />
     </list>
@@ -262,7 +261,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670442504233</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="javaDoc comment">
+      <created>1670442657616</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670442657616</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Implemented constructor">
+      <created>1670442915135</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670442915135</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,8 +290,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Salesman class" />
-    <MESSAGE value="Salesman pojo" />
     <MESSAGE value="JavaDoc salesman" />
     <MESSAGE value="Category javaDoc" />
     <MESSAGE value="Cars javaDoc" />
@@ -302,7 +313,9 @@
     <MESSAGE value="Restructured methods in DAO classes" />
     <MESSAGE value="Changed method paramters" />
     <MESSAGE value="Implemented Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Update" />
+    <MESSAGE value="javaDoc comment" />
+    <MESSAGE value="Implemented constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented constructor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
