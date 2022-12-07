@@ -59,8 +59,22 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         return null;
     }
 
+    /**
+     * Insert salesman in database with given values
+     * @param item
+     */
     @Override
     public void insert(Salesman item) {
+        String query = "INSERT INTO Salesman (name,surname,number) values (?, ?, ?)";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setString(1,item.getName());
+            stmt.setString(2,item.getSurname());
+            stmt.setString(3,item.getNumber());
+            stmt.executeUpdate(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
