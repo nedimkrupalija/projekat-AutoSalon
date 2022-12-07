@@ -126,7 +126,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
             while(rs.next()) {
                 Category category = new Category();
                 category.setId(rs.getInt("id"));
-                category.setName(rs.getString("make"));
+                category.setName(rs.getString("name"));
                 categories.add(category);
             }
             rs.close();

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented update in CategoryDAOSQlImpl">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated getById in SalesmanDaoSQLImpl">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
     </list>
@@ -312,7 +311,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670443452345</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="implemented constructor for SalesmanDaoSQLImpl">
+      <created>1670444271417</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1670444271417</updated>
+    </task>
+    <task id="LOCAL-00039" summary="implemented getById for SalesmanDaoSQLImpl">
+      <created>1670444292632</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670444292632</updated>
+    </task>
+    <task id="LOCAL-00040" summary="implemented insert for SalesmanDaoSQLImpl">
+      <created>1670444422395</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1670444422395</updated>
+    </task>
+    <task id="LOCAL-00041" summary="updated getById in SalesmanDaoSQLImpl">
+      <created>1670444456305</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1670444456305</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -327,10 +354,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added DAO interfaces for cars, salesman and category" />
-    <MESSAGE value="Added methods cardao" />
-    <MESSAGE value="Added templates for DAO implmenetations" />
-    <MESSAGE value="Implemented constructor car impl" />
     <MESSAGE value="Implemented getCategoryById" />
     <MESSAGE value="Implemented getSalesmanById" />
     <MESSAGE value="Implemented getById for car" />
@@ -352,7 +375,11 @@
     <MESSAGE value="Implemented delete in CategoryDAOSQlImpl" />
     <MESSAGE value="implemented getAll for categories" />
     <MESSAGE value="implemented update in CategoryDAOSQlImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented update in CategoryDAOSQlImpl" />
+    <MESSAGE value="implemented constructor for SalesmanDaoSQLImpl" />
+    <MESSAGE value="implemented getById for SalesmanDaoSQLImpl" />
+    <MESSAGE value="implemented insert for SalesmanDaoSQLImpl" />
+    <MESSAGE value="updated getById in SalesmanDaoSQLImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated getById in SalesmanDaoSQLImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -361,15 +388,6 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java</url>
-          <line>69</line>
-          <properties class="ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl" method="update">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
