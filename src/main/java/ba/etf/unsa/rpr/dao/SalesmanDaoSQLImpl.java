@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -78,14 +79,26 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         }
     }
 
+    /**
+     * Method deletes Salesman from database based on passed id
+     * @param id
+     */
     @Override
     public void delete(int id) {
-
+        String query = "DELETE FROM Salesman WHERE id = ?";
+        try {
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setInt(1,id);
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
 
     @Override
     public List<Salesman> getAll() {
-        return null;
+
     }
 
     @Override
