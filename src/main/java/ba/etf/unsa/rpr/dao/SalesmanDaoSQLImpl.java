@@ -122,8 +122,27 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         return null;
     }
 
+
+    /**
+     * Method that updates salesman with given id
+     * @param item / salesman from which parameters are taken
+     * @param id of salesman to update
+     * @return updated salesman
+     */
     @Override
     public Salesman update(Salesman item,int id) {
+        String query = "UPDATE Salesman SET name = ?, surname = ?, number = ? WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setString(1,item.getName());
+            stmt.setString(2,item.getSurname());
+            stmt.setString(3,item.getNumber());
+            stmt.setInt(4,id);
+            stmt.executeUpdate(query);
+            return getById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
