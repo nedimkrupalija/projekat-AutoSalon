@@ -28,7 +28,6 @@ public class CarDaoSQLImpl implements CarDao {
             FileReader reader = new FileReader("db.properties");
             Properties property = new Properties();
             property.load(reader);
-            //System.out.println(property.getProperty("username") + " -- " + property.getProperty("password"));
             this.conn = DriverManager.getConnection("jdbc:mysql://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),property.getProperty("username"),property.getProperty("password"));
         } catch (Exception  e) {
             e.printStackTrace();
