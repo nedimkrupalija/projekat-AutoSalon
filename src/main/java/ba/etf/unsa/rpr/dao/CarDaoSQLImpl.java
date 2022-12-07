@@ -18,6 +18,10 @@ import java.util.Properties;
 
 public class CarDaoSQLImpl implements CarDao {
     private Connection conn;
+
+    /**
+     * Constructor for CarDao implementation, makes DB connection, username and password hidden
+     */
     public CarDaoSQLImpl()
     {
         try{
