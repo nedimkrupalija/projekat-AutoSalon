@@ -3,7 +3,6 @@ package ba.etf.unsa.rpr.dao;
 import ba.etf.unsa.rpr.domain.Cars;
 import ba.etf.unsa.rpr.domain.Category;
 import ba.etf.unsa.rpr.domain.Salesman;
-import org.jaxen.expr.DefaultAbsoluteLocationPath;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -67,6 +66,8 @@ public class CarDaoSQLImpl implements CarDao {
         }
     return null;
     }
+
+
 
     /**
      * Methods returns salesman for given id of car
@@ -163,10 +164,9 @@ public class CarDaoSQLImpl implements CarDao {
     /**
      * Method that inserts given car in database
      * @param item for insertion in database
-     * @return inserted car
      */
     @Override
-    public Cars insert(Cars item) {
+    public void insert(Cars item) {
         String query = "INSERT INTO Cars (make,model,year,color,hp,salesman_fk,category_fk) values (?, ?, ?, ?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -181,11 +181,32 @@ public class CarDaoSQLImpl implements CarDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return item;
     }
 
+    /**
+     *
+     * @param item
+     * @return updated car
+     */
+
     @Override
-    public Cars update(Cars item) {
+    public Cars update(Cars item, int id) {
+        String query = "UPDATE Cars SET make = ?, model = ?, year = ?, color = ?, hp = ?, salesman_fk = ?, category_fk = ? WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setString(1,item.getMake());
+            stmt.setString(2,item.getModel());
+            stmt.setString(3,item.getYear());
+            stmt.setString(4,item.getColor());
+            stmt.setInt(5,item.gethP());
+            stmt.setInt(6,item.getSalesman().getId());
+            stmt.setInt(7,item.getCategory().getId());
+            stmt.setInt(8,id);
+            stmt.executeUpdate(query);
+            return getById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
