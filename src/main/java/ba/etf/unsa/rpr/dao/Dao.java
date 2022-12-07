@@ -18,17 +18,17 @@ public interface Dao<T> {
 
     /**
      * Insert given item in database
+     *
      * @param item
-     * @return inserted item
      */
-    T insert(T item);
+    void insert(T item);
 
     /**
      * Update item based on id
      * @param item
      * @return updated item
      */
-    T update(T item);
+    T update(T item,int id);
 
     /**
      * Delete item from database based on ID
