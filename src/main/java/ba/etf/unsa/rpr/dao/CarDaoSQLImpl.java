@@ -3,10 +3,13 @@ package ba.etf.unsa.rpr.dao;
 import ba.etf.unsa.rpr.domain.Cars;
 import ba.etf.unsa.rpr.domain.Category;
 import ba.etf.unsa.rpr.domain.Salesman;
+import org.jaxen.expr.DefaultAbsoluteLocationPath;
 
+import java.io.FileReader;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * CarDao interface SQL implementation
@@ -19,8 +22,11 @@ public class CarDaoSQLImpl implements CarDao {
     public CarDaoSQLImpl()
     {
         try{
-            this.conn = DriverManager.getConnection("jdbc://sql7.freemysqlhosting.net:3306/abc","abc","abc");
-        } catch (SQLException e) {
+            FileReader reader = new FileReader("db.properties");
+            Properties property = new Properties();
+            property.load(reader);
+            this.conn = DriverManager.getConnection("jdbc://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),property.getProperty("username"),property.getProperty("password"));
+        } catch (Exception  e) {
             e.printStackTrace();
         }
     }
@@ -176,8 +182,6 @@ public class CarDaoSQLImpl implements CarDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 
     /**
