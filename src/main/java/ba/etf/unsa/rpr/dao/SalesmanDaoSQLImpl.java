@@ -33,9 +33,29 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
     }
 
 
-
+    /**
+     * @param id of salesman
+     * @return Salesman with searched id
+     */
     @Override
     public Salesman getById(int id) {
+        String query = "SELECT * FROM Salesman where id = ?";
+        try{
+            PreparedStatement stmt  = this.connection.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Salesman salesman = new Salesman();
+                salesman.setId(rs.getInt("id"));
+                salesman.setName(rs.getString("name"));
+                salesman.setSurname(rs.getString("surname"));
+                rs.close();
+                return salesman;
+            }
+            else return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
