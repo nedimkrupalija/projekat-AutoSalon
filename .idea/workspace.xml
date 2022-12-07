@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented constructor">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Implemented getById for category">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" />
@@ -275,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670442915135</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Implemented getById for category">
+      <created>1670443090412</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670443090412</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,7 +297,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JavaDoc salesman" />
     <MESSAGE value="Category javaDoc" />
     <MESSAGE value="Cars javaDoc" />
     <MESSAGE value="Restructured app" />
@@ -315,7 +321,8 @@
     <MESSAGE value="Implemented Update" />
     <MESSAGE value="javaDoc comment" />
     <MESSAGE value="Implemented constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented constructor" />
+    <MESSAGE value="Implemented getById for category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented getById for category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

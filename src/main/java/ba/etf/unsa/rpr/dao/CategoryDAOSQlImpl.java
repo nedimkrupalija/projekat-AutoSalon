@@ -55,8 +55,21 @@ public class CategoryDAOSQlImpl implements CategoryDao{
         return null;
     }
 
+
+    /**
+     * Insert category item in database
+     * @param item
+     */
     @Override
     public void insert(Category item) {
+        String query = "INSERT INTO Category (name) values (?)";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setString(1,item.getName());
+            stmt.executeUpdate(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
