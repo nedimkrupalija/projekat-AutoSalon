@@ -134,13 +134,14 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
      */
     @Override
     public Salesman update(Salesman item,int id) {
-        String query = "UPDATE Salesman SET name = ?, surname = ?, number = ? WHERE id = ?";
+        String query = "UPDATE Salesman SET name = ?, surname = ?, number = ?, password = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1,item.getName());
             stmt.setString(2,item.getSurname());
             stmt.setString(3,item.getNumber());
-            stmt.setInt(4,id);
+            stmt.setString(4,item.getPassword());
+            stmt.setInt(5,id);
             stmt.executeUpdate(query);
             return getById(id);
         } catch (Exception e) {
