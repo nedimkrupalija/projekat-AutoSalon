@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated update in SalesmanDaoSQLImplm">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added dependencies for fxml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +37,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/Student/projekat-AutoSalon",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "gradle.compiler"
   }
 }]]></component>
@@ -373,7 +374,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670847313370</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added resources structure">
+      <created>1670847625318</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847625318</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added dependencies for fxml">
+      <created>1670847813108</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847813108</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -388,8 +403,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated javaDoc" />
-    <MESSAGE value="Updated getCategory and searchCategory" />
     <MESSAGE value="Implemented getALl" />
     <MESSAGE value="Implemented delete" />
     <MESSAGE value="Login trough Properties class" />
@@ -413,7 +426,9 @@
     <MESSAGE value="Updated insert in SalesmanDaoSQLImpl" />
     <MESSAGE value="Updated getAll in SalesmanDaoSQLImpl" />
     <MESSAGE value="updated update in SalesmanDaoSQLImplm" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated update in SalesmanDaoSQLImplm" />
+    <MESSAGE value="Added resources structure" />
+    <MESSAGE value="Added dependencies for fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dependencies for fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
