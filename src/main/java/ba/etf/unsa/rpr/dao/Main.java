@@ -1,7 +1,28 @@
 package ba.etf.unsa.rpr.dao;
 
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
+
+public class Main extends Application {
+
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+       launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+       Parent root = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
+       Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
+        stage.setScene(scene);
+        stage.setResizable(false);
+        
+        stage.show();
     }
 }
