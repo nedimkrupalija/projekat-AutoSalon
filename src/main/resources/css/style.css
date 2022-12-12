@@ -4,3 +4,13 @@
     -fx-background-position: right;
     -fx-background-position-y: 10%;
 }
+#label2{
+    -fx-background-color: white;
+    -fx-opacity: 0.9;
+}
+
+
+#label1{
+    -fx-background-color: white;
+    -fx-opacity: 0.9;
+}
