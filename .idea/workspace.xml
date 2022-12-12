@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="New box for admin/salesman login">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added css for login">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Cars pojo">
-      <created>1670345572575</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1670345572575</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added Salesman class">
-      <created>1670346140659</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1670346140659</updated>
     </task>
     <task id="LOCAL-00008" summary="Salesman pojo">
       <created>1670346232825</created>
@@ -421,7 +410,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670888103067</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Updated look of login">
+      <created>1670888699487</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1670888699487</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added css for login">
+      <created>1670888713663</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1670888713663</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,8 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed method paramters" />
-    <MESSAGE value="Implemented Update" />
     <MESSAGE value="javaDoc comment" />
     <MESSAGE value="Implemented constructor" />
     <MESSAGE value="Implemented getById for category" />
@@ -461,7 +462,9 @@
     <MESSAGE value="Added css for labels" />
     <MESSAGE value="Added controller for main scene" />
     <MESSAGE value="New box for admin/salesman login" />
-    <option name="LAST_COMMIT_MESSAGE" value="New box for admin/salesman login" />
+    <MESSAGE value="Updated look of login" />
+    <MESSAGE value="Added css for login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added css for login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
