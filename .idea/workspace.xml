@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated getById in SalesmanDaoSQLImpl">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated update in SalesmanDaoSQLImplm">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -352,7 +352,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670847086149</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Updated insert in SalesmanDaoSQLImpl">
+      <created>1670847220161</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847220161</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Updated getAll in SalesmanDaoSQLImpl">
+      <created>1670847249843</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847249843</updated>
+    </task>
+    <task id="LOCAL-00046" summary="updated update in SalesmanDaoSQLImplm">
+      <created>1670847313370</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847313370</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,9 +388,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented getSalesmanById" />
-    <MESSAGE value="Implemented getById for car" />
-    <MESSAGE value="Implemented searchByCategory" />
     <MESSAGE value="Updated javaDoc" />
     <MESSAGE value="Updated getCategory and searchCategory" />
     <MESSAGE value="Implemented getALl" />
@@ -392,7 +410,10 @@
     <MESSAGE value="implemented insert for SalesmanDaoSQLImpl" />
     <MESSAGE value="Added attribute for Salesman" />
     <MESSAGE value="updated getById in SalesmanDaoSQLImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated getById in SalesmanDaoSQLImpl" />
+    <MESSAGE value="Updated insert in SalesmanDaoSQLImpl" />
+    <MESSAGE value="Updated getAll in SalesmanDaoSQLImpl" />
+    <MESSAGE value="updated update in SalesmanDaoSQLImplm" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated update in SalesmanDaoSQLImplm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

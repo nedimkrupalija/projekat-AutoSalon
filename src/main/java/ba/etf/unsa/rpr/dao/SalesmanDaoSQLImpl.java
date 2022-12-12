@@ -30,7 +30,6 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         } catch (Exception  e) {
             e.printStackTrace();
         }
-
     }
 
 
