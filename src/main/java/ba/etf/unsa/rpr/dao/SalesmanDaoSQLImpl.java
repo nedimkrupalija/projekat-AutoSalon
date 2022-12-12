@@ -51,6 +51,7 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
                 salesman.setName(rs.getString("name"));
                 salesman.setSurname(rs.getString("surname"));
                 salesman.setNumber(rs.getString("number"));
+                salesman.setPassword(rs.getString("password"));
                 rs.close();
                 return salesman;
             }
