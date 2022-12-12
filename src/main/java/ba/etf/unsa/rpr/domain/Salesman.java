@@ -13,6 +13,7 @@ public class Salesman {
     private String name;
     private String surname;
     private String number;
+    private String password;
 
     @Override
     public String toString() {
@@ -22,6 +23,14 @@ public class Salesman {
                 ", surname='" + surname + '\'' +
                 ", number='" + number + '\'' +
                 '}';
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
