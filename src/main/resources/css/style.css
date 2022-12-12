@@ -1,0 +1,6 @@
+#mainScene{
+    -fx-background-image: url("/img/munjeviti.jpg");
+    -fx-background-size: 500px 500px;
+    -fx-background-position: right;
+    -fx-background-position-y: 10%;
+}
