@@ -68,12 +68,13 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
      */
     @Override
     public void insert(Salesman item) {
-        String query = "INSERT INTO Salesman (name,surname,number) values (?, ?, ?)";
+        String query = "INSERT INTO Salesman (name,surname,number,password) values (?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1,item.getName());
             stmt.setString(2,item.getSurname());
             stmt.setString(3,item.getNumber());
+            stmt.setString(4,item.getPassword());
             stmt.executeUpdate(query);
         } catch (Exception e) {
             e.printStackTrace();

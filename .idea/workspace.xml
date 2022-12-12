@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated getById in SalesmanDaoSQLImpl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDAOSQlImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Student/projekat-AutoSalon",
     "settings.editor.selected.configurable": "gradle.compiler"
   }
 }]]></component>
@@ -339,7 +338,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670444456305</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added attribute for Salesman">
+      <created>1670847039278</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847039278</updated>
+    </task>
+    <task id="LOCAL-00043" summary="updated getById in SalesmanDaoSQLImpl">
+      <created>1670847086149</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847086149</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,7 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented getCategoryById" />
     <MESSAGE value="Implemented getSalesmanById" />
     <MESSAGE value="Implemented getById for car" />
     <MESSAGE value="Implemented searchByCategory" />
@@ -378,6 +390,7 @@
     <MESSAGE value="implemented constructor for SalesmanDaoSQLImpl" />
     <MESSAGE value="implemented getById for SalesmanDaoSQLImpl" />
     <MESSAGE value="implemented insert for SalesmanDaoSQLImpl" />
+    <MESSAGE value="Added attribute for Salesman" />
     <MESSAGE value="updated getById in SalesmanDaoSQLImpl" />
     <option name="LAST_COMMIT_MESSAGE" value="updated getById in SalesmanDaoSQLImpl" />
   </component>
