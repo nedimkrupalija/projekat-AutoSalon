@@ -7,6 +7,6 @@ public class MainController {
 
 
     public void prodavacClick(ActionEvent actionEvent) {
-
+        System.out.println("Izabran prodavac");
     }
 }
