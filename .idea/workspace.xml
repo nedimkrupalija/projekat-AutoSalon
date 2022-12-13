@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="javadoc update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added structure for admin panel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,20 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Implemented getById for car">
-      <created>1670359013159</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1670359013159</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Implemented searchByCategory">
-      <created>1670360055600</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1670360055600</updated>
     </task>
     <task id="LOCAL-00021" summary="Updated javaDoc">
       <created>1670360113332</created>
@@ -422,7 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670963536305</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="small update and scene switching">
+      <created>1670964071554</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1670964071554</updated>
+    </task>
+    <task id="LOCAL-00069" summary="added structure for admin panel">
+      <created>1670964086745</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1670964086745</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,8 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated getById in SalesmanDaoSQLImpl" />
-    <MESSAGE value="Updated insert in SalesmanDaoSQLImpl" />
     <MESSAGE value="Updated getAll in SalesmanDaoSQLImpl" />
     <MESSAGE value="updated update in SalesmanDaoSQLImplm" />
     <MESSAGE value="Added resources structure" />
@@ -462,7 +461,9 @@
     <MESSAGE value="Updated method for validation of user" />
     <MESSAGE value="Implemented login for salesman to admin panel" />
     <MESSAGE value="javadoc update" />
-    <option name="LAST_COMMIT_MESSAGE" value="javadoc update" />
+    <MESSAGE value="small update and scene switching" />
+    <MESSAGE value="added structure for admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="added structure for admin panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,6 +472,11 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

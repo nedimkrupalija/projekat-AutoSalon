@@ -29,6 +29,6 @@ public class MainController {
         stage.setResizable(false);
         stage.show();
         Stage primaryStage = (Stage) prodavacButton.getScene().getWindow();
-        primaryStage.close();
+        primaryStage.hide();
     }
 }

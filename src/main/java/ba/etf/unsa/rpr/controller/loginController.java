@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.dao.Main;
 import ba.etf.unsa.rpr.dao.SalesmanDao;
 import ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Salesman;
@@ -53,14 +54,14 @@ public class loginController {
         }
         else {
             SalesmanDao salesmanDao = new SalesmanDaoSQLImpl();
-            Salesman salesman = salesmanDao.getByNamePass(usernameField.toString(),passwordField.toString());
+            Salesman salesman = salesmanDao.getByNamePass(usernameField.getText(),passwordField.getText());
             if(salesman==null) {
                 setWrongUser();
                 setWrongPass();
                 System.out.println("Prijava neuspjesna!");
             }
             else{
-                System.out.println("Prijava uspjesna, user: " + usernameField);
+                System.out.println("Prijava uspjesna, user: " + usernameField.getText());
                 Stage newStage = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/panel.fxml"));
                 Parent root = loader.load();
@@ -73,5 +74,24 @@ public class loginController {
                 primaryStage.close();
             }
         }
+    }
+
+    /**
+     * Method to go back to main screen in case of misslick or forgotten password etc.
+     * @param actionEvent
+     * @throws IOException
+     */
+    public void backButtonClick(ActionEvent actionEvent) throws IOException {
+        Stage mainStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root, USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        mainStage.setTitle("Pocetni zaslon");
+        mainStage.setResizable(false);
+        mainStage.setScene(scene);
+        mainStage.show();
+        Stage currentStage = (Stage) usernameField.getScene().getWindow();
+        currentStage.close();
+        System.out.println("Korisnik se vratio na pocetak");
     }
 }
