@@ -14,6 +14,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -65,10 +68,15 @@ public class loginController {
                 Stage newStage = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/panel.fxml"));
                 Parent root = loader.load();
+                panelController panelController = loader.getController();
+                panelController.labelUser.setText(panelController.labelUser.getText()+" "+usernameField.getText());
+                LocalDate date = LocalDate.now();
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy", Locale.getDefault());
+                panelController.dateLabel.setText("Datum: " + date.format(formatter));
                 Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
                 newStage.setTitle("Admin panel");
                 newStage.setScene(scene);
-                newStage.setResizable(false);
+                //newStage.setResizable(false);
                 newStage.show();
                 Stage primaryStage = (Stage) usernameField.getScene().getWindow();
                 primaryStage.close();
