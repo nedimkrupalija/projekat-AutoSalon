@@ -8,4 +8,5 @@ import ba.etf.unsa.rpr.domain.Salesman;
  */
 
 public interface SalesmanDao extends Dao<Salesman> {
+    public Salesman getByNamePass(String name, String password);
 }
