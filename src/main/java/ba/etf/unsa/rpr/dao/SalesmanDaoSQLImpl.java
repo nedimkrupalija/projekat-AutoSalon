@@ -69,6 +69,7 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
      * @param password of Salesman
      * @return  Salesman with given par. or null
      */
+    @Override
     public Salesman getByNamePass(String name, String password) {
         String query = "SELECT * FROM Salesman where name = ? and password = ?";
         try{
