@@ -2,6 +2,7 @@ package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.domain.Category;
 import ba.etf.unsa.rpr.domain.Salesman;
+import javafx.util.Pair;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -43,6 +44,37 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         try{
             PreparedStatement stmt  = this.connection.prepareStatement(query);
             stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Salesman salesman = new Salesman();
+                salesman.setId(rs.getInt("id"));
+                salesman.setName(rs.getString("name"));
+                salesman.setSurname(rs.getString("surname"));
+                salesman.setNumber(rs.getString("number"));
+                salesman.setPassword(rs.getString("password"));
+                rs.close();
+                return salesman;
+            }
+            else return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    /**
+     * Method for searching Salesman by his/her name, pass
+     * @param name of Salesman
+     * @param password of Salesman
+     * @return  Salesman with given par. or null
+     */
+    public Salesman getByNamePass(String name, String password) {
+        String query = "SELECT * FROM Salesman where name = ? and password = ?";
+        try{
+            PreparedStatement stmt  = this.connection.prepareStatement(query);
+            stmt.setString(1,name);
+            stmt.setString(2,password);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
                 Salesman salesman = new Salesman();
