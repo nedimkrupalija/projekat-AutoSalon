@@ -12,10 +12,17 @@ import javafx.scene.text.Text;
 
 public class loginController {
 
+    /**
+     * Private method to set css style of user field
+     */
     private void setWrongUser(){
         usernameField.getStyleClass().removeAll("fieldWrong");
         usernameField.getStyleClass().add("fieldWrong");
     }
+
+    /**
+     * Private method to set css style of pass field
+     */
     private void setWrongPass(){
         passwordField.getStyleClass().removeAll("fieldWrong");
         usernameField.getStyleClass().add("fieldWrong");
@@ -23,6 +30,11 @@ public class loginController {
 
     public TextField usernameField;
     public PasswordField passwordField;
+
+    /**
+     * Go to admin panel if salesman is chosen
+     * @param actionEvent btn click
+     */
     public void loginClick(ActionEvent actionEvent) {
         if(passwordField.getText().isEmpty()){
             setWrongPass();
