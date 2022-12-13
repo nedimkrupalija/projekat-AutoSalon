@@ -2,3 +2,14 @@
     -fx-border-color: aqua;
     -fx-border-width: 2px;
 }
+
+
+.fieldWrong{
+    -fx-background-color: pink;
+    -fx-opacity: 0.9;
+}
+
+.fieldOk{
+    -fx-background-color: aquamarine;
+    -fx-opacity: 0.9;
+}
