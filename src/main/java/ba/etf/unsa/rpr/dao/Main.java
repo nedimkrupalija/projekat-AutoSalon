@@ -19,10 +19,10 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
        Parent root = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
-        scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
+       stage.setTitle("Pocetni zaslon");
+       // scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
         stage.setScene(scene);
         stage.setResizable(false);
-        
         stage.show();
     }
 }
