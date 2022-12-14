@@ -4,10 +4,14 @@ import ba.etf.unsa.rpr.dao.Main;
 import ba.etf.unsa.rpr.dao.SalesmanDao;
 import ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Salesman;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -16,6 +20,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Locale;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -43,6 +48,25 @@ public class loginController {
     public PasswordField passwordField;
 
     /**
+     * Set all fields for next screen
+     * @param loader
+     */
+    private void setNextFields(FXMLLoader loader){
+        panelController panelController = loader.getController();
+        panelController.labelUser.setText(panelController.labelUser.getText()+" "+usernameField.getText());
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy", Locale.getDefault());
+        panelController.dateLabel.setText("Datum: " + date.format(formatter));
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Kategorija");
+        arrayList.add("Vozila");
+        ObservableList<String> observableList = FXCollections.observableArrayList(arrayList);
+        panelController.picker.setItems(observableList);
+
+    }
+
+
+    /**
      * Go to admin panel if salesman is chosen
      * @param actionEvent btn click
      */
@@ -68,11 +92,7 @@ public class loginController {
                 Stage newStage = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/panel.fxml"));
                 Parent root = loader.load();
-                panelController panelController = loader.getController();
-                panelController.labelUser.setText(panelController.labelUser.getText()+" "+usernameField.getText());
-                LocalDate date = LocalDate.now();
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy", Locale.getDefault());
-                panelController.dateLabel.setText("Datum: " + date.format(formatter));
+                setNextFields(loader);
                 Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
                 newStage.setTitle("Admin panel");
                 newStage.setScene(scene);
