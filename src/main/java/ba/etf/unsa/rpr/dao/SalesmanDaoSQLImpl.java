@@ -123,7 +123,7 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1,id);
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
