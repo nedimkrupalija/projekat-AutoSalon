@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added event in admin panel">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added listener for fields">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Implemented insert Car">
-      <created>1670441404611</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1670441404611</updated>
     </task>
     <task id="LOCAL-00028" summary="Restructured methods in DAO classes">
       <created>1670442450959</created>
@@ -421,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671047209371</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="added listener for fields">
+      <created>1671048964647</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1671048964648</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added csstyle for mainbg" />
     <MESSAGE value="Added css for labels" />
     <MESSAGE value="Added controller for main scene" />
     <MESSAGE value="New box for admin/salesman login" />
@@ -461,7 +458,8 @@
     <MESSAGE value="new design for admin panel" />
     <MESSAGE value="setter for user data" />
     <MESSAGE value="Added event in admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added event in admin panel" />
+    <MESSAGE value="added listener for fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="added listener for fields" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

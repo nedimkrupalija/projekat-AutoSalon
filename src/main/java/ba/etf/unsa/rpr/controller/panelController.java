@@ -48,26 +48,40 @@ public class panelController {
                     textIme.getStyleClass().add("fieldWrong");
                 }
                 else textIme.getStyleClass().removeAll("fieldWrong");
-
+            }
+        });
+        textPrezime.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 if(textPrezime.getText().trim().isEmpty()){
                     textPrezime.getStyleClass().add("fieldWrong");
                 }
                 else textPrezime.getStyleClass().removeAll("fieldWrong");
-
-                if(textPassword.getText().trim().isEmpty()){
-                    textPassword.getStyleClass().add("fieldWrong");
-                }
-                else textPassword.getStyleClass().removeAll("fieldWrong");
-
+            }
+        });
+        textTelefon.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 if(textTelefon.getText().trim().isEmpty()){
                     textTelefon.getStyleClass().add("fieldWrong");
                 }
                 else textTelefon.getStyleClass().removeAll("fieldWrong");
+            }
+        });
 
-
+        textPassword.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if(textPassword.getText().trim().isEmpty()){
+                    textPassword.getStyleClass().add("fieldWrong");
+                }
+                else textPassword.getStyleClass().removeAll("fieldWrong");
             }
         });
 
     }
+
+
+
 
 }
