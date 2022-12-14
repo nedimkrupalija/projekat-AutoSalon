@@ -93,7 +93,37 @@ public class panelController {
         textTelefon.setText(salesman.getNumber());
     }
 
+    /**
+     * Action for changing data of salesman/user
+     * @param actionEvent
+     */
+    public void acceptClicked(ActionEvent actionEvent) {
+        if(textIme.getText().isEmpty()||textPrezime.getText().isEmpty()||textTelefon.getText().isEmpty()||textPassword.getText().isEmpty()){
+            System.out.println("Pogresni podaci!");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Pogresni podaci!");
+            alert.setContentText("Molimo ispravite podatke i probajte opet!");
+            alert.showAndWait();
+        }
+        else {
+            System.out.println("Izmjena potvrdena");
+            SalesmanDao salesmanDao = new SalesmanDaoSQLImpl();
+            Salesman salesman = new Salesman();
+            salesman.setId(Integer.parseInt(labelId.getText()));
+            salesman.setName(textIme.getText());
+            salesman.setSurname(textPrezime.getText());
+            salesman.setNumber(textTelefon.getText());
+            salesman.setPassword(textPassword.getText());
+            salesmanDao.update(salesman,Integer.parseInt(labelId.getText()));
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Izmjena podataka");
+            alert.setHeaderText(null);
+            alert.setContentText("Izmjena uspjesna!");
+            alert.showAndWait();
+        }
 
+    }
 
 
 }

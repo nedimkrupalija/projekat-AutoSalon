@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="private method for setting data">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="insert bugfix in salesman dao">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,27 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Implemented Update">
-      <created>1670442504233</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1670442504233</updated>
-    </task>
-    <task id="LOCAL-00031" summary="javaDoc comment">
-      <created>1670442657616</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1670442657616</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Implemented constructor">
-      <created>1670442915135</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1670442915135</updated>
     </task>
     <task id="LOCAL-00033" summary="Implemented getById for category">
       <created>1670443090412</created>
@@ -421,7 +398,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671049333575</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="updated update for salesman dao">
+      <created>1671052228427</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1671052228427</updated>
+    </task>
+    <task id="LOCAL-00080" summary="delete bugfix in salesman dao">
+      <created>1671052256843</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1671052256843</updated>
+    </task>
+    <task id="LOCAL-00081" summary="insert bugfix in salesman dao">
+      <created>1671052277382</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1671052277382</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,9 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New box for admin/salesman login" />
-    <MESSAGE value="Updated look of login" />
-    <MESSAGE value="Added css for login" />
     <MESSAGE value="refactored id" />
     <MESSAGE value="added border style for login" />
     <MESSAGE value="Added colors for wrong and correct user/pass" />
@@ -461,7 +456,10 @@
     <MESSAGE value="added listener for fields" />
     <MESSAGE value="Bugfix in listener" />
     <MESSAGE value="private method for setting data" />
-    <option name="LAST_COMMIT_MESSAGE" value="private method for setting data" />
+    <MESSAGE value="updated update for salesman dao" />
+    <MESSAGE value="delete bugfix in salesman dao" />
+    <MESSAGE value="insert bugfix in salesman dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert bugfix in salesman dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
