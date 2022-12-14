@@ -81,6 +81,18 @@ public class panelController {
 
     }
 
+    /**
+     * Setting changed data for user
+     * @param salesman
+     */
+    private void setData(Salesman salesman)
+    {
+        textIme.setText(salesman.getName());
+        textPrezime.setText(salesman.getName());
+        textPassword.setText(salesman.getPassword());
+        textTelefon.setText(salesman.getNumber());
+    }
+
 
 
 
