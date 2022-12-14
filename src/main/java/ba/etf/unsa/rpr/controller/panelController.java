@@ -39,6 +39,11 @@ public class panelController {
         categoryButton.setText("Idi na izmjenu: "+picker.getSelectionModel().getSelectedItem());
     }
 
+
+    /**
+     * Listener for text fields
+     * Sets css style if field is empty
+     */
     @FXML
     public void initialize(){
         textIme.textProperty().addListener(new ChangeListener<String>() {
