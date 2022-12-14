@@ -62,7 +62,21 @@ public class loginController {
         arrayList.add("Vozila");
         ObservableList<String> observableList = FXCollections.observableArrayList(arrayList);
         panelController.picker.setItems(observableList);
+    }
 
+    /**
+     * Method to set data for user that logged in
+     * @param loader
+     * @param salesman
+     */
+    private void setData(FXMLLoader loader, Salesman salesman)
+    {
+        panelController panelController = loader.getController();
+        panelController.labelId.setText(String.valueOf(salesman.getId()));
+        panelController.textIme.setText(salesman.getName());
+        panelController.textPrezime.setText(salesman.getSurname());
+        panelController.textTelefon.setText(salesman.getNumber());
+        panelController.textPassword.setText(salesman.getPassword());
     }
 
 
