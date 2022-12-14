@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="insert bugfix in salesman dao">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated javaDoc for listener in panelController">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,20 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Implemented getById for category">
-      <created>1670443090412</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1670443090412</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Implemented insert in Category">
-      <created>1670443169774</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1670443169774</updated>
     </task>
     <task id="LOCAL-00035" summary="Implemented delete in CategoryDAOSQlImpl">
       <created>1670443219203</created>
@@ -419,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671052277382</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Implemented action for changing data of salesman">
+      <created>1671052501495</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1671052501495</updated>
+    </task>
+    <task id="LOCAL-00083" summary="updated javaDoc for listener in panelController">
+      <created>1671052540159</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1671052540159</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,8 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored id" />
-    <MESSAGE value="added border style for login" />
     <MESSAGE value="Added colors for wrong and correct user/pass" />
     <MESSAGE value="loginController check field" />
     <MESSAGE value="MainController login for salesman" />
@@ -459,7 +458,9 @@
     <MESSAGE value="updated update for salesman dao" />
     <MESSAGE value="delete bugfix in salesman dao" />
     <MESSAGE value="insert bugfix in salesman dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert bugfix in salesman dao" />
+    <MESSAGE value="Implemented action for changing data of salesman" />
+    <MESSAGE value="updated javaDoc for listener in panelController" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated javaDoc for listener in panelController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
