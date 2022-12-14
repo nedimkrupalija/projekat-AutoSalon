@@ -107,7 +107,7 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
             stmt.setString(2,item.getSurname());
             stmt.setString(3,item.getNumber());
             stmt.setString(4,item.getPassword());
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
