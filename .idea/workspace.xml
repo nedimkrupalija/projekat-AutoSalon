@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated look of admin panel">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added event in admin panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
     </list>
@@ -78,34 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Implemented getALl">
-      <created>1670360956296</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1670360956296</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Implemented delete">
-      <created>1670361454788</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1670361454788</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Login trough Properties class">
-      <created>1670436341847</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1670436341847</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added connector dependecy">
-      <created>1670436769774</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1670436769774</updated>
     </task>
     <task id="LOCAL-00027" summary="Implemented insert Car">
       <created>1670441404611</created>
@@ -422,7 +393,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670973969595</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="refactored setting fields for next stage">
+      <created>1670977080793</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1670977080793</updated>
+    </task>
+    <task id="LOCAL-00073" summary="new design for admin panel">
+      <created>1670977095767</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1670977095767</updated>
+    </task>
+    <task id="LOCAL-00074" summary="setter for user data">
+      <created>1671046300909</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1671046300910</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Added event in admin panel">
+      <created>1671047209371</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1671047209371</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,10 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added resources structure" />
-    <MESSAGE value="Added dependencies for fxml" />
-    <MESSAGE value="Added main window" />
-    <MESSAGE value="Added pictures for bg" />
     <MESSAGE value="Added csstyle for mainbg" />
     <MESSAGE value="Added css for labels" />
     <MESSAGE value="Added controller for main scene" />
@@ -462,7 +457,11 @@
     <MESSAGE value="added structure for admin panel" />
     <MESSAGE value="added go back in loginController" />
     <MESSAGE value="updated look of admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated look of admin panel" />
+    <MESSAGE value="refactored setting fields for next stage" />
+    <MESSAGE value="new design for admin panel" />
+    <MESSAGE value="setter for user data" />
+    <MESSAGE value="Added event in admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added event in admin panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

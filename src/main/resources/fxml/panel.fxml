@@ -12,8 +12,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.panelController">
-  <columnConstraints>
+   <stylesheets>
+      <URL value="@/css/login.css" />
+   </stylesheets>
+   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="263.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="275.0" />
   </columnConstraints>
@@ -84,27 +88,27 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <TextField>
+                  <Label fx:id="labelId" prefHeight="19.0" prefWidth="66.0" text="Label">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textIme">
                      <VBox.margin>
                         <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField>
+                  <TextField fx:id="textPrezime">
                      <VBox.margin>
                         <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField>
+                  <TextField fx:id="textTelefon">
                      <VBox.margin>
                         <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField>
-                     <VBox.margin>
-                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField>
+                  <TextField fx:id="textPassword">
                      <VBox.margin>
                         <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                      </VBox.margin>
@@ -113,7 +117,7 @@
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" text="Potvrdi">
+                  <Button fx:id="acceptButton" mnemonicParsing="false" onAction="#acceptClicked" text="Potvrdi">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -129,12 +133,12 @@
       </HBox>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
          <children>
-            <ChoiceBox fx:id="picker" prefWidth="150.0">
+            <ChoiceBox fx:id="picker" onMouseEntered="#pickerClick" prefWidth="150.0">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </ChoiceBox>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" text="Idi na izmjenu">
+            <Button fx:id="categoryButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" text="Idi na izmjenu">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
