@@ -174,10 +174,12 @@ public class SalesmanDaoSQLImpl implements SalesmanDao{
             stmt.setString(3,item.getNumber());
             stmt.setString(4,item.getPassword());
             stmt.setInt(5,id);
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
+            stmt.close();
             return getById(id);
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Greska pri update-u usera");
         }
         return null;
     }

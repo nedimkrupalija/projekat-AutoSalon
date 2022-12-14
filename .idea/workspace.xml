@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added listener for fields">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="private method for setting data">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Restructured methods in DAO classes">
-      <created>1670442450959</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1670442450959</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Changed method paramters">
-      <created>1670442487997</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1670442487997</updated>
     </task>
     <task id="LOCAL-00030" summary="Implemented Update">
       <created>1670442504233</created>
@@ -419,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671048964648</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Bugfix in listener">
+      <created>1671049311708</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1671049311711</updated>
+    </task>
+    <task id="LOCAL-00078" summary="private method for setting data">
+      <created>1671049333575</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1671049333575</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,8 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added css for labels" />
-    <MESSAGE value="Added controller for main scene" />
     <MESSAGE value="New box for admin/salesman login" />
     <MESSAGE value="Updated look of login" />
     <MESSAGE value="Added css for login" />
@@ -459,7 +459,9 @@
     <MESSAGE value="setter for user data" />
     <MESSAGE value="Added event in admin panel" />
     <MESSAGE value="added listener for fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="added listener for fields" />
+    <MESSAGE value="Bugfix in listener" />
+    <MESSAGE value="private method for setting data" />
+    <option name="LAST_COMMIT_MESSAGE" value="private method for setting data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,6 +470,15 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java</url>
+          <line>167</line>
+          <properties class="ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl" method="update">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
