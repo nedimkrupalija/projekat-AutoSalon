@@ -107,6 +107,7 @@ public class loginController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/panel.fxml"));
                 Parent root = loader.load();
                 setNextFields(loader);
+                setData(loader,salesman);
                 Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
                 newStage.setTitle("Admin panel");
                 newStage.setScene(scene);
