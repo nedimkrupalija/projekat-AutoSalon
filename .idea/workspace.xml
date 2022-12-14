@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated javaDoc for listener in panelController">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented action to go back in panelController">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Implemented delete in CategoryDAOSQlImpl">
-      <created>1670443219203</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1670443219203</updated>
     </task>
     <task id="LOCAL-00036" summary="implemented getAll for categories">
       <created>1670443319284</created>
@@ -420,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671052540159</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="implemented action to go back in panelController">
+      <created>1671053059294</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1671053059294</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added colors for wrong and correct user/pass" />
     <MESSAGE value="loginController check field" />
     <MESSAGE value="MainController login for salesman" />
     <MESSAGE value="Updated fxml of main screen" />
@@ -460,7 +460,8 @@
     <MESSAGE value="insert bugfix in salesman dao" />
     <MESSAGE value="Implemented action for changing data of salesman" />
     <MESSAGE value="updated javaDoc for listener in panelController" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated javaDoc for listener in panelController" />
+    <MESSAGE value="implemented action to go back in panelController" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented action to go back in panelController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,12 +472,21 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java</url>
-          <line>167</line>
+          <line>162</line>
           <properties class="ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl" method="update">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java</url>
+          <line>10</line>
+          <properties class="ba.etf.unsa.rpr.dao.SalesmanDao" method="getByIdPass">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

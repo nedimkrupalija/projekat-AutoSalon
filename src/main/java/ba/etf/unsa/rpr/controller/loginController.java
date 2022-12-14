@@ -81,7 +81,7 @@ public class loginController {
 
 
     /**
-     * Go to admin panel if salesman is chosen
+     * Go to admin panel if id and pass match
      * @param actionEvent btn click
      */
     public void loginClick(ActionEvent actionEvent) throws IOException {
@@ -95,14 +95,14 @@ public class loginController {
         }
         else {
             SalesmanDao salesmanDao = new SalesmanDaoSQLImpl();
-            Salesman salesman = salesmanDao.getByNamePass(usernameField.getText(),passwordField.getText());
+            Salesman salesman = salesmanDao.getByIdPass(Integer.parseInt(usernameField.getText()),passwordField.getText());
             if(salesman==null) {
                 setWrongUser();
                 setWrongPass();
                 System.out.println("Prijava neuspjesna!");
             }
             else{
-                System.out.println("Prijava uspjesna, user: " + usernameField.getText());
+                System.out.println("Prijava uspjesna, user: " + salesman.getName() + ", id: " + usernameField.getText());
                 Stage newStage = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/panel.fxml"));
                 Parent root = loader.load();
