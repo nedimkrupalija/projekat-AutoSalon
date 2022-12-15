@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented action to go back in panelController">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated login in loginController">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/kategorijaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00036" summary="implemented getAll for categories">
-      <created>1670443319284</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1670443319284</updated>
-    </task>
-    <task id="LOCAL-00037" summary="implemented update in CategoryDAOSQlImpl">
-      <created>1670443452345</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1670443452345</updated>
     </task>
     <task id="LOCAL-00038" summary="implemented constructor for SalesmanDaoSQLImpl">
       <created>1670444271417</created>
@@ -421,7 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671053059294</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="updated method in SalesmanDaoSQLImpl">
+      <created>1671053314375</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1671053314375</updated>
+    </task>
+    <task id="LOCAL-00086" summary="updated login in loginController">
+      <created>1671053518950</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1671053518950</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,8 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="loginController check field" />
-    <MESSAGE value="MainController login for salesman" />
     <MESSAGE value="Updated fxml of main screen" />
     <MESSAGE value="Added method for searching salesman" />
     <MESSAGE value="Updated DAO for salesman" />
@@ -461,7 +460,9 @@
     <MESSAGE value="Implemented action for changing data of salesman" />
     <MESSAGE value="updated javaDoc for listener in panelController" />
     <MESSAGE value="implemented action to go back in panelController" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented action to go back in panelController" />
+    <MESSAGE value="updated method in SalesmanDaoSQLImpl" />
+    <MESSAGE value="updated login in loginController" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated login in loginController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
