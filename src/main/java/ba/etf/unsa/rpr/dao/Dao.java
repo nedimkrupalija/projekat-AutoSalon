@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -21,7 +22,7 @@ public interface Dao<T> {
      *
      * @param item
      */
-    void insert(T item);
+    void insert(T item) throws SQLException;
 
     /**
      * Update item based on id

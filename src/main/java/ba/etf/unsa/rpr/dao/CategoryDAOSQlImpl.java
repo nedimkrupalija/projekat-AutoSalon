@@ -62,14 +62,14 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * @param item
      */
     @Override
-    public void insert(Category item) {
+    public void insert(Category item) throws SQLException {
         String query = "INSERT INTO Category (name) values (?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setString(1,item.getName());
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw e;
         }
 
     }
