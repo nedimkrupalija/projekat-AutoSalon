@@ -87,7 +87,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setString(1,item.getName());
             stmt.setInt(2,id);
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
             return getById(id);
         } catch (Exception e) {
             e.printStackTrace();

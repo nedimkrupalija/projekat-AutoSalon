@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented count categories">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented action for deleting category from db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
@@ -77,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00058" summary="added border style for login">
-      <created>1670889341466</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1670889341466</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Added colors for wrong and correct user/pass">
-      <created>1670890141723</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1670890141723</updated>
     </task>
     <task id="LOCAL-00060" summary="loginController check field">
       <created>1670890170592</created>
@@ -421,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671119954907</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="bugfix in setting id on label">
+      <created>1671120959178</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1671120959178</updated>
+    </task>
+    <task id="LOCAL-00108" summary="implemented action for deleting category from db">
+      <created>1671120979315</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1671120979315</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,8 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented action for changing data of salesman" />
-    <MESSAGE value="updated javaDoc for listener in panelController" />
     <MESSAGE value="implemented action to go back in panelController" />
     <MESSAGE value="updated method in SalesmanDaoSQLImpl" />
     <MESSAGE value="updated login in loginController" />
@@ -461,7 +459,9 @@
     <MESSAGE value="bugfix in category delete" />
     <MESSAGE value="added reference to list of all categories" />
     <MESSAGE value="implemented count categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented count categories" />
+    <MESSAGE value="bugfix in setting id on label" />
+    <MESSAGE value="implemented action for deleting category from db" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented action for deleting category from db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -487,6 +487,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDao.java</url>
+          <line>11</line>
+          <properties class="ba.etf.unsa.rpr.dao.CategoryDao" method="getNumberWithName">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
