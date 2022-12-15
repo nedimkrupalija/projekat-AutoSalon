@@ -143,6 +143,11 @@ public class categoryController {
         alert.showAndWait();
     }
 
+
+    /**
+     * Action that changes name of category when "Izmijeni" is clicked
+     * @param actionEvent
+     */
     public void changeCategoryClick(ActionEvent actionEvent) {
         boolean idCheck = false;
         for(Category x: categories){

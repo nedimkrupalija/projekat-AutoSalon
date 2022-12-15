@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated categorydao">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented action for changing current category">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Updated fxml of main screen">
-      <created>1670960703703</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1670960703703</updated>
     </task>
     <task id="LOCAL-00063" summary="Added method for searching salesman">
       <created>1670962492048</created>
@@ -419,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671122389671</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="implemented action for changing current category">
+      <created>1671122690602</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1671122690602</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated login in loginController" />
     <MESSAGE value="added new screen for changing category" />
     <MESSAGE value="implemented button for going to category updater" />
     <MESSAGE value="implemented look of window for updating category" />
@@ -459,7 +458,8 @@
     <MESSAGE value="implemented action for deleting category from db" />
     <MESSAGE value="bugfix in update in CategoryDAOSQlImpl" />
     <MESSAGE value="updated categorydao" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated categorydao" />
+    <MESSAGE value="implemented action for changing current category" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented action for changing current category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
