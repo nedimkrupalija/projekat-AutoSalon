@@ -34,9 +34,18 @@ public class categoryController {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 if(categoryID.getText().trim().isEmpty()){
-                    categoryID.getStyleClass().add("wrongField");
+                    categoryID.getStyleClass().add("fieldWrong");
                 }
-                else categoryID.getStyleClass().removeAll("wrongField");
+                else categoryID.getStyleClass().removeAll("fieldWrong");
+            }
+        });
+        categoryName.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if(categoryName.getText().trim().isEmpty()){
+                    categoryName.getStyleClass().add("fieldWrong");
+                }
+                else categoryName.getStyleClass().removeAll("fieldWrong");
             }
         });
     }
