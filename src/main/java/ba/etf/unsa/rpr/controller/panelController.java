@@ -177,7 +177,11 @@ public class panelController {
         categoryController.tableView.getColumns().addAll(column1,column2);
     }
 
-
+    /**
+     * public action for going to category/car changer/updater
+     * @param actionEvent
+     * @throws IOException
+     */
     public void categoryButtonClick(ActionEvent actionEvent) throws IOException {
         if(picker.getSelectionModel().getSelectedItem().equals("Kategorija")){
             System.out.println("Izmjena kategorije!");
