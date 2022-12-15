@@ -90,7 +90,12 @@ public class categoryController {
         alert.setContentText("Ubacivanje uspjesno!");
         alert.showAndWait();
         if(categoryIndex==-1) categoryIndex = categoryIndex+1;
-        categoryCount.setText(String.valueOf(Integer.parseInt(categoryCount.getText())+1));
+        categories = (ArrayList<Category>) categoryDao.getAll();
+        categoryCount.setText(String.valueOf(categories.size()));
+        if(categories.size()==1){
+            categoryID.setText(String.valueOf(category.getId()));
+            categoryName.setText(category.getName());
+        }
     }
 
     /**
