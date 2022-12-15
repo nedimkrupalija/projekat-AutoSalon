@@ -30,6 +30,15 @@ public class categoryController {
                 else newCategoryName.getStyleClass().removeAll("wrongField");
             }
         });
+        categoryID.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                if(categoryID.getText().trim().isEmpty()){
+                    categoryID.getStyleClass().add("wrongField");
+                }
+                else categoryID.getStyleClass().removeAll("wrongField");
+            }
+        });
     }
 
 }
