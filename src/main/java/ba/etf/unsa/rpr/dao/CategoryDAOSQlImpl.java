@@ -20,7 +20,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      */
     public CategoryDAOSQlImpl(){
         try {
-            FileReader reader = new FileReader("properties.db");
+            FileReader reader = new FileReader("db.properties");
             Properties property = new Properties();
             property.load(reader);
             this.conn = DriverManager.getConnection("jdbc:mysql://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),property.getProperty("username"),property.getProperty("password"));
