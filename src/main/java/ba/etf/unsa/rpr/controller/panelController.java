@@ -172,9 +172,15 @@ public class panelController {
         CategoryDao categoryDao = new CategoryDAOSQlImpl();
         ArrayList<Category> categories = (ArrayList<Category>) categoryDao.getAll();
         Category category = new Category();
-        TableColumn column1 = new TableColumn("ID: ");
-        TableColumn column2 = new TableColumn("Ime: ");
-        categoryController.tableView.getColumns().addAll(column1,column2);
+        if(categories.isEmpty()) {
+            System.out.println("Kategorije prazne!");
+            return;
+        }
+        else{
+            categoryController.categoryID.setText(String.valueOf(categories.get(0).getId()));
+            categoryController.categoryName.setText(categories.get(0).getName());
+        }
+
     }
 
     /**
@@ -192,6 +198,7 @@ public class panelController {
             stage.setTitle("Kategorija");
             stage.setScene(scene);
             stage.setResizable(false);
+            setCategoryChanger(loader);
             stage.showAndWait();
         }
         else if (picker.getSelectionModel().getSelectedItem().equals("Vozila")){
