@@ -81,7 +81,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * @return  updated item
      */
     @Override
-    public Category update(Category item, int id) {
+    public Category update(Category item, int id) throws SQLException {
         String query = "UPDATE Category SET name = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -90,9 +90,8 @@ public class CategoryDAOSQlImpl implements CategoryDao{
             stmt.executeUpdate();
             return getById(id);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new SQLException();
         }
-        return null;
     }
 
 

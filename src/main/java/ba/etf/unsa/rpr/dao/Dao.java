@@ -29,7 +29,7 @@ public interface Dao<T> {
      * @param item
      * @return updated item
      */
-    T update(T item,int id);
+    T update(T item,int id) throws SQLException;
 
     /**
      * Delete item from database based on ID

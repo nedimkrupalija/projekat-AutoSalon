@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented action for deleting category from db">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in update in CategoryDAOSQlImpl">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00060" summary="loginController check field">
-      <created>1670890170592</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1670890170592</updated>
     </task>
     <task id="LOCAL-00061" summary="MainController login for salesman">
       <created>1670960690230</created>
@@ -421,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671120979315</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="bugfix in update in CategoryDAOSQlImpl">
+      <created>1671122003658</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1671122003658</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented action to go back in panelController" />
     <MESSAGE value="updated method in SalesmanDaoSQLImpl" />
     <MESSAGE value="updated login in loginController" />
     <MESSAGE value="added new screen for changing category" />
@@ -461,7 +458,8 @@
     <MESSAGE value="implemented count categories" />
     <MESSAGE value="bugfix in setting id on label" />
     <MESSAGE value="implemented action for deleting category from db" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented action for deleting category from db" />
+    <MESSAGE value="bugfix in update in CategoryDAOSQlImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix in update in CategoryDAOSQlImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
