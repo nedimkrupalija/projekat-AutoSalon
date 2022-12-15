@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated category setter in panelController">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="removed unnecessary ref.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
     </list>
@@ -76,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Added resources structure">
-      <created>1670847625318</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1670847625318</updated>
     </task>
     <task id="LOCAL-00048" summary="Added dependencies for fxml">
       <created>1670847813108</created>
@@ -420,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671115400328</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="removed unnecessary ref.">
+      <created>1671115689401</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1671115689401</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated look of admin panel" />
     <MESSAGE value="refactored setting fields for next stage" />
     <MESSAGE value="new design for admin panel" />
     <MESSAGE value="setter for user data" />
@@ -460,7 +460,8 @@
     <MESSAGE value="bugfix in CategoryDAOSQlImpl" />
     <MESSAGE value="new design for category changer/updater" />
     <MESSAGE value="updated category setter in panelController" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated category setter in panelController" />
+    <MESSAGE value="removed unnecessary ref." />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary ref." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

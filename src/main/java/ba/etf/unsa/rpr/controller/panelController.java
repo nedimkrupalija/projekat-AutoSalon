@@ -173,11 +173,15 @@ public class panelController {
         ArrayList<Category> categories = (ArrayList<Category>) categoryDao.getAll();
         if(categories.isEmpty()) {
             System.out.println("Kategorije prazne!");
+            categoryController.categoryIndex = -1;
+
         }
         else{
             categoryController.categoryID.setText(String.valueOf(categories.get(0).getId()));
             categoryController.categoryName.setText(categories.get(0).getName());
+            categoryController.categoryIndex=0;
         }
+        categoryController.categoryCount.setText(categoryController.categoryCount.getText() + String.valueOf(categoryController.categoryIndex));
 
     }
 
