@@ -136,4 +136,23 @@ public class CategoryDAOSQlImpl implements CategoryDao{
         }
         return null;
     }
+
+    @Override
+    public int getNumberWithName(String name) {
+        String query = "SELECT COUNT(*) FROM Category WHERE lower(name)=?";
+        try{
+            PreparedStatement stmt  = this.conn.prepareStatement(query);
+            stmt.setString(1,name);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Category category = new Category();
+                int count = rs.getInt(1);
+                return count;
+            }
+            else return 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

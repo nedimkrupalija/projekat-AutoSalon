@@ -9,4 +9,5 @@ import ba.etf.unsa.rpr.domain.Category;
  */
 
 public interface CategoryDao extends Dao<Category> {
+    public int getNumberWithName(String name);
 }
