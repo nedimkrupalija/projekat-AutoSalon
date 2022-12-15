@@ -19,6 +19,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -115,7 +116,7 @@ public class panelController {
      * Action for changing data of salesman/user
      * @param actionEvent
      */
-    public void acceptClicked(ActionEvent actionEvent) {
+    public void acceptClicked(ActionEvent actionEvent) throws SQLException {
         if(textIme.getText().isEmpty()||textPrezime.getText().isEmpty()||textTelefon.getText().isEmpty()||textPassword.getText().isEmpty()){
             System.out.println("Pogresni podaci!");
             Alert alert = new Alert(Alert.AlertType.ERROR);

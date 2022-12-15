@@ -25,6 +25,7 @@ public class categoryController {
     public Label categoryCount;
     public TextField newCategoryName;
     public Button acceptNewCategory;
+    public Button changeCategory;
 
     @FXML
     public void initialize(){
@@ -140,5 +141,39 @@ public class categoryController {
         alert.setHeaderText(null);
         alert.setContentText("Brisanje uspjesno!");
         alert.showAndWait();
+    }
+
+    public void changeCategoryClick(ActionEvent actionEvent) {
+        boolean idCheck = false;
+        for(Category x: categories){
+            if(x.getId()==Integer.parseInt(categoryID.getText())) {
+                idCheck=true;
+            }
+        }
+        if(!idCheck){
+            System.out.println("Nepostojeca kategorija");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Kategorija ne postoji!");
+            alert.setContentText("Molimo unesite ispravan id i pokusajte opet!");
+            alert.showAndWait();
+            return;
+        }
+        CategoryDao categoryDao = new CategoryDAOSQlImpl();
+        Category category = categoryDao.getById(Integer.parseInt(categoryID.getText()));
+        category.setName(categoryName.getText());
+        try {
+            categoryDao.update(category, Integer.parseInt(categoryID.getText()));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return;
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Izmjena kategorije");
+        alert.setHeaderText(null);
+        alert.setContentText("Izmjena uspjesna!");
+        alert.showAndWait();
+
     }
 }
