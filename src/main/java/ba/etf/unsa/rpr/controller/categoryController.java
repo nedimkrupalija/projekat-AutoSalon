@@ -179,6 +179,8 @@ public class categoryController {
         alert.setHeaderText(null);
         alert.setContentText("Izmjena uspjesna!");
         alert.showAndWait();
+        categoryID.setText(String.valueOf(category.getId()));
+        categoryName.setText(category.getName());
 
     }
 }
