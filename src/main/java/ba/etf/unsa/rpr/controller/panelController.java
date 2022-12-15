@@ -170,18 +170,18 @@ public class panelController {
     private void setCategoryChanger(FXMLLoader loader){
         categoryController categoryController = loader.getController();
         CategoryDao categoryDao = new CategoryDAOSQlImpl();
-        ArrayList<Category> categories = (ArrayList<Category>) categoryDao.getAll();
-        if(categories.isEmpty()) {
+        categoryController.categories = (ArrayList<Category>) categoryDao.getAll();
+        if(categoryController.categories.isEmpty()) {
             System.out.println("Kategorije prazne!");
             categoryController.categoryIndex = -1;
 
         }
         else{
-            categoryController.categoryID.setText(String.valueOf(categories.get(0).getId()+1));
-            categoryController.categoryName.setText(categories.get(0).getName());
+            categoryController.categoryID.setText(String.valueOf(categoryController.categories.get(0).getId()+1));
+            categoryController.categoryName.setText(categoryController.categories.get(0).getName());
             categoryController.categoryIndex=0;
         }
-        categoryController.categoryCount.setText(String.valueOf(categories.size()));
+        categoryController.categoryCount.setText(String.valueOf(categoryController.categories.size()));
 
     }
 
