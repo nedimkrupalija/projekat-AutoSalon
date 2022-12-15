@@ -177,7 +177,7 @@ public class panelController {
 
         }
         else{
-            categoryController.categoryID.setText(String.valueOf(categoryController.categories.get(0).getId()+1));
+            categoryController.categoryID.setText(String.valueOf(categoryController.categories.get(0).getId()));
             categoryController.categoryName.setText(categoryController.categories.get(0).getName());
             categoryController.categoryIndex=0;
         }
