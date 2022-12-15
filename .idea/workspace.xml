@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in changing category">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in adding category">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Updated method for validation of user">
-      <created>1670963411344</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1670963411344</updated>
     </task>
     <task id="LOCAL-00066" summary="Implemented login for salesman to admin panel">
       <created>1670963462109</created>
@@ -419,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671122919497</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="bugfix in adding category">
+      <created>1671123060890</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1671123060890</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented button for going to category updater" />
     <MESSAGE value="implemented look of window for updating category" />
     <MESSAGE value="implemented main design for tableview in category updater" />
     <MESSAGE value="bugfix changed listview to tableview" />
@@ -459,7 +459,8 @@
     <MESSAGE value="implemented action for changing current category" />
     <MESSAGE value="javadoc update" />
     <MESSAGE value="bugfix in changing category" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix in changing category" />
+    <MESSAGE value="bugfix in adding category" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix in adding category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -478,22 +479,13 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDao.java</url>
-          <line>10</line>
-          <properties class="ba.etf.unsa.rpr.dao.SalesmanDao" method="getByIdPass">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java</url>
+          <line>104</line>
+          <properties class="ba.etf.unsa.rpr.controller.categoryController" method="deleteButtonClick">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CategoryDao.java</url>
-          <line>11</line>
-          <properties class="ba.etf.unsa.rpr.dao.CategoryDao" method="getNumberWithName">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

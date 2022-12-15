@@ -93,7 +93,7 @@ public class categoryController {
         categories = (ArrayList<Category>) categoryDao.getAll();
         categoryCount.setText(String.valueOf(categories.size()));
         if(categories.size()==1){
-            categoryID.setText(String.valueOf(category.getId()));
+            categoryID.setText(String.valueOf(categories.get(0).getId()));
             categoryName.setText(category.getName());
         }
     }
@@ -170,6 +170,7 @@ public class categoryController {
             return;
         }
         CategoryDao categoryDao = new CategoryDAOSQlImpl();
+
         Category category = categoryDao.getById(Integer.parseInt(categoryID.getText()));
         category.setName(categoryName.getText());
         try {
@@ -184,6 +185,7 @@ public class categoryController {
         alert.setHeaderText(null);
         alert.setContentText("Izmjena uspjesna!");
         alert.showAndWait();
+        categories = (ArrayList<Category>) categoryDao.getAll();
         categoryID.setText(String.valueOf(category.getId()));
         categoryName.setText(category.getName());
 
