@@ -147,6 +147,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
             if(rs.next()){
                 Category category = new Category();
                 int count = rs.getInt(1);
+                rs.close();
                 return count;
             }
             else return 0;

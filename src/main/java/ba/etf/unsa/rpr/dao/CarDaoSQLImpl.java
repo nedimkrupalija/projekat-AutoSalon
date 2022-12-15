@@ -214,6 +214,31 @@ public class CarDaoSQLImpl implements CarDao {
     }
 
     /**
+     * Count number of categories with given id
+     * @param id
+     * @return
+     */
+    @Override
+    public int countCategories(int id) {
+        String query = "SELECT COUNT(*) from Cars WHERE category_fk=?";
+        try{
+            PreparedStatement stmt  = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                Category category = new Category();
+                int count = rs.getInt(1);
+                rs.close();
+                return count;
+            }
+            else return 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    /**
      * Method for deleting car from database with matching id
      * @param id
      */

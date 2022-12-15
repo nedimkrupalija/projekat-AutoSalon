@@ -20,4 +20,6 @@ public interface CarDao extends Dao<Cars> {
     List<Cars> seachByCategory(Category category);
 
     Cars update(Cars item,int id);
+
+    int countCategories(int id);
 }
