@@ -10,8 +10,12 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
+<?import java.net.URL?>
 <GridPane prefHeight="190.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.categoryController">
-  <columnConstraints>
+   <stylesheets>
+      <URL value="@/css/login.css" />
+   </stylesheets>
+   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.0" minWidth="10.0" prefWidth="416.0" />
   </columnConstraints>
   <rowConstraints>

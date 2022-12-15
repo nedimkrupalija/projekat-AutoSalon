@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="removed unnecessary ref.">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added category counter">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Added dependencies for fxml">
-      <created>1670847813108</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1670847813108</updated>
     </task>
     <task id="LOCAL-00049" summary="Added main window">
       <created>1670874017184</created>
@@ -421,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671115689401</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="added category counter">
+      <created>1671116041386</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1671116041386</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored setting fields for next stage" />
     <MESSAGE value="new design for admin panel" />
     <MESSAGE value="setter for user data" />
     <MESSAGE value="Added event in admin panel" />
@@ -461,7 +459,8 @@
     <MESSAGE value="new design for category changer/updater" />
     <MESSAGE value="updated category setter in panelController" />
     <MESSAGE value="removed unnecessary ref." />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary ref." />
+    <MESSAGE value="added category counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added category counter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
