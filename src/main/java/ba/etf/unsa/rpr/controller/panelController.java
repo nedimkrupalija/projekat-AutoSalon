@@ -157,4 +157,22 @@ public class panelController {
         Stage thisStage = (Stage) labelId.getScene().getWindow();
         thisStage.close();
     }
+
+    public void categoryButtonClick(ActionEvent actionEvent) throws IOException {
+        if(picker.getSelectionModel().getSelectedItem().equals("Kategorija")){
+            System.out.println("Izmjena kategorije!");
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/kategorija.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+            stage.setTitle("Kategorija");
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.showAndWait();
+        }
+        else if (picker.getSelectionModel().getSelectedItem().equals("Vozila")){
+
+        }
+        else return;
+    }
 }

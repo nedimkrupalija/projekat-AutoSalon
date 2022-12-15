@@ -138,7 +138,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </ChoiceBox>
-            <Button fx:id="categoryButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" text="Idi na izmjenu">
+            <Button fx:id="categoryButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#categoryButtonClick" prefHeight="25.0" prefWidth="163.0" text="Idi na izmjenu">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
