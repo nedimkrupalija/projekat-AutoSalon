@@ -171,10 +171,8 @@ public class panelController {
         categoryController categoryController = loader.getController();
         CategoryDao categoryDao = new CategoryDAOSQlImpl();
         ArrayList<Category> categories = (ArrayList<Category>) categoryDao.getAll();
-        Category category = new Category();
         if(categories.isEmpty()) {
             System.out.println("Kategorije prazne!");
-            return;
         }
         else{
             categoryController.categoryID.setText(String.valueOf(categories.get(0).getId()));
