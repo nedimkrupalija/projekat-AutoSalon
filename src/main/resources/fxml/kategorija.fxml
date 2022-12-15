@@ -17,7 +17,7 @@
   </rowConstraints>
    <children>
       <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-      <TableView fx:id="listView" editable="true" prefHeight="200.0" prefWidth="519.0">
+      <TableView fx:id="tableView" editable="true" prefHeight="200.0" prefWidth="519.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Identifier" />
           <TableColumn prefWidth="75.0" text="Podaci" />
