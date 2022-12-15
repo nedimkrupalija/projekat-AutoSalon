@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix category insert">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented count categories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,34 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00054" summary="New box for admin/salesman login">
-      <created>1670888103067</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1670888103067</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Updated look of login">
-      <created>1670888699487</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1670888699487</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Added css for login">
-      <created>1670888713663</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1670888713663</updated>
-    </task>
-    <task id="LOCAL-00057" summary="refactored id">
-      <created>1670889319501</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1670889319501</updated>
     </task>
     <task id="LOCAL-00058" summary="added border style for login">
       <created>1670889341466</created>
@@ -422,7 +393,35 @@
       <option name="project" value="LOCAL" />
       <updated>1671117798237</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="implemented category insert">
+      <created>1671118420772</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1671118420772</updated>
+    </task>
+    <task id="LOCAL-00104" summary="bugfix in category delete">
+      <created>1671119057778</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1671119057778</updated>
+    </task>
+    <task id="LOCAL-00105" summary="added reference to list of all categories">
+      <created>1671119222428</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1671119222428</updated>
+    </task>
+    <task id="LOCAL-00106" summary="implemented count categories">
+      <created>1671119954907</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1671119954907</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,10 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="private method for setting data" />
-    <MESSAGE value="updated update for salesman dao" />
-    <MESSAGE value="delete bugfix in salesman dao" />
-    <MESSAGE value="insert bugfix in salesman dao" />
     <MESSAGE value="Implemented action for changing data of salesman" />
     <MESSAGE value="updated javaDoc for listener in panelController" />
     <MESSAGE value="implemented action to go back in panelController" />
@@ -462,7 +457,11 @@
     <MESSAGE value="added listener for current cat.name" />
     <MESSAGE value="implemented method for getting number of rows with given name" />
     <MESSAGE value="bugfix category insert" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix category insert" />
+    <MESSAGE value="implemented category insert" />
+    <MESSAGE value="bugfix in category delete" />
+    <MESSAGE value="added reference to list of all categories" />
+    <MESSAGE value="implemented count categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented count categories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

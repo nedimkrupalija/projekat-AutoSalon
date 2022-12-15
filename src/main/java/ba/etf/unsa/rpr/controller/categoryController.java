@@ -1,5 +1,7 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.dao.CarDao;
+import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.CategoryDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.CategoryDao;
 import ba.etf.unsa.rpr.domain.Category;
@@ -9,8 +11,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.util.ArrayList;
+
 public class categoryController {
 
+
+    public ArrayList<Category> categories;
     public TextField categoryName;
     public TextField categoryID;
     public int categoryIndex ;
@@ -83,6 +89,56 @@ public class categoryController {
         alert.setContentText("Ubacivanje uspjesno!");
         alert.showAndWait();
         if(categoryIndex==-1) categoryIndex = categoryIndex+1;
-        categoryCount.setText(String.valueOf(Integer.valueOf(categoryCount.getText())+1));
+        categoryCount.setText(String.valueOf(Integer.parseInt(categoryCount.getText())+1));
+    }
+
+    /**
+     * Action for deleting category through app
+     * @param actionEvent
+     */
+    public void deleteButtonClick(ActionEvent actionEvent) {
+            boolean idCheck = false, nameCheck = false;
+            for(Category x : categories){
+            if(x.getId()==Integer.parseInt(categoryID.getText())) idCheck=true;
+            if(x.getName().equals(categoryName.getText())) nameCheck = true;
+             }
+            if(categoryID.getText().trim().isEmpty()||categoryName.getText().trim().isEmpty()||!idCheck||!nameCheck) {
+                System.out.println("Polja za brisanje prazna!");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Upisite ispravnu kategoriju za brisanje (ili izaberite putem slj/preth)!");
+                alert.setContentText("Molimo ispravite podatke i probajte opet!");
+                alert.showAndWait();
+                return;
+            }
+
+            CarDao carDao = new CarDaoSQLImpl();
+            if(carDao.countCategories(Integer.parseInt(categoryID.getText()))!=0){
+                System.out.println("Postoje auta s tom kategorijom!");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Zabranjeno brisati kategoriju koja je dodjeljena nekom autu!");
+                alert.setContentText("Molimo ispravite podatke i probajte opet!");
+                alert.showAndWait();
+                return;
+            }
+            CategoryDao categoryDao = new CategoryDAOSQlImpl();
+            categoryDao.delete(Integer.parseInt(categoryID.getText()));
+            categories = (ArrayList<Category>) categoryDao.getAll();
+            categoryCount.setText(String.valueOf(categories.size()));
+            if(categories.size()==0){
+                categoryID.setText("");
+                categoryName.setText("");
+            }
+            else if(categoryIndex==categories.size()){
+                categoryID.setText(String.valueOf(categories.get(categoryIndex).getId()));
+                categoryName.setText(categories.get(categoryIndex).getName());
+            }
+        System.out.println("Kategorija uspjesno izbrisana!");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Izbacivanje kategorije");
+        alert.setHeaderText(null);
+        alert.setContentText("Brisanje uspjesno!");
+        alert.showAndWait();
     }
 }
