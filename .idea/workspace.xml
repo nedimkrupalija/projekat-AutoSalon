@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented button for going to category updater">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented look of window for updating category">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/kategorijaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/kategorijaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/kategorijaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,13 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00040" summary="implemented insert for SalesmanDaoSQLImpl">
-      <created>1670444422395</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1670444422395</updated>
     </task>
     <task id="LOCAL-00041" summary="updated getById in SalesmanDaoSQLImpl">
       <created>1670444456305</created>
@@ -421,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671110941507</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="implemented look of window for updating category">
+      <created>1671111529605</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1671111529606</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated DAO for salesman" />
     <MESSAGE value="Updated method for validation of user" />
     <MESSAGE value="Implemented login for salesman to admin panel" />
     <MESSAGE value="javadoc update" />
@@ -461,7 +462,8 @@
     <MESSAGE value="updated login in loginController" />
     <MESSAGE value="added new screen for changing category" />
     <MESSAGE value="implemented button for going to category updater" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented button for going to category updater" />
+    <MESSAGE value="implemented look of window for updating category" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented look of window for updating category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,8 +1,12 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.dao.CategoryDAOSQlImpl;
+import ba.etf.unsa.rpr.dao.CategoryDao;
 import ba.etf.unsa.rpr.dao.SalesmanDao;
 import ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl;
+import ba.etf.unsa.rpr.domain.Category;
 import ba.etf.unsa.rpr.domain.Salesman;
+import com.mysql.cj.xdevapi.Table;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -15,6 +19,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -157,6 +162,21 @@ public class panelController {
         Stage thisStage = (Stage) labelId.getScene().getWindow();
         thisStage.close();
     }
+
+    /**
+     * private method for setting table in category changer/updater
+     * @param loader
+     */
+    private void setCategoryChanger(FXMLLoader loader){
+        categoryController categoryController = loader.getController();
+        CategoryDao categoryDao = new CategoryDAOSQlImpl();
+        ArrayList<Category> categories = (ArrayList<Category>) categoryDao.getAll();
+        Category category = new Category();
+        TableColumn column1 = new TableColumn("ID: ");
+        TableColumn column2 = new TableColumn("Ime: ");
+        categoryController.tableView.getColumns().addAll(column1,column2);
+    }
+
 
     public void categoryButtonClick(ActionEvent actionEvent) throws IOException {
         if(picker.getSelectionModel().getSelectedItem().equals("Kategorija")){
