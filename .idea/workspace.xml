@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added category counter">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix category insert">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kategorija.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,41 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Added main window">
-      <created>1670874017184</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1670874017184</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Added pictures for bg">
-      <created>1670874035205</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1670874035207</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Added csstyle for mainbg">
-      <created>1670874047474</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1670874047474</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Added css for labels">
-      <created>1670874058025</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1670874058025</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Added controller for main scene">
-      <created>1670887301065</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1670887301065</updated>
     </task>
     <task id="LOCAL-00054" summary="New box for admin/salesman login">
       <created>1670888103067</created>
@@ -420,7 +387,42 @@
       <option name="project" value="LOCAL" />
       <updated>1671116041386</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="added listener for adding new cat.">
+      <created>1671116367685</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1671116367685</updated>
+    </task>
+    <task id="LOCAL-00099" summary="added listener for current cat.id">
+      <created>1671116383618</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1671116383618</updated>
+    </task>
+    <task id="LOCAL-00100" summary="added listener for current cat.name">
+      <created>1671116454463</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1671116454463</updated>
+    </task>
+    <task id="LOCAL-00101" summary="implemented method for getting number of rows with given name">
+      <created>1671117168020</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1671117168020</updated>
+    </task>
+    <task id="LOCAL-00102" summary="bugfix category insert">
+      <created>1671117798237</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1671117798237</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,11 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new design for admin panel" />
-    <MESSAGE value="setter for user data" />
-    <MESSAGE value="Added event in admin panel" />
-    <MESSAGE value="added listener for fields" />
-    <MESSAGE value="Bugfix in listener" />
     <MESSAGE value="private method for setting data" />
     <MESSAGE value="updated update for salesman dao" />
     <MESSAGE value="delete bugfix in salesman dao" />
@@ -460,7 +457,12 @@
     <MESSAGE value="updated category setter in panelController" />
     <MESSAGE value="removed unnecessary ref." />
     <MESSAGE value="added category counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added category counter" />
+    <MESSAGE value="added listener for adding new cat." />
+    <MESSAGE value="added listener for current cat.id" />
+    <MESSAGE value="added listener for current cat.name" />
+    <MESSAGE value="implemented method for getting number of rows with given name" />
+    <MESSAGE value="bugfix category insert" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix category insert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
