@@ -106,7 +106,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
         try {
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
