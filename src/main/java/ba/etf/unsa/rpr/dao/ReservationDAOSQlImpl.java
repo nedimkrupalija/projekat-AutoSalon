@@ -1,6 +1,10 @@
 package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.CarException;
+import ba.etf.unsa.rpr.exception.ReservationException;
+import ba.etf.unsa.rpr.exception.UserException;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -13,7 +17,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
     private Connection conn ;
 
     /**
-     * Default constructor for CategoryDao implementation, makes connection to database
+     * Default constructor for ReservationDao implementation, makes connection to database
      * Parameters hidden
      */
     public ReservationDAOSQlImpl(){
@@ -31,32 +35,34 @@ public class ReservationDAOSQlImpl implements ReservationDao {
     /**
      *
      * @param id to look for
-     * @return Specific category seached by id
+     * @return Specific reservation seached by id
      */
     @Override
-    public Reservation getById(int id) {
-        String query = "SELECT * FROM Category where id = ?";
+    public Reservation getById(int id) throws ReservationException {
+        String query = "SELECT * FROM Reservations where id = ?";
         try{
             PreparedStatement stmt  = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
-                Reservation category = new Reservation();
-                category.setId(rs.getInt("id"));
-                category.setName(rs.getString("name"));
+                Reservation reservation = new Reservation();
+                reservation.setId(rs.getInt("id"));
+                reservation.setReservationDate(rs.getDate("reservation_date"));
+                reservation.setArrivalDate(rs.getDate("arrival_date"));
+                reservation.setUser(new UserDaoSQLImpl().getById(rs.getInt("user_fk")));
+                reservation.setCar(new CarDaoSQLImpl().getById(rs.getInt("car_fk")));
                 rs.close();
-                return category;
+                return reservation;
             }
             else return null;
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            throw new ReservationException("Greska pri dohvacanju rezervacije!");
         }
-        return null;
     }
 
 
     /**
-     * Insert category item in database
+     * Insert reservation item in database
      * @param item
      */
     @Override
@@ -73,7 +79,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
     }
 
     /**
-     * Updates specific Category item
+     * Updates specific reservation item
      * @param item from which attributes are taken
      * @param id of item to change
      * @return  updated item
@@ -111,7 +117,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
 
     /**
      *
-     * @return list of all categories from
+     * @return list of all reservations from
      */
     @Override
     public List<Reservation> getAll() {
