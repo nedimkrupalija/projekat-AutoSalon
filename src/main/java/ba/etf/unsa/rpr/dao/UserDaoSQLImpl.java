@@ -68,6 +68,7 @@ public class UserDaoSQLImpl implements UserDao {
     public void insert(User item) throws UserException {
         String query = "INSERT INTO Users (name,password) values (?, ?)";
         try{
+            if(item.getName()==null|item.getPassword()==null) throw new UserException("Greska pri ubacivanju korisnika!");
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1,item.getName());
             stmt.setString(2,item.getPassword());
