@@ -14,6 +14,8 @@ public class UserDaoSQLImpl implements UserDao {
     private Connection connection;
 
 
+
+
     /**
      * Default constructor
      * makes database connection
@@ -139,4 +141,34 @@ public class UserDaoSQLImpl implements UserDao {
             throw new UserException("Greska pri izmjeni!");
         }
     }
+
+    /**
+     * Help method that gets user by name and password
+     * @param name of user
+     * @param password of user
+     * @return user
+     * @throws UserException user defined exc
+     */
+    public User getByNamePass(String name, String password) throws UserException {
+        String query = "SELECT * FROM Users where name = ? AND password = ?";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setString(1,name);
+            stmt.setString(2,password);
+            ResultSet rs = stmt.executeQuery();
+            User user = new User();
+            if(rs.next()){
+                user.setId(rs.getInt("id"));
+                user.setName(rs.getString("name"));
+                user.setPassword(rs.getString("password"));
+                user.setAdmin(rs.getInt("admin"));
+            }
+            rs.close();
+            return user;
+        } catch (SQLException e) {
+            throw new UserException("Greska pri dohvacanju podataka korisnika!");
+        }
+
+    }
+
 }
