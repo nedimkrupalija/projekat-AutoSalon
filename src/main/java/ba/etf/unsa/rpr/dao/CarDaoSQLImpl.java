@@ -3,6 +3,7 @@ package ba.etf.unsa.rpr.dao;
 import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.CarException;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -43,7 +44,7 @@ public class CarDaoSQLImpl implements CarDao {
      * @return
      */
     @Override
-    public Car getById(int id) {
+    public Car getById(int id) throws CarException {
         String query = "SELECT * FROM Cars where id = ?";
         try{
             PreparedStatement stmt  = this.conn.prepareStatement(query);
@@ -52,21 +53,17 @@ public class CarDaoSQLImpl implements CarDao {
             if(rs.next()){
                 Car car = new Car();
                 car.setId(rs.getInt("id"));
-                car.setMake(rs.getString("make"));
-                car.setModel(rs.getString("model"));
+                car.setName(rs.getString("make"));
                 car.setYear(rs.getString("year"));
                 car.setColor(rs.getString("color"));
                 car.sethP(rs.getInt("hp"));
-                car.setCategory(getCategoryById(id));
-                car.setSalesman(getSalesmanById(id));
                 rs.close();
                 return car;
             }
             else return null;
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new CarException("Greska pri dohvacanju auta!");
         }
-    return null;
     }
 
 
