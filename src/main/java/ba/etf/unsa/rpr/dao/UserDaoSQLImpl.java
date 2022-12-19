@@ -164,6 +164,7 @@ public class UserDaoSQLImpl implements UserDao {
                 user.setAdmin(rs.getInt("admin"));
             }
             rs.close();
+            if(user.getName()==null) throw new UserException("Nepostojeci korisnik!");
             return user;
         } catch (SQLException e) {
             throw new UserException("Greska pri dohvacanju podataka korisnika!");
