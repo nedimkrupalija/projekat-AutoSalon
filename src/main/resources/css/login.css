@@ -3,6 +3,11 @@
     -fx-border-width: 2px;
 }
 
+#backButton{
+    -fx-background-color: crimson;
+    -fx-font-size: large;
+    -fx-font-weight: bold;
+}
 
 .fieldWrong{
     -fx-background-color: pink;
