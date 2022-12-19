@@ -66,14 +66,17 @@ public class ReservationDAOSQlImpl implements ReservationDao {
      * @param item
      */
     @Override
-    public void insert(Reservation item) throws SQLException {
-        String query = "INSERT INTO Category (name) values (?)";
+    public void insert(Reservation item) throws SQLException, ReservationException {
+        String query = "INSERT INTO Category (reservation_date, arrival_date, user_fk, car_fk) values (?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setString(1,item.getName());
+            stmt.setDate(1,item.getReservationDate());
+            stmt.setDate(2,item.getArrivalDate());
+            stmt.setInt(3,item.getUser().getId());
+            stmt.setInt(4,item.getCar().getId());
             stmt.executeUpdate();
         } catch (Exception e) {
-            throw e;
+            throw new ReservationException("Greska pri ubacivanju rezervacije!");
         }
 
     }
