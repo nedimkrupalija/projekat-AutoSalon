@@ -103,6 +103,21 @@ public class registrationController {
         System.out.println("Registracija uspjesna!");
     }
 
-    public void backButtonClick(ActionEvent actionEvent) {
+    /**
+     * Action for returning back to main screen
+     * @param actionEvent
+     * @throws IOException
+     */
+    public void backButtonClick(ActionEvent actionEvent) throws IOException {
+        System.out.println("Nazad na pocetni ekran");
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        Stage currentStage = (Stage) nameLabel.getScene().getWindow();
+        currentStage.close();
     }
 }
