@@ -1,6 +1,7 @@
 package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.UserException;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -31,12 +32,12 @@ public class UserDaoSQLImpl implements UserDao {
 
 
     /**
-     * @param id of salesman
-     * @return Salesman with searched id
+     * @param id of user
+     * @return User with searched id
      */
     @Override
-    public User getById(int id) {
-        String query = "SELECT * FROM Salesman where id = ?";
+    public User getById(int id) throws UserException {
+        String query = "SELECT * FROM Users where id = ?";
         try{
             PreparedStatement stmt  = this.connection.prepareStatement(query);
             stmt.setInt(1,id);
@@ -45,17 +46,15 @@ public class UserDaoSQLImpl implements UserDao {
                 User user = new User();
                 user.setId(rs.getInt("id"));
                 user.setName(rs.getString("name"));
-                user.setSurname(rs.getString("surname"));
-                user.setNumber(rs.getString("number"));
                 user.setPassword(rs.getString("password"));
+                user.setAdmin(rs.getInt("admin"));
                 rs.close();
                 return user;
             }
             else return null;
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new UserException("Greska pri dohvacanju usera");
         }
-        return null;
     }
 
 

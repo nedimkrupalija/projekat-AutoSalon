@@ -1,6 +1,7 @@
 package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.exception.CarException;
+import ba.etf.unsa.rpr.exception.UserException;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -16,7 +17,7 @@ public interface Dao<T> {
      * @param id
      * @return
      */
-    T getById(int id) throws CarException;
+    T getById(int id) throws CarException, UserException;
 
 
     /**
