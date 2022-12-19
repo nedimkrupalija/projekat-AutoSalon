@@ -96,27 +96,25 @@ public class UserDaoSQLImpl implements UserDao {
      * @return list of Salesmen
      */
     @Override
-    public List<User> getAll() {
+    public List<User> getAll() throws UserException {
         String query = "SELECT * FROM Salesman";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
-            ArrayList<User> salesmen = new ArrayList<User>();
+            ArrayList<User> users = new ArrayList<User>();
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
                 User user = new User();
                 user.setId(rs.getInt("id"));
                 user.setName(rs.getString("name"));
-                user.setSurname(rs.getString("surname"));
-                user.setNumber("number");
-                user.setPassword("password");
-                salesmen.add(user);
+                user.setPassword(rs.getString("password"));
+                user.setAdmin(rs.getInt("admin"));
+                users.add(user);
             }
             rs.close();
-            return salesmen;
+            return users;
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new UserException("Greska pri dohvacanju podataka!");
         }
-        return null;
     }
 
 

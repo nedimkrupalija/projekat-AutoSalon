@@ -45,7 +45,7 @@ public interface Dao<T> {
      * Return all items from database in a list
      * @return
      */
-    List<T> getAll();
+    List<T> getAll() throws UserException;
 
 
 
