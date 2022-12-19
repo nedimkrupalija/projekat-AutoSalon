@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added listener for checking if user is already present in db">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added component ids for registration.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/registrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/registrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,20 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00107" summary="bugfix in setting id on label">
-      <created>1671120959178</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1671120959178</updated>
-    </task>
-    <task id="LOCAL-00108" summary="implemented action for deleting category from db">
-      <created>1671120979315</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1671120979315</updated>
     </task>
     <task id="LOCAL-00109" summary="bugfix in update in CategoryDAOSQlImpl">
       <created>1671122003658</created>
@@ -425,7 +410,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671483014649</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="bugfix in update UserDaoSQLImpl">
+      <created>1671485127931</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1671485127932</updated>
+    </task>
+    <task id="LOCAL-00157" summary="added component ids for registration.fxml">
+      <created>1671485142976</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1671485142976</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated names of classes" />
     <MESSAGE value="refactored names of classes" />
     <MESSAGE value="added user exception" />
     <MESSAGE value="changed getbyid in user" />
@@ -448,7 +446,6 @@
     <MESSAGE value="updated delete in UserDaoSQLImpl" />
     <MESSAGE value="updated getall in UserDaoSQLImpl" />
     <MESSAGE value="updated update in UserDaoSQLImpl" />
-    <MESSAGE value="bugfix in update UserDaoSQLImpl" />
     <MESSAGE value="added CategoryException" />
     <MESSAGE value="changed getbyid in ReservationDAOSQlImpl" />
     <MESSAGE value="changed insert in ReservationDAOSQlImpl" />
@@ -465,7 +462,9 @@
     <MESSAGE value="added listener for username length in registrationController" />
     <MESSAGE value="added listener for password length in registrationController" />
     <MESSAGE value="added listener for checking if user is already present in db" />
-    <option name="LAST_COMMIT_MESSAGE" value="added listener for checking if user is already present in db" />
+    <MESSAGE value="bugfix in update UserDaoSQLImpl" />
+    <MESSAGE value="added component ids for registration.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added component ids for registration.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
