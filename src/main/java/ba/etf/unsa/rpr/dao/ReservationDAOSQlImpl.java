@@ -1,16 +1,14 @@
 package ba.etf.unsa.rpr.dao;
 
-import ba.etf.unsa.rpr.domain.Cars;
-import ba.etf.unsa.rpr.domain.Category;
+import ba.etf.unsa.rpr.domain.Reservation;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class CategoryDAOSQlImpl implements CategoryDao{
+public class ReservationDAOSQlImpl implements ReservationDao {
 
     private Connection conn ;
 
@@ -18,7 +16,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * Default constructor for CategoryDao implementation, makes connection to database
      * Parameters hidden
      */
-    public CategoryDAOSQlImpl(){
+    public ReservationDAOSQlImpl(){
         try {
             FileReader reader = new FileReader("db.properties");
             Properties property = new Properties();
@@ -36,14 +34,14 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * @return Specific category seached by id
      */
     @Override
-    public Category getById(int id) {
+    public Reservation getById(int id) {
         String query = "SELECT * FROM Category where id = ?";
         try{
             PreparedStatement stmt  = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
-                Category category = new Category();
+                Reservation category = new Reservation();
                 category.setId(rs.getInt("id"));
                 category.setName(rs.getString("name"));
                 rs.close();
@@ -62,7 +60,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * @param item
      */
     @Override
-    public void insert(Category item) throws SQLException {
+    public void insert(Reservation item) throws SQLException {
         String query = "INSERT INTO Category (name) values (?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -81,7 +79,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * @return  updated item
      */
     @Override
-    public Category update(Category item, int id) throws SQLException {
+    public Reservation update(Reservation item, int id) throws SQLException {
         String query = "UPDATE Category SET name = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -116,14 +114,14 @@ public class CategoryDAOSQlImpl implements CategoryDao{
      * @return list of all categories from
      */
     @Override
-    public List<Category> getAll() {
+    public List<Reservation> getAll() {
         String query = "SELECT * FROM Category";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            ArrayList<Category> categories = new ArrayList<Category>();
+            ArrayList<Reservation> categories = new ArrayList<Reservation>();
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
-                Category category = new Category();
+                Reservation category = new Reservation();
                 category.setId(rs.getInt("id"));
                 category.setName(rs.getString("name"));
                 categories.add(category);
@@ -144,7 +142,7 @@ public class CategoryDAOSQlImpl implements CategoryDao{
             stmt.setString(1,name);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
-                Category category = new Category();
+                Reservation category = new Reservation();
                 int count = rs.getInt(1);
                 rs.close();
                 return count;
