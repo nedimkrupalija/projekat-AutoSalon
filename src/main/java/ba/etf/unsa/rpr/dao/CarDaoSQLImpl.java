@@ -95,15 +95,14 @@ public class CarDaoSQLImpl implements CarDao {
 
     @Override
     public Car update(Car item, int id) {
-        String query = "UPDATE Cars SET make = ?, model = ?, year = ?, color = ?, hp = ?, salesman_fk = ?, category_fk = ? WHERE id = ?";
+        String query = "UPDATE Cars SET name = ?, year = ?, color = ?, hp = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-
-            stmt.setString(3,item.getYear());
-            stmt.setString(4,item.getColor());
-            stmt.setInt(5,item.gethP());
-
-            stmt.setInt(8,id);
+            stmt.setString(1,item.getName());
+            stmt.setString(2,item.getYear());
+            stmt.setString(3,item.getColor());
+            stmt.setInt(4,item.gethP());
+            stmt.setInt(5,id);
             stmt.executeUpdate(query);
             return getById(id);
         } catch (Exception e) {
