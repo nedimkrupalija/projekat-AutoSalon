@@ -25,7 +25,7 @@ public interface Dao<T> {
      *
      * @param item
      */
-    void insert(T item) throws SQLException, CarException;
+    void insert(T item) throws SQLException, CarException, UserException;
 
     /**
      * Update item based on id

@@ -59,51 +59,19 @@ public class UserDaoSQLImpl implements UserDao {
 
 
     /**
-     * Method for searching Salesman by his/her name, pass
-     * @param id of Salesman
-     * @param password of Salesman
-     * @return  Salesman with given par. or null
-     */
-    public User getByIdPass(int id, String password) {
-        String query = "SELECT * FROM Salesman where id = ? and password = ?";
-        try{
-            PreparedStatement stmt  = this.connection.prepareStatement(query);
-            stmt.setInt(1,id);
-            stmt.setString(2,password);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                User user = new User();
-                user.setId(rs.getInt("id"));
-                user.setName(rs.getString("name"));
-                user.setSurname(rs.getString("surname"));
-                user.setNumber(rs.getString("number"));
-                user.setPassword(rs.getString("password"));
-                rs.close();
-                return user;
-            }
-            else return null;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    /**
      * Insert salesman in database with given values
      * @param item
      */
     @Override
-    public void insert(User item) {
-        String query = "INSERT INTO Salesman (name,surname,number,password) values (?, ?, ?, ?)";
+    public void insert(User item) throws UserException {
+        String query = "INSERT INTO Salesman (name,password) values (?, ?)";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1,item.getName());
-            stmt.setString(2,item.getSurname());
-            stmt.setString(3,item.getNumber());
-            stmt.setString(4,item.getPassword());
+            stmt.setString(2,item.getPassword());
             stmt.executeUpdate();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new UserException("Greska pri ubacivanju korisnika!");
         }
     }
 
