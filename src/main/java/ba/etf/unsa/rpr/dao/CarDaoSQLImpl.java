@@ -72,18 +72,17 @@ public class CarDaoSQLImpl implements CarDao {
      * @param item for insertion in database
      */
     @Override
-    public void insert(Car item) {
-        String query = "INSERT INTO Cars (make,model,year,color,hp,salesman_fk,category_fk) values (?, ?, ?, ?, ?, ?, ?)";
+    public void insert(Car item) throws CarException {
+        String query = "INSERT INTO Cars (name, year, color, hp) values (?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-
-            stmt.setString(3,item.getYear());
-            stmt.setString(4,item.getColor());
-            stmt.setInt(5,item.gethP());
-
+            stmt.setString(1,item.getName());
+            stmt.setString(2,item.getYear());
+            stmt.setString(3,item.getColor());
+            stmt.setInt(4,item.gethP());
             stmt.executeUpdate(query);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new CarException("Greska pri upisivanju auta!");
         }
     }
 
@@ -94,7 +93,7 @@ public class CarDaoSQLImpl implements CarDao {
      */
 
     @Override
-    public Car update(Car item, int id) {
+    public Car update(Car item, int id) throws CarException {
         String query = "UPDATE Cars SET name = ?, year = ?, color = ?, hp = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -106,9 +105,8 @@ public class CarDaoSQLImpl implements CarDao {
             stmt.executeUpdate(query);
             return getById(id);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new CarException("Greska pri izmjeni podataka!");
         }
-        return null;
     }
 
 
