@@ -1,12 +1,7 @@
 package ba.etf.unsa.rpr.controller;
 
-import ba.etf.unsa.rpr.dao.CategoryDAOSQlImpl;
-import ba.etf.unsa.rpr.dao.CategoryDao;
-import ba.etf.unsa.rpr.dao.SalesmanDao;
-import ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl;
-import ba.etf.unsa.rpr.domain.Category;
-import ba.etf.unsa.rpr.domain.Salesman;
-import com.mysql.cj.xdevapi.Table;
+
+import ba.etf.unsa.rpr.domain.User;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -20,14 +15,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
-public class panelController {
+public class adminPanelController {
 
     public Label labelUser;
     public Label dateLabel;
+
     public ChoiceBox picker;
 
 
@@ -102,14 +97,14 @@ public class panelController {
 
     /**
      * Setting changed data for user
-     * @param salesman
+     * @param user
      */
-    private void setData(Salesman salesman)
+    private void setData(User user)
     {
-        textIme.setText(salesman.getName());
-        textPrezime.setText(salesman.getName());
-        textPassword.setText(salesman.getPassword());
-        textTelefon.setText(salesman.getNumber());
+        textIme.setText(user.getName());
+        textPrezime.setText(user.getName());
+        textPassword.setText(user.getPassword());
+
     }
 
     /**
@@ -117,30 +112,7 @@ public class panelController {
      * @param actionEvent
      */
     public void acceptClicked(ActionEvent actionEvent) throws SQLException {
-        if(textIme.getText().isEmpty()||textPrezime.getText().isEmpty()||textTelefon.getText().isEmpty()||textPassword.getText().isEmpty()){
-            System.out.println("Pogresni podaci!");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Pogresni podaci!");
-            alert.setContentText("Molimo ispravite podatke i probajte opet!");
-            alert.showAndWait();
-        }
-        else {
-            System.out.println("Izmjena potvrdena");
-            SalesmanDao salesmanDao = new SalesmanDaoSQLImpl();
-            Salesman salesman = new Salesman();
-            salesman.setId(Integer.parseInt(labelId.getText()));
-            salesman.setName(textIme.getText());
-            salesman.setSurname(textPrezime.getText());
-            salesman.setNumber(textTelefon.getText());
-            salesman.setPassword(textPassword.getText());
-            salesmanDao.update(salesman,Integer.parseInt(labelId.getText()));
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Izmjena podataka");
-            alert.setHeaderText(null);
-            alert.setContentText("Izmjena uspjesna!");
-            alert.showAndWait();
-        }
+
 
     }
 
@@ -169,20 +141,6 @@ public class panelController {
      * @param loader
      */
     private void setCategoryChanger(FXMLLoader loader){
-        categoryController categoryController = loader.getController();
-        CategoryDao categoryDao = new CategoryDAOSQlImpl();
-        categoryController.categories = (ArrayList<Category>) categoryDao.getAll();
-        if(categoryController.categories.isEmpty()) {
-            System.out.println("Kategorije prazne!");
-            categoryController.categoryIndex = -1;
-
-        }
-        else{
-            categoryController.categoryID.setText(String.valueOf(categoryController.categories.get(0).getId()));
-            categoryController.categoryName.setText(categoryController.categories.get(0).getName());
-            categoryController.categoryIndex=0;
-        }
-        categoryController.categoryCount.setText(String.valueOf(categoryController.categories.size()));
 
     }
 

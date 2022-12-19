@@ -3,6 +3,7 @@ package ba.etf.unsa.rpr.controller;
 import ba.etf.unsa.rpr.dao.UserDao;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -67,10 +69,44 @@ public class loginController {
 
 
     /**
-     * Go to admin panel if id and pass match
+     * Action that takes user to admin/user panel if credentials are correct (username,password)
      * @param actionEvent btn click
      */
     public void loginClick(ActionEvent actionEvent) throws IOException {
+        User user = null;
+        try {
+             user = new UserDaoSQLImpl().getByNamePass(usernameField.getText(),passwordField.getText());
+        } catch (UserException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greska!");
+            alert.setHeaderText(e.getMessage());
+            alert.setContentText("Ispravite podatke i pokusajte opet!");
+            alert.showAndWait();
+            return;
+        }
+        Stage stage = new Stage();
+        Stage currentStage = (Stage) usernameField.getScene().getWindow();
+        if(user.getAdmin()==1){
+            System.out.println("Login administratora!");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/adminPanel.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+            stage.setTitle("Admin panel");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+            currentStage.close();
+        }
+        else{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userPanel.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+            stage.setTitle("Korisnicki panel");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+            currentStage.close();
+        }
 
     }
 

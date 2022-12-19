@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added getbynamepass method to UserDaoSQLImpl">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="renamed panel to adminPanel.fxml">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,20 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00099" summary="added listener for current cat.id">
-      <created>1671116383618</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1671116383618</updated>
-    </task>
-    <task id="LOCAL-00100" summary="added listener for current cat.name">
-      <created>1671116454463</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1671116454463</updated>
     </task>
     <task id="LOCAL-00101" summary="implemented method for getting number of rows with given name">
       <created>1671117168020</created>
@@ -427,7 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671477171312</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="bugfix in getbynamepass UserDaoSQLImpl">
+      <created>1671478443284</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1671478443284</updated>
+    </task>
+    <task id="LOCAL-00149" summary="renamed panel to adminPanel.fxml">
+      <created>1671478465835</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1671478465835</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -442,8 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented POJO for user" />
-    <MESSAGE value="deleted unnecessary methods" />
     <MESSAGE value="added user defined exception" />
     <MESSAGE value="removed unnecessary methods from cardao" />
     <MESSAGE value="changed getbyid method&#10;CarDaoSQLImpl" />
@@ -467,7 +461,9 @@
     <MESSAGE value="update main screen look" />
     <MESSAGE value="added initialize and listeners to fields" />
     <MESSAGE value="added getbynamepass method to UserDaoSQLImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getbynamepass method to UserDaoSQLImpl" />
+    <MESSAGE value="bugfix in getbynamepass UserDaoSQLImpl" />
+    <MESSAGE value="renamed panel to adminPanel.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed panel to adminPanel.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
