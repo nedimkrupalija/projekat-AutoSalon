@@ -138,6 +138,5 @@ public class UserDaoSQLImpl implements UserDao {
         } catch (Exception e) {
             throw new UserException("Greska pri izmjeni!");
         }
-        return null;
     }
 }
