@@ -3,14 +3,17 @@
     -fx-background-size: 500px 500px;
     -fx-background-position: right;
     -fx-background-position-y: 10%;
+    -fx-border-color: black;
 }
 #label2{
     -fx-background-color: white;
+    -fx-border-width: 3px;
+    -fx-border-color: firebrick;
     -fx-opacity: 0.9;
 }
 
 
 #label1{
     -fx-background-color: white;
-    -fx-opacity: 0.9;
+    -fx--opacity: 0.9;
 }
