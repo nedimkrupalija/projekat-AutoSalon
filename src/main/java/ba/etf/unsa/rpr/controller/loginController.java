@@ -72,7 +72,7 @@ public class loginController {
      * Action that takes user to admin/user panel if credentials are correct (username,password)
      * @param actionEvent btn click
      */
-    public void loginClick(ActionEvent actionEvent) throws IOException {
+    public void loginClick(ActionEvent actionEvent) throws Exception {
         User user = null;
         try {
              user = new UserDaoSQLImpl().getByNamePass(usernameField.getText(),passwordField.getText());
@@ -87,20 +87,26 @@ public class loginController {
         Stage stage = new Stage();
         Stage currentStage = (Stage) usernameField.getScene().getWindow();
         if(user.getAdmin()==1){
-            System.out.println("Login administratora!");
+            System.out.println("Login administratora: "+ user.getName());
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/adminPanel.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
             stage.setTitle("Admin panel");
-            stage.setResizable(false);
+            //stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
             currentStage.close();
 
             adminPanelController adminPanelController = loader.getController();
             adminPanelController.labelId.setText(String.valueOf(user.getId()));
+            adminPanelController.textName.setText(user.getName());
+            adminPanelController.textPassword.setText(user.getPassword());
+            adminPanelController.labelUser.setText(user.getName());
+
+
         }
         else{
+            System.out.println("Login korisnika: " + user.getName());
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userPanel.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);

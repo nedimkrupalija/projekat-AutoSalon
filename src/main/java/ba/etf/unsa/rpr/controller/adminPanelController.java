@@ -1,7 +1,9 @@
 package ba.etf.unsa.rpr.controller;
 
 
+import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -30,22 +32,21 @@ public class adminPanelController {
     public Label labelId;
     public Button acceptButton;
     public Button backButton;
-
-
+    public User user;
 
     /**
      * Listener for text fields
      * Sets css style if field is empty
      */
     @FXML
-    public void initialize() {
+    public void initialize() throws UserException {
 
     }
 
 
-
     /**
      * Action for returning to main screen from admin panel
+     *
      * @param actionEvent
      * @throws IOException
      */
@@ -54,7 +55,7 @@ public class adminPanelController {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         Parent root = loader.load();
-        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        Scene scene = new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
         stage.setTitle("Login");
         // scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
         stage.setScene(scene);
@@ -63,5 +64,9 @@ public class adminPanelController {
         Stage thisStage = (Stage) labelId.getScene().getWindow();
         thisStage.close();
     }
+
+    public void acceptClicked(ActionEvent actionEvent) {
+    }
+}
 
 
