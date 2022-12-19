@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in adding category">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added getbynamepass method to UserDaoSQLImpl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/panelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -41,7 +48,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nedim Krupalija/RPR/projekat/src/main/resources/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nedim Krupalija/RPR/quote-maker&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.33793104&quot;,
@@ -76,237 +83,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Implemented login for salesman to admin panel">
-      <created>1670963462109</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1670963462109</updated>
-    </task>
-    <task id="LOCAL-00067" summary="javadoc update">
-      <created>1670963536305</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1670963536305</updated>
-    </task>
-    <task id="LOCAL-00068" summary="small update and scene switching">
-      <created>1670964071554</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1670964071554</updated>
-    </task>
-    <task id="LOCAL-00069" summary="added structure for admin panel">
-      <created>1670964086745</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1670964086745</updated>
-    </task>
-    <task id="LOCAL-00070" summary="added go back in loginController">
-      <created>1670969713644</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1670969713644</updated>
-    </task>
-    <task id="LOCAL-00071" summary="updated look of admin panel">
-      <created>1670973969595</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1670973969595</updated>
-    </task>
-    <task id="LOCAL-00072" summary="refactored setting fields for next stage">
-      <created>1670977080793</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1670977080793</updated>
-    </task>
-    <task id="LOCAL-00073" summary="new design for admin panel">
-      <created>1670977095767</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1670977095767</updated>
-    </task>
-    <task id="LOCAL-00074" summary="setter for user data">
-      <created>1671046300909</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1671046300910</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Added event in admin panel">
-      <created>1671047209371</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1671047209371</updated>
-    </task>
-    <task id="LOCAL-00076" summary="added listener for fields">
-      <created>1671048964647</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1671048964648</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Bugfix in listener">
-      <created>1671049311708</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1671049311711</updated>
-    </task>
-    <task id="LOCAL-00078" summary="private method for setting data">
-      <created>1671049333575</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1671049333575</updated>
-    </task>
-    <task id="LOCAL-00079" summary="updated update for salesman dao">
-      <created>1671052228427</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1671052228427</updated>
-    </task>
-    <task id="LOCAL-00080" summary="delete bugfix in salesman dao">
-      <created>1671052256843</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1671052256843</updated>
-    </task>
-    <task id="LOCAL-00081" summary="insert bugfix in salesman dao">
-      <created>1671052277382</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1671052277382</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Implemented action for changing data of salesman">
-      <created>1671052501495</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1671052501495</updated>
-    </task>
-    <task id="LOCAL-00083" summary="updated javaDoc for listener in panelController">
-      <created>1671052540159</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1671052540159</updated>
-    </task>
-    <task id="LOCAL-00084" summary="implemented action to go back in panelController">
-      <created>1671053059294</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1671053059294</updated>
-    </task>
-    <task id="LOCAL-00085" summary="updated method in SalesmanDaoSQLImpl">
-      <created>1671053314375</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1671053314375</updated>
-    </task>
-    <task id="LOCAL-00086" summary="updated login in loginController">
-      <created>1671053518950</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1671053518950</updated>
-    </task>
-    <task id="LOCAL-00087" summary="added new screen for changing category">
-      <created>1671110873710</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1671110873711</updated>
-    </task>
-    <task id="LOCAL-00088" summary="implemented button for going to category updater">
-      <created>1671110941507</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1671110941507</updated>
-    </task>
-    <task id="LOCAL-00089" summary="implemented look of window for updating category">
-      <created>1671111529605</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1671111529606</updated>
-    </task>
-    <task id="LOCAL-00090" summary="implemented main design for tableview in category updater">
-      <created>1671112684617</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1671112684617</updated>
-    </task>
-    <task id="LOCAL-00091" summary="javadoc update">
-      <created>1671112735392</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1671112735394</updated>
-    </task>
-    <task id="LOCAL-00092" summary="bugfix changed listview to tableview">
-      <created>1671112910143</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1671112910143</updated>
-    </task>
-    <task id="LOCAL-00093" summary="bugfix in CategoryDAOSQlImpl">
-      <created>1671113177841</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1671113177841</updated>
-    </task>
-    <task id="LOCAL-00094" summary="new design for category changer/updater">
-      <created>1671114994317</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1671114994318</updated>
-    </task>
-    <task id="LOCAL-00095" summary="updated category setter in panelController">
-      <created>1671115400328</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1671115400328</updated>
-    </task>
-    <task id="LOCAL-00096" summary="removed unnecessary ref.">
-      <created>1671115689401</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1671115689401</updated>
-    </task>
-    <task id="LOCAL-00097" summary="added category counter">
-      <created>1671116041386</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1671116041386</updated>
-    </task>
-    <task id="LOCAL-00098" summary="added listener for adding new cat.">
-      <created>1671116367685</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1671116367685</updated>
     </task>
     <task id="LOCAL-00099" summary="added listener for current cat.id">
       <created>1671116383618</created>
@@ -420,7 +196,238 @@
       <option name="project" value="LOCAL" />
       <updated>1671123060890</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="bugfix2 in changing category">
+      <created>1671124481166</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1671124481166</updated>
+    </task>
+    <task id="LOCAL-00116" summary="changed category to user and added private variables">
+      <created>1671469338929</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469338930</updated>
+    </task>
+    <task id="LOCAL-00117" summary="implemented getter/setter methods for reservations">
+      <created>1671469366618</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469366619</updated>
+    </task>
+    <task id="LOCAL-00118" summary="implemented equals/hashcode/tostring methods for Reservation">
+      <created>1671469413772</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469413772</updated>
+    </task>
+    <task id="LOCAL-00119" summary="changed car domain class / added private fields">
+      <created>1671469512335</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469512335</updated>
+    </task>
+    <task id="LOCAL-00120" summary="implemented getter/setter methods for car">
+      <created>1671469544132</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469544132</updated>
+    </task>
+    <task id="LOCAL-00121" summary="implemented new equals/hashcode methods for car">
+      <created>1671469565103</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469565103</updated>
+    </task>
+    <task id="LOCAL-00122" summary="implemented new tostring method for car">
+      <created>1671469590393</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469590393</updated>
+    </task>
+    <task id="LOCAL-00123" summary="changed private fields of user / added admin validation within db field">
+      <created>1671469700718</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469700718</updated>
+    </task>
+    <task id="LOCAL-00124" summary="implemented POJO for user">
+      <created>1671469762835</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1671469762838</updated>
+    </task>
+    <task id="LOCAL-00125" summary="deleted unnecessary methods">
+      <created>1671470250628</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1671470250628</updated>
+    </task>
+    <task id="LOCAL-00126" summary="added user defined exception">
+      <created>1671470269222</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1671470269222</updated>
+    </task>
+    <task id="LOCAL-00127" summary="removed unnecessary methods from cardao">
+      <created>1671470322658</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1671470322658</updated>
+    </task>
+    <task id="LOCAL-00128" summary="changed getbyid method&#10;CarDaoSQLImpl">
+      <created>1671470984135</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1671470984135</updated>
+    </task>
+    <task id="LOCAL-00129" summary="changed getall in carsqlimpl">
+      <created>1671471049158</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471049158</updated>
+    </task>
+    <task id="LOCAL-00130" summary="changed update in CarDaoSQLImpl">
+      <created>1671471187066</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471187066</updated>
+    </task>
+    <task id="LOCAL-00131" summary="updated insert in CarDaoSQLImpl">
+      <created>1671471311257</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471311258</updated>
+    </task>
+    <task id="LOCAL-00132" summary="refactored names of classes">
+      <created>1671471442947</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471442947</updated>
+    </task>
+    <task id="LOCAL-00133" summary="added user exception">
+      <created>1671471779439</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471779439</updated>
+    </task>
+    <task id="LOCAL-00134" summary="changed getbyid in user">
+      <created>1671471842434</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471842434</updated>
+    </task>
+    <task id="LOCAL-00135" summary="updated insert in UserDaoSQLImpl">
+      <created>1671471951926</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1671471951926</updated>
+    </task>
+    <task id="LOCAL-00136" summary="updated delete in UserDaoSQLImpl">
+      <created>1671472054482</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1671472054482</updated>
+    </task>
+    <task id="LOCAL-00137" summary="updated getall in UserDaoSQLImpl">
+      <created>1671472153007</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1671472153007</updated>
+    </task>
+    <task id="LOCAL-00138" summary="updated update in UserDaoSQLImpl">
+      <created>1671472542523</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1671472542523</updated>
+    </task>
+    <task id="LOCAL-00139" summary="bugfix in update UserDaoSQLImpl">
+      <created>1671472570262</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1671472570262</updated>
+    </task>
+    <task id="LOCAL-00140" summary="added CategoryException">
+      <created>1671472630726</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1671472630728</updated>
+    </task>
+    <task id="LOCAL-00141" summary="changed getbyid in ReservationDAOSQlImpl">
+      <created>1671473652856</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1671473652856</updated>
+    </task>
+    <task id="LOCAL-00142" summary="changed insert in ReservationDAOSQlImpl">
+      <created>1671473918601</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1671473918602</updated>
+    </task>
+    <task id="LOCAL-00143" summary="changed update in ReservationDAOSQlImpl">
+      <created>1671474036763</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1671474036763</updated>
+    </task>
+    <task id="LOCAL-00144" summary="changed getall in ReservationDAOSQlImpl">
+      <created>1671474225237</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1671474225237</updated>
+    </task>
+    <task id="LOCAL-00145" summary="update main screen look">
+      <created>1671476041535</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1671476041535</updated>
+    </task>
+    <task id="LOCAL-00146" summary="added initialize and listeners to fields">
+      <created>1671476688337</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1671476688337</updated>
+    </task>
+    <task id="LOCAL-00147" summary="added getbynamepass method to UserDaoSQLImpl">
+      <created>1671477171312</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1671477171312</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,32 +442,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented look of window for updating category" />
-    <MESSAGE value="implemented main design for tableview in category updater" />
-    <MESSAGE value="bugfix changed listview to tableview" />
-    <MESSAGE value="bugfix in CategoryDAOSQlImpl" />
-    <MESSAGE value="new design for category changer/updater" />
-    <MESSAGE value="updated category setter in panelController" />
-    <MESSAGE value="removed unnecessary ref." />
-    <MESSAGE value="added category counter" />
-    <MESSAGE value="added listener for adding new cat." />
-    <MESSAGE value="added listener for current cat.id" />
-    <MESSAGE value="added listener for current cat.name" />
-    <MESSAGE value="implemented method for getting number of rows with given name" />
-    <MESSAGE value="bugfix category insert" />
-    <MESSAGE value="implemented category insert" />
-    <MESSAGE value="bugfix in category delete" />
-    <MESSAGE value="added reference to list of all categories" />
-    <MESSAGE value="implemented count categories" />
-    <MESSAGE value="bugfix in setting id on label" />
-    <MESSAGE value="implemented action for deleting category from db" />
-    <MESSAGE value="bugfix in update in CategoryDAOSQlImpl" />
-    <MESSAGE value="updated categorydao" />
-    <MESSAGE value="implemented action for changing current category" />
-    <MESSAGE value="javadoc update" />
-    <MESSAGE value="bugfix in changing category" />
-    <MESSAGE value="bugfix in adding category" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix in adding category" />
+    <MESSAGE value="implemented POJO for user" />
+    <MESSAGE value="deleted unnecessary methods" />
+    <MESSAGE value="added user defined exception" />
+    <MESSAGE value="removed unnecessary methods from cardao" />
+    <MESSAGE value="changed getbyid method&#10;CarDaoSQLImpl" />
+    <MESSAGE value="changed getall in carsqlimpl" />
+    <MESSAGE value="changed update in CarDaoSQLImpl" />
+    <MESSAGE value="updated insert in CarDaoSQLImpl" />
+    <MESSAGE value="updated names of classes" />
+    <MESSAGE value="refactored names of classes" />
+    <MESSAGE value="added user exception" />
+    <MESSAGE value="changed getbyid in user" />
+    <MESSAGE value="updated insert in UserDaoSQLImpl" />
+    <MESSAGE value="updated delete in UserDaoSQLImpl" />
+    <MESSAGE value="updated getall in UserDaoSQLImpl" />
+    <MESSAGE value="updated update in UserDaoSQLImpl" />
+    <MESSAGE value="bugfix in update UserDaoSQLImpl" />
+    <MESSAGE value="added CategoryException" />
+    <MESSAGE value="changed getbyid in ReservationDAOSQlImpl" />
+    <MESSAGE value="changed insert in ReservationDAOSQlImpl" />
+    <MESSAGE value="changed update in ReservationDAOSQlImpl" />
+    <MESSAGE value="changed getall in ReservationDAOSQlImpl" />
+    <MESSAGE value="update main screen look" />
+    <MESSAGE value="added initialize and listeners to fields" />
+    <MESSAGE value="added getbynamepass method to UserDaoSQLImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getbynamepass method to UserDaoSQLImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,22 +477,22 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/SalesmanDaoSQLImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java</url>
           <line>162</line>
-          <properties class="ba.etf.unsa.rpr.dao.SalesmanDaoSQLImpl" method="update">
+          <properties class="ba.etf.unsa.rpr.dao.UserDaoSQLImpl">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java</url>
-          <line>104</line>
-          <properties class="ba.etf.unsa.rpr.controller.categoryController" method="deleteButtonClick">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java</url>
+          <line>74</line>
+          <properties class="ba.etf.unsa.rpr.controller.loginController" method="loginClick">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
