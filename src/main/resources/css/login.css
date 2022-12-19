@@ -1,6 +1,9 @@
 #loginScene{
     -fx-border-color: aqua;
     -fx-border-width: 2px;
+    -fx-background-image: url("/img/bgimage2.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
 }
 
 #backButton{
@@ -12,6 +15,11 @@
 .fieldWrong{
     -fx-background-color: pink;
     -fx-opacity: 0.9;
+}
+
+#loginButton{
+    -fx-background-color: lightgreen;
+
 }
 
 .fieldOk{
