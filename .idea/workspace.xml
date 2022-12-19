@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="set id from login to admin panel">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated responsivness of admin panel and added css file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00119" summary="changed car domain class / added private fields">
-      <created>1671469512335</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1671469512335</updated>
-    </task>
-    <task id="LOCAL-00120" summary="implemented getter/setter methods for car">
-      <created>1671469544132</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1671469544132</updated>
     </task>
     <task id="LOCAL-00121" summary="implemented new equals/hashcode methods for car">
       <created>1671469565103</created>
@@ -423,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671491868829</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="setting data for admin panel from loginController">
+      <created>1671493354881</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1671493354881</updated>
+    </task>
+    <task id="LOCAL-00169" summary="updated responsivness of admin panel and added css file">
+      <created>1671493373932</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1671493373932</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -438,8 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed insert in ReservationDAOSQlImpl" />
-    <MESSAGE value="changed update in ReservationDAOSQlImpl" />
     <MESSAGE value="changed getall in ReservationDAOSQlImpl" />
     <MESSAGE value="update main screen look" />
     <MESSAGE value="added initialize and listeners to fields" />
@@ -463,7 +459,9 @@
     <MESSAGE value="added css for login screen" />
     <MESSAGE value="deleted adminPanelController and updated look" />
     <MESSAGE value="set id from login to admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="set id from login to admin panel" />
+    <MESSAGE value="setting data for admin panel from loginController" />
+    <MESSAGE value="updated responsivness of admin panel and added css file" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated responsivness of admin panel and added css file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

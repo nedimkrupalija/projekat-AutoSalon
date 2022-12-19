@@ -13,8 +13,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -33,6 +35,8 @@ public class adminPanelController {
     public Button acceptButton;
     public Button backButton;
     public User user;
+    public RadioButton radioButtonUser;
+    public RadioButton radioButtonReservation;
 
     /**
      * Listener for text fields
@@ -40,7 +44,9 @@ public class adminPanelController {
      */
     @FXML
     public void initialize() throws UserException {
-
+        ToggleGroup group = new ToggleGroup();
+        radioButtonUser.setToggleGroup(group);
+        radioButtonReservation.setToggleGroup(group);
     }
 
 
