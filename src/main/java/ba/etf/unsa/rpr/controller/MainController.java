@@ -15,10 +15,10 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class MainController {
 
 
-    public Button prodavacButton;
+    public Button loginButton;
 
-    public void prodavacClick(ActionEvent actionEvent) throws IOException {
-        System.out.println("Izabran prodavac");
+    public void loginButtonClick(ActionEvent actionEvent) throws IOException {
+        System.out.println("Izabran login");
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
         Parent root = loader.load();
@@ -28,7 +28,24 @@ public class MainController {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-        Stage primaryStage = (Stage) prodavacButton.getScene().getWindow();
+        Stage primaryStage = (Stage) loginButton.getScene().getWindow();
         primaryStage.hide();
+    }
+
+
+    /**
+     * Event for going to registration screen from main screen
+     * @param actionEvent
+     */
+    public void registrationButtonClick(ActionEvent actionEvent) throws IOException {
+        System.out.println("Izabrana registracija!");
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/registration.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        stage.setScene(scene);
+        stage.show();
+        Stage thisStage = (Stage) loginButton.getScene().getWindow();
+        thisStage.close();
     }
 }
