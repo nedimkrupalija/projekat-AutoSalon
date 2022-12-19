@@ -5,15 +5,15 @@
     -fx-background-position-y: 10%;
     -fx-border-color: black;
 }
-#label2{
-    -fx-background-color: white;
-    -fx-border-width: 3px;
-    -fx-border-color: firebrick;
-    -fx-opacity: 0.9;
+.labelClass{
+    -fx-font-weight: bolder;
 }
 
-
-#label1{
-    -fx-background-color: white;
-    -fx-opacity: 0.9;
+.buttonClass{
+    -fx-background-color: crimson;
+    -fx-font-weight: bold;
+    -fx-font-size: large;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5%;
 }

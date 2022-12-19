@@ -25,7 +25,7 @@
    <children>
       <VBox alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
-            <Label fx:id="label2" alignment="BOTTOM_CENTER" text="Prijava" textAlignment="CENTER">
+            <Label fx:id="label2" alignment="BOTTOM_CENTER" styleClass="labelClass" text="Prijava" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -33,22 +33,22 @@
                   <Insets bottom="10.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#loginButtonClick" text="Login">
+            <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#loginButtonClick" styleClass="buttonClass" text="Login" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
                   <Insets />
                </VBox.margin></Button>
-            <Button fx:id="registrationButton" alignment="CENTER" mnemonicParsing="false" onAction="#registrationButtonClick" text="Registracija">
+            <Button fx:id="registrationButton" alignment="CENTER" mnemonicParsing="false" onAction="#registrationButtonClick" styleClass="buttonClass" text="Registracija" textFill="WHITE">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin></Button>
          </children>
       </VBox>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
          <children>
-            <Label fx:id="label1" alignment="TOP_CENTER" contentDisplay="CENTER" text="Dobrodosli u autosalon NK">
+            <Label fx:id="label1" alignment="TOP_CENTER" contentDisplay="CENTER" styleClass="labelClass" text="Dobrodosli u autosalon NK">
                <font>
                   <Font size="19.0" />
                </font>
