@@ -1,7 +1,7 @@
 package ba.etf.unsa.rpr.dao;
 
-import ba.etf.unsa.rpr.domain.Cars;
-import ba.etf.unsa.rpr.domain.Category;
+import ba.etf.unsa.rpr.domain.Car;
+import ba.etf.unsa.rpr.domain.Reservation;
 
 import java.util.List;
 
@@ -10,16 +10,6 @@ import java.util.List;
  * @author Nedim Krupalija
  */
 
-public interface CarDao extends Dao<Cars> {
+public interface CarDao extends Dao<Car> {
 
-    /**
-     * Method for searching for cars of certain category
-     * @param category
-     * @return list of cars of given category
-     */
-    List<Cars> seachByCategory(Category category);
-
-    Cars update(Cars item,int id);
-
-    int countCategories(int id);
 }
