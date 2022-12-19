@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css style for back button">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/registration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented look of registration panel">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/registrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00103" summary="implemented category insert">
-      <created>1671118420772</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1671118420772</updated>
     </task>
     <task id="LOCAL-00104" summary="bugfix in category delete">
       <created>1671119057778</created>
@@ -425,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671479320247</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="implemented look of registration panel">
+      <created>1671481996714</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1671481996714</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed getbyid method&#10;CarDaoSQLImpl" />
     <MESSAGE value="changed getall in carsqlimpl" />
     <MESSAGE value="changed update in CarDaoSQLImpl" />
     <MESSAGE value="updated insert in CarDaoSQLImpl" />
@@ -465,7 +464,8 @@
     <MESSAGE value="renamed panel to adminPanel.fxml" />
     <MESSAGE value="implemented event for logging in" />
     <MESSAGE value="added css style for back button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added css style for back button" />
+    <MESSAGE value="implemented look of registration panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented look of registration panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
