@@ -32,7 +32,7 @@ public interface Dao<T> {
      * @param item
      * @return updated item
      */
-    T update(T item,int id) throws SQLException, CarException;
+    T update(T item,int id) throws SQLException, CarException, UserException;
 
     /**
      * Delete item from database based on ID

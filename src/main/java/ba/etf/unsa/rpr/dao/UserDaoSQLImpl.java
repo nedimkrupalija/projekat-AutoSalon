@@ -92,12 +92,12 @@ public class UserDaoSQLImpl implements UserDao {
     }
 
     /**
-     * Method that gives List of all Salesmen in database
-     * @return list of Salesmen
+     * Method that gives List of all users in database
+     * @return list of users
      */
     @Override
     public List<User> getAll() throws UserException {
-        String query = "SELECT * FROM Salesman";
+        String query = "SELECT * FROM Users";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             ArrayList<User> users = new ArrayList<User>();
@@ -119,27 +119,24 @@ public class UserDaoSQLImpl implements UserDao {
 
 
     /**
-     * Method that updates salesman with given id
-     * @param item / salesman from which parameters are taken
-     * @param id of salesman to update
-     * @return updated salesman
+     * Method that updates users with given id
+     * @param item / user from which parameters are taken
+     * @param id of user to update
+     * @return updated user
      */
     @Override
-    public User update(User item, int id) {
-        String query = "UPDATE Salesman SET name = ?, surname = ?, number = ?, password = ? WHERE id = ?";
+    public User update(User item, int id) throws UserException {
+        String query = "UPDATE Users SET name = ?, password = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1,item.getName());
-            stmt.setString(2,item.getSurname());
-            stmt.setString(3,item.getNumber());
-            stmt.setString(4,item.getPassword());
-            stmt.setInt(5,id);
+            stmt.setString(2,item.getPassword());
+            stmt.setInt(3,id);
             stmt.executeUpdate();
             stmt.close();
             return getById(id);
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Greska pri update-u usera");
+            throw new UserException("Greska pri izmjeni!");
         }
         return null;
     }
