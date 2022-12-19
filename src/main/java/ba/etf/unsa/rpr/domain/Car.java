@@ -15,6 +15,19 @@ public class Car {
     private String color;
     private int hP;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return id == car.id && hP == car.hP && Objects.equals(name, car.name) && Objects.equals(year, car.year) && Objects.equals(color, car.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, year, color, hP);
+    }
+
     public int getId() {
         return id;
     }
