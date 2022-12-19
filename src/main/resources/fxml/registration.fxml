@@ -13,7 +13,7 @@
 <?import java.net.URL?>
 <GridPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.registrationController">
    <stylesheets>
-      <URL value="@/css/login.css" />
+      <URL value="@/css/registration.css" />
    </stylesheets>
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" />

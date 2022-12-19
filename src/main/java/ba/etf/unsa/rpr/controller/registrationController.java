@@ -43,14 +43,17 @@ public class registrationController {
         nameLabel.setText("");
         passLabel.setText("");
         nameTextField.textProperty().addListener((observableValue, s, newValue) -> {
+                nameTextField.getStyleClass().removeAll("fieldWrong");
             if(newValue.trim().length()<3||newValue.trim().length()>10){
                 nameLabel.setText("3-10 karaktera!");
+                nameTextField.getStyleClass().add("fieldWrong");
             }
             else {
                 nameLabel.setText("");
                 for(User x : users){
                     if(x.getName().equals(newValue)){
                         nameLabel.setText("User vec postoji!");
+                        nameTextField.getStyleClass().add("fieldWrong");
                         break;
                     }
                 }
@@ -59,8 +62,12 @@ public class registrationController {
         passTextField.textProperty().addListener((observableValue, s, newValue) -> {
             if(newValue.trim().length()<3||newValue.trim().length()>10){
                 passLabel.setText("3-10 karaktera!");
+                passTextField.getStyleClass().add("fieldWrong");
             }
-            else passLabel.setText("");
+            else{
+                passTextField.getStyleClass().removeAll("fieldWrong");
+                passLabel.setText("");
+            }
         });
     }
 
