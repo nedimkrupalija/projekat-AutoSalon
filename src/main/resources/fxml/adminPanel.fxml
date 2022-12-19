@@ -15,7 +15,7 @@
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.adminPanelController">
    <stylesheets>
-      <URL value="@/css/registration.css" />
+      <URL value="@/css/login.css" />
    </stylesheets>
    <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="263.0" />
