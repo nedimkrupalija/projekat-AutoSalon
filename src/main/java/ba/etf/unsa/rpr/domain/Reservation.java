@@ -2,6 +2,7 @@ package ba.etf.unsa.rpr.domain;
 
 
 import java.sql.Date;
+import java.util.Objects;
 
 
 /**
@@ -22,6 +23,30 @@ public class Reservation {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Reservation that = (Reservation) o;
+        return id == that.id && Objects.equals(reservationDate, that.reservationDate) && Objects.equals(arrivalDate, that.arrivalDate) && Objects.equals(user, that.user) && Objects.equals(car, that.car);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, reservationDate, arrivalDate, user, car);
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "id=" + id +
+                ", reservationDate=" + reservationDate +
+                ", arrivalDate=" + arrivalDate +
+                ", user=" + user +
+                ", car=" + car +
+                '}';
     }
 
     public Date getReservationDate() {
