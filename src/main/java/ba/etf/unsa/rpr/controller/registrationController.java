@@ -31,6 +31,15 @@ public class registrationController {
                 else nameLabel.setText("");
             }
         });
+        passTextField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String newValue) {
+                if(newValue.trim().length()<3||newValue.trim().length()>10){
+                    passLabel.setText("Ime treba biti duzine 3-10 karaktera!");
+                }
+                else passLabel.setText("");
+            }
+        });
     }
 
     public void registerButtonClick(ActionEvent actionEvent) {
