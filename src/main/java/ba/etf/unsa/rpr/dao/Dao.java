@@ -26,14 +26,14 @@ public interface Dao<T> {
      *
      * @param item
      */
-    void insert(T item) throws SQLException, CarException, UserException;
+    void insert(T item) throws SQLException, CarException, UserException, ReservationException;
 
     /**
      * Update item based on id
      * @param item
      * @return updated item
      */
-    T update(T item,int id) throws SQLException, CarException, UserException;
+    T update(T item,int id) throws SQLException, CarException, UserException, ReservationException;
 
     /**
      * Delete item from database based on ID

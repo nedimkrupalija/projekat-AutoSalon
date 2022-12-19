@@ -88,16 +88,18 @@ public class ReservationDAOSQlImpl implements ReservationDao {
      * @return  updated item
      */
     @Override
-    public Reservation update(Reservation item, int id) throws SQLException {
-        String query = "UPDATE Category SET name = ? WHERE id = ?";
+    public Reservation update(Reservation item, int id) throws SQLException, ReservationException {
+        String query = "UPDATE Category SET reservation_date = ?, arrival_date = ?, user_fk = ?, car_fk = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setString(1,item.getName());
-            stmt.setInt(2,id);
+            stmt.setDate(1,item.getReservationDate());
+            stmt.setDate(2,item.getArrivalDate());
+            stmt.setInt(3,item.getUser().getId());
+            stmt.setInt(4,item.getCar().getId());
             stmt.executeUpdate();
             return getById(id);
         } catch (Exception e) {
-            throw new SQLException();
+            throw new ReservationException("Greska pri updateu rezervacije!");
         }
     }
 
