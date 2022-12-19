@@ -96,6 +96,9 @@ public class loginController {
             stage.setScene(scene);
             stage.show();
             currentStage.close();
+
+            adminPanelController adminPanelController = loader.getController();
+            adminPanelController.labelId.setText(String.valueOf(user.getId()));
         }
         else{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userPanel.fxml"));

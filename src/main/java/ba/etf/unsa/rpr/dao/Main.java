@@ -22,7 +22,7 @@ public class Main extends Application {
        stage.setTitle("Pocetni zaslon");
        // scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
     }
 }

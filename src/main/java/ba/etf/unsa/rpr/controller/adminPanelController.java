@@ -28,7 +28,6 @@ public class adminPanelController {
 
 
     public Label labelId;
-    public Button categoryButton;
     public Button acceptButton;
     public Button backButton;
 
