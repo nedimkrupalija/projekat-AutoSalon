@@ -1,8 +1,8 @@
 package ba.etf.unsa.rpr.dao;
 
-import ba.etf.unsa.rpr.domain.Cars;
-import ba.etf.unsa.rpr.domain.Category;
-import ba.etf.unsa.rpr.domain.Salesman;
+import ba.etf.unsa.rpr.domain.Car;
+import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.domain.User;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -35,100 +35,6 @@ public class CarDaoSQLImpl implements CarDao {
     }
 
 
-    /**
-     * Return array of cars based on category
-     * @param category
-     * @return
-     */
-    @Override
-    public List<Cars> seachByCategory(Category category) {
-        String query = "SELECT * FROM Cars where category_fk = ?";
-
-        try{
-            PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setInt(1,category.getId());
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Cars> carsArrayList = new ArrayList<Cars>();
-            while(rs.next()){
-                Cars car = new Cars();
-                car.setModel(rs.getString("model"));
-                car.setMake(rs.getString("make"));
-                car.setId(rs.getInt("id"));
-                car.setCategory(category);
-                car.setSalesman(getSalesmanById(car.getId()));
-                car.setColor(rs.getString("color"));
-                car.sethP(rs.getInt("hp"));
-                car.setYear(rs.getString("year"));
-                carsArrayList.add(car);
-            }
-            rs.close();
-            return carsArrayList;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    return null;
-    }
-
-
-
-    /**
-     * Methods returns salesman for given id of car
-     * @param id of car
-     * @return
-     */
-    public Salesman getSalesmanById(int id){
-        String query = "SELECT * FROM Salesman where id = (SELECT c.salesman_fk FROM Cars c WHERE c.id = ?)";
-        try{
-            PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setInt(1,id);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                Salesman salesman = new Salesman();
-                salesman.setId(rs.getInt("id"));
-                salesman.setName(rs.getString("name"));
-                salesman.setSurname(rs.getString("surname"));
-                salesman.setNumber(rs.getString("number"));
-                rs.close();
-                return salesman;
-            }
-            else return null;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-
-    /**
-     * Method that gives category for some id of car,
-     * usefull for other methods that need to set Category
-     * @param id of
-     * @return
-     */
-    public Category getCategoryById(int id){
-        String query = "SELECT * FROM Category where id = (SELECT c.category_fk FROM Cars c WHERE c.id = ?)";
-        try{
-            PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setInt(1,id);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                Category category = new Category();
-                category.setId(rs.getInt("id"));
-                category.setName(rs.getString("name"));
-                rs.close();
-                return category;
-            }
-            else return null;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
 
     /**
      * Method that returns all information about a car from DB
@@ -137,14 +43,14 @@ public class CarDaoSQLImpl implements CarDao {
      * @return
      */
     @Override
-    public Cars getById(int id) {
+    public Car getById(int id) {
         String query = "SELECT * FROM Cars where id = ?";
         try{
             PreparedStatement stmt  = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
-                Cars car = new Cars();
+                Car car = new Car();
                 car.setId(rs.getInt("id"));
                 car.setMake(rs.getString("make"));
                 car.setModel(rs.getString("model"));
@@ -169,7 +75,7 @@ public class CarDaoSQLImpl implements CarDao {
      * @param item for insertion in database
      */
     @Override
-    public void insert(Cars item) {
+    public void insert(Car item) {
         String query = "INSERT INTO Cars (make,model,year,color,hp,salesman_fk,category_fk) values (?, ?, ?, ?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -193,7 +99,7 @@ public class CarDaoSQLImpl implements CarDao {
      */
 
     @Override
-    public Cars update(Cars item, int id) {
+    public Car update(Car item, int id) {
         String query = "UPDATE Cars SET make = ?, model = ?, year = ?, color = ?, hp = ?, salesman_fk = ?, category_fk = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -213,30 +119,6 @@ public class CarDaoSQLImpl implements CarDao {
         return null;
     }
 
-    /**
-     * Count number of categories with given id
-     * @param id
-     * @return
-     */
-    @Override
-    public int countCategories(int id) {
-        String query = "SELECT COUNT(*) from Cars WHERE category_fk=?";
-        try{
-            PreparedStatement stmt  = this.conn.prepareStatement(query);
-            stmt.setInt(1,id);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                Category category = new Category();
-                int count = rs.getInt(1);
-                rs.close();
-                return count;
-            }
-            else return 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
 
     /**
      * Method for deleting car from database with matching id
@@ -259,14 +141,14 @@ public class CarDaoSQLImpl implements CarDao {
      * @return All cars from database
      */
     @Override
-    public List<Cars> getAll() {
+    public List<Car> getAll() {
         String query = "SELECT * FROM Cars";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            ArrayList<Cars> carsArrayList = new ArrayList<Cars>();
+            ArrayList<Car> carArrayList = new ArrayList<Car>();
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
-                Cars car = new Cars();
+                Car car = new Car();
                 car.setId(rs.getInt("id"));
                 car.setMake(rs.getString("make"));
                 car.setModel(rs.getString("model"));
@@ -275,10 +157,10 @@ public class CarDaoSQLImpl implements CarDao {
                 car.sethP(rs.getInt("hp"));
                 car.setCategory(getCategoryById(car.getId()));
                 car.setSalesman(getSalesmanById(car.getId()));
-                carsArrayList.add(car);
+                carArrayList.add(car);
             }
             rs.close();
-            return carsArrayList;
+            return carArrayList;
         } catch (SQLException e) {
             e.printStackTrace();
         }
