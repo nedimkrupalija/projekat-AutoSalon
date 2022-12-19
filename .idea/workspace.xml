@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="deleted adminPanelController and updated look">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/ProdavacController.java" beforeDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="set id from login to admin panel">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/categoryController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Category.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,13 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00118" summary="implemented equals/hashcode/tostring methods for Reservation">
-      <created>1671469413772</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1671469413772</updated>
     </task>
     <task id="LOCAL-00119" summary="changed car domain class / added private fields">
       <created>1671469512335</created>
@@ -425,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671491598544</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="set id from login to admin panel">
+      <created>1671491868829</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1671491868829</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed getbyid in ReservationDAOSQlImpl" />
     <MESSAGE value="changed insert in ReservationDAOSQlImpl" />
     <MESSAGE value="changed update in ReservationDAOSQlImpl" />
     <MESSAGE value="changed getall in ReservationDAOSQlImpl" />
@@ -465,7 +462,8 @@
     <MESSAGE value="added css for main screen" />
     <MESSAGE value="added css for login screen" />
     <MESSAGE value="deleted adminPanelController and updated look" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted adminPanelController and updated look" />
+    <MESSAGE value="set id from login to admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="set id from login to admin panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,11 +15,11 @@
 
 <GridPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.adminPanelController">
    <stylesheets>
-      <URL value="@/css/login.css" />
+      <URL value="@/css/adminPanel.css" />
    </stylesheets>
    <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" />
-      <ColumnConstraints hgrow="SOMETIMES" />
+    <ColumnConstraints hgrow="NEVER" />
+      <ColumnConstraints hgrow="NEVER" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints vgrow="NEVER" />
