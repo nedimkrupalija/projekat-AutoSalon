@@ -55,7 +55,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
       </PasswordField>
-      <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backButtonClick" text="Nazad" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+      <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backButtonClick" text="Nazad" textFill="#e4e4e4" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
          <GridPane.margin>
             <Insets bottom="3.0" left="3.0" right="10.0" top="5.0" />
          </GridPane.margin>
