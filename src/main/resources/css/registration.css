@@ -3,3 +3,23 @@
     -fx-background-color: pink;
     -fx-opacity: 0.9;
 }
+
+#backButton{
+     -fx-background-color: crimson;
+     -fx-font-weight: bold;
+}
+
+#registerButton{
+       -fx-background-color: lightgreen;
+       -fx-font-weight: bold;
+}
+
+#gridPane{
+    -fx-background-image: url("/img/bgimage1.jpg/");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.labelClass{
+    -fx-font-weight: bold;
+}
