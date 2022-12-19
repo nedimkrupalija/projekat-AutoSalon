@@ -24,6 +24,17 @@ public class Car {
     }
 
     @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", year='" + year + '\'' +
+                ", color='" + color + '\'' +
+                ", hP=" + hP +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(id, name, year, color, hP);
     }
