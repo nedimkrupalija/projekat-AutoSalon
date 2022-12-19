@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.dao;
 
+import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.CarException;
@@ -67,7 +68,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
      */
     @Override
     public void insert(Reservation item) throws SQLException, ReservationException {
-        String query = "INSERT INTO Category (reservation_date, arrival_date, user_fk, car_fk) values (?, ?, ?, ?)";
+        String query = "INSERT INTO Reservations (reservation_date, arrival_date, user_fk, car_fk) values (?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setDate(1,item.getReservationDate());
@@ -89,7 +90,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
      */
     @Override
     public Reservation update(Reservation item, int id) throws SQLException, ReservationException {
-        String query = "UPDATE Category SET reservation_date = ?, arrival_date = ?, user_fk = ?, car_fk = ? WHERE id = ?";
+        String query = "UPDATE Reservations SET reservation_date = ?, arrival_date = ?, user_fk = ?, car_fk = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setDate(1,item.getReservationDate());
@@ -110,7 +111,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
      */
     @Override
     public void delete(int id) {
-        String query = "DELETE FROM Category WHERE id = ?";
+        String query = "DELETE FROM Reservations WHERE id = ?";
         try {
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
@@ -122,46 +123,30 @@ public class ReservationDAOSQlImpl implements ReservationDao {
 
     /**
      *
-     * @return list of all reservations from
+     * @return list of all reservations from database
      */
     @Override
-    public List<Reservation> getAll() {
-        String query = "SELECT * FROM Category";
+    public List<Reservation> getAll() throws ReservationException {
+        String query = "SELECT * FROM Reservations";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            ArrayList<Reservation> categories = new ArrayList<Reservation>();
+            ArrayList<Reservation> reservations = new ArrayList<Reservation>();
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
-                Reservation category = new Reservation();
-                category.setId(rs.getInt("id"));
-                category.setName(rs.getString("name"));
-                categories.add(category);
+                Reservation reservation = new Reservation();
+                reservation.setId(rs.getInt("id"));
+                reservation.setReservationDate(rs.getDate("reservation_date"));
+                reservation.setArrivalDate(rs.getDate("arrival_date"));
+                reservation.setUser(new UserDaoSQLImpl().getById(rs.getInt("user_fk")));
+                reservation.setCar(new CarDaoSQLImpl().getById(rs.getInt("car_fk")));
+                reservations.add(reservation);
             }
             rs.close();
-            return categories;
-        } catch (SQLException e) {
-            e.printStackTrace();
+            return reservations;
+        } catch (Exception e) {
+            throw new ReservationException("Greska pri dohvacanju rezervacija!");
         }
-        return null;
     }
 
-    @Override
-    public int getNumberWithName(String name) {
-        String query = "SELECT COUNT(*) FROM Category WHERE lower(name)=?";
-        try{
-            PreparedStatement stmt  = this.conn.prepareStatement(query);
-            stmt.setString(1,name);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                Reservation category = new Reservation();
-                int count = rs.getInt(1);
-                rs.close();
-                return count;
-            }
-            else return 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
+
 }

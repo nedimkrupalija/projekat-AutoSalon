@@ -9,5 +9,5 @@ import ba.etf.unsa.rpr.domain.Reservation;
  */
 
 public interface ReservationDao extends Dao<Reservation> {
-    public int getNumberWithName(String name);
+
 }
