@@ -76,13 +76,11 @@ public class CarDaoSQLImpl implements CarDao {
         String query = "INSERT INTO Cars (make,model,year,color,hp,salesman_fk,category_fk) values (?, ?, ?, ?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setString(1,item.getMake());
-            stmt.setString(2,item.getModel());
+
             stmt.setString(3,item.getYear());
             stmt.setString(4,item.getColor());
             stmt.setInt(5,item.gethP());
-             stmt.setInt(6,item.getSalesman().getId());
-            stmt.setInt(7,item.getCategory().getId());
+
             stmt.executeUpdate(query);
         } catch (Exception e) {
             e.printStackTrace();
@@ -100,13 +98,11 @@ public class CarDaoSQLImpl implements CarDao {
         String query = "UPDATE Cars SET make = ?, model = ?, year = ?, color = ?, hp = ?, salesman_fk = ?, category_fk = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
-            stmt.setString(1,item.getMake());
-            stmt.setString(2,item.getModel());
+
             stmt.setString(3,item.getYear());
             stmt.setString(4,item.getColor());
             stmt.setInt(5,item.gethP());
-            stmt.setInt(6,item.getSalesman().getId());
-            stmt.setInt(7,item.getCategory().getId());
+
             stmt.setInt(8,id);
             stmt.executeUpdate(query);
             return getById(id);
@@ -134,7 +130,6 @@ public class CarDaoSQLImpl implements CarDao {
     }
 
     /**
-     * Note: Not very efficient
      * @return All cars from database
      */
     @Override
@@ -147,13 +142,11 @@ public class CarDaoSQLImpl implements CarDao {
             while(rs.next()) {
                 Car car = new Car();
                 car.setId(rs.getInt("id"));
-                car.setMake(rs.getString("make"));
-                car.setModel(rs.getString("model"));
+                car.setName(rs.getString("name"));
                 car.setYear(rs.getString("year"));
                 car.setColor(rs.getString("color"));
                 car.sethP(rs.getInt("hp"));
-                car.setCategory(getCategoryById(car.getId()));
-                car.setSalesman(getSalesmanById(car.getId()));
+
                 carArrayList.add(car);
             }
             rs.close();
