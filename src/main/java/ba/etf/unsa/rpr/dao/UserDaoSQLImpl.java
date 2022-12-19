@@ -59,12 +59,12 @@ public class UserDaoSQLImpl implements UserDao {
 
 
     /**
-     * Insert salesman in database with given values
+     * Insert user in database with given values
      * @param item
      */
     @Override
     public void insert(User item) throws UserException {
-        String query = "INSERT INTO Salesman (name,password) values (?, ?)";
+        String query = "INSERT INTO Users (name,password) values (?, ?)";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1,item.getName());
@@ -76,18 +76,18 @@ public class UserDaoSQLImpl implements UserDao {
     }
 
     /**
-     * Method deletes Salesman from database based on passed id
+     * Method deletes user from database based on passed id
      * @param id
      */
     @Override
-    public void delete(int id) {
-        String query = "DELETE FROM Salesman WHERE id = ?";
+    public void delete(int id) throws UserException {
+        String query = "DELETE FROM Users WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1,id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+           throw new UserException("Greska pri brisanju");
         }
     }
 
