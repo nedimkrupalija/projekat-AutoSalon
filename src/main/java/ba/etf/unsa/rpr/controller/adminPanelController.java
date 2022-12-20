@@ -60,8 +60,8 @@ public class adminPanelController {
             }
         });
         textPassword.textProperty().addListener((observableValue, s, t1) -> {
-            if(t1.trim().length()==0) textName.getStyleClass().add("fieldWrong");
-            else textName.getStyleClass().removeAll("fieldWrong");
+            if(t1.trim().length()==0) textPassword.getStyleClass().add("fieldWrong");
+            else textPassword.getStyleClass().removeAll("fieldWrong");
         });
     }
 
@@ -105,7 +105,13 @@ public class adminPanelController {
             alert.setHeaderText(e.getMessage());
             alert.setContentText("Ispravite podatke i pokusajte opet!");
             alert.showAndWait();
+            return;
         }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Uspjesna izmjena");
+        alert.setHeaderText(null);
+        alert.setContentText("Podaci uspjesno izmjenjeni, mozete nastaviti dalje!");
+        alert.showAndWait();
 
     }
 
