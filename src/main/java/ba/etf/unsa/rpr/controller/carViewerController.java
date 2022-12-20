@@ -35,30 +35,55 @@ public class carViewerController {
 
     private ArrayList<Reservation> reservations;
 
+    /**
+     * Private method for setting css to text fields
+     * @param textField
+     * @param value
+     */
+    private void setTextFieldCss(TextField textField, String value){
+        textField.getStyleClass().removeAll("textFieldClass");
+        if (value.trim().isEmpty() || value.trim().length() > 45) {
+            textField.getStyleClass().add("textFieldClass");
+        }
+    }
+
+
 
     /**
      * Initializer for text fields, field validation
      */
     @FXML
     public void initialize(){
+
         carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
-            idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
-            nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
-            yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
-            colorText.setText(carsList.getSelectionModel().getSelectedItem().getColor());
-            powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
-            descText.setText(carsList.getSelectionModel().getSelectedItem().getDesc());
-            try {
-                if(new ReservationDAOSQlImpl().isReserved(carsList.getSelectionModel().getSelectedItem().getId())==1) {
-                    reservedButton.getStyleClass().add("reserved");
-                }
-                else {
-                    reservedButton.getStyleClass().add("notReserved");
-                }
-            } catch (ReservationException e) {
-                e.printStackTrace();
-            }
-        });
+
+
+
+                    idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
+                    nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
+                    yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
+                    colorText.setText(carsList.getSelectionModel().getSelectedItem().getColor());
+                    powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
+                    descText.setText(carsList.getSelectionModel().getSelectedItem().getDesc());
+                    try {
+                        if (new ReservationDAOSQlImpl().isReserved(carsList.getSelectionModel().getSelectedItem().getId()) == 1) {
+                            reservedButton.getStyleClass().add("reserved");
+                        } else {
+                            reservedButton.getStyleClass().add("notReserved");
+                        }
+                    } catch (ReservationException e) {
+                        e.printStackTrace();
+                    }
+                });
+            nameText.textProperty().addListener((observableValue1, s, t11) ->
+                setTextFieldCss(nameText,t11));
+        yearText.textProperty().addListener((observableValue1, s, t11) ->
+                setTextFieldCss(yearText  ,t11));
+        colorText.textProperty().addListener((observableValue1, s, t11) ->
+                setTextFieldCss(colorText,t11));
+        powerText.textProperty().addListener((observableValue1, s, t11) ->
+                setTextFieldCss(powerText,t11));
+
     }
 
 

@@ -75,42 +75,42 @@
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="nameText">
+                  <TextField fx:id="nameText" styleClass="textFieldClass">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="nameError" text="Label">
+                  <Label fx:id="nameError" styleClass="labelClass" underline="true">
                      <VBox.margin>
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="yearText">
+                  <TextField fx:id="yearText" styleClass="textFieldClass">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="yearError" text="Label">
+                  <Label fx:id="yearError" styleClass="labelClass" underline="true">
                      <VBox.margin>
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="colorText">
+                  <TextField fx:id="colorText" styleClass="textFieldClass">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="colorError" text="Label">
+                  <Label fx:id="colorError" styleClass="labelClass" underline="true">
                      <VBox.margin>
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="powerText">
+                  <TextField fx:id="powerText" styleClass="textFieldClass">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="powerError" text="Label">
+                  <Label fx:id="powerError" styleClass="labelClass" underline="true">
                      <VBox.margin>
                         <Insets left="10.0" />
                      </VBox.margin>
