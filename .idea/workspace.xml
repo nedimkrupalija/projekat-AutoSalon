@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented action for changing admin credentials">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfixes in changing admin info">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/userResViewer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -75,13 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00126" summary="added user defined exception">
-      <created>1671470269222</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1671470269222</updated>
     </task>
     <task id="LOCAL-00127" summary="removed unnecessary methods from cardao">
       <created>1671470322658</created>
@@ -419,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671554486142</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="bugfixes in changing admin info">
+      <created>1671554682895</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1671554682896</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renamed panel to adminPanel.fxml" />
     <MESSAGE value="implemented event for logging in" />
     <MESSAGE value="added css style for back button" />
     <MESSAGE value="implemented look of registration panel" />
@@ -459,7 +462,8 @@
     <MESSAGE value="added listener for name changing" />
     <MESSAGE value="added css for field color" />
     <MESSAGE value="implemented action for changing admin credentials" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented action for changing admin credentials" />
+    <MESSAGE value="bugfixes in changing admin info" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfixes in changing admin info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

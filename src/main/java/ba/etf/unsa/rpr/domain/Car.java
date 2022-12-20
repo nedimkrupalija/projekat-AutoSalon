@@ -15,6 +15,16 @@ public class Car {
     private String color;
     private int hP;
 
+    String desc;
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

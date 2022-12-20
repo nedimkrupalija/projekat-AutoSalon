@@ -57,6 +57,7 @@ public class CarDaoSQLImpl implements CarDao {
                 car.setYear(rs.getString("year"));
                 car.setColor(rs.getString("color"));
                 car.sethP(rs.getInt("hp"));
+                car.setDesc(rs.getString("desc"));
                 rs.close();
                 return car;
             }
@@ -73,13 +74,14 @@ public class CarDaoSQLImpl implements CarDao {
      */
     @Override
     public void insert(Car item) throws CarException {
-        String query = "INSERT INTO Cars (name, year, color, hp) values (?, ?, ?, ?)";
+        String query = "INSERT INTO Cars (name, year, color, hp, desc) values (?, ?, ?, ?, ?)";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setString(1,item.getName());
             stmt.setString(2,item.getYear());
             stmt.setString(3,item.getColor());
             stmt.setInt(4,item.gethP());
+            stmt.setString(5,item.getDesc());
             stmt.executeUpdate(query);
         } catch (Exception e) {
             throw new CarException("Greska pri upisivanju auta!");
@@ -94,14 +96,15 @@ public class CarDaoSQLImpl implements CarDao {
 
     @Override
     public Car update(Car item, int id) throws CarException {
-        String query = "UPDATE Cars SET name = ?, year = ?, color = ?, hp = ? WHERE id = ?";
+        String query = "UPDATE Cars SET name = ?, year = ?, color = ?, hp = ?, desc = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setString(1,item.getName());
             stmt.setString(2,item.getYear());
             stmt.setString(3,item.getColor());
             stmt.setInt(4,item.gethP());
-            stmt.setInt(5,id);
+            stmt.setString(5,item.getDesc());
+            stmt.setInt(6,id);
             stmt.executeUpdate(query);
             return getById(id);
         } catch (Exception e) {
@@ -143,7 +146,7 @@ public class CarDaoSQLImpl implements CarDao {
                 car.setYear(rs.getString("year"));
                 car.setColor(rs.getString("color"));
                 car.sethP(rs.getInt("hp"));
-
+                car.setDesc(rs.getString("desc"));
                 carArrayList.add(car);
             }
             rs.close();
