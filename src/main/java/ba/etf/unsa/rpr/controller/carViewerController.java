@@ -1,21 +1,24 @@
 package ba.etf.unsa.rpr.controller;
 
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
+import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.exception.ReservationException;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
 public class carViewerController {
-    public ListView carsList;
-    public VBox colorText;
+    public Button reservedButton;
+    public Label idLabel;
+    public ListView<Car> carsList;
+    public TextField colorText;
     public TextField nameText;
     public TextField yearText;
     public TextField powerText;
@@ -25,17 +28,35 @@ public class carViewerController {
 
     private ArrayList<Reservation> reservations;
 
+
+    /**
+     * Initializer for text fields, field validation
+     */
     @FXML
-    public void intialize(){
-        try {
-            reservations = (ArrayList<Reservation>) new ReservationDAOSQlImpl().getAll();
-        } catch (ReservationException e) {
-            e.printStackTrace();
-    }
+    public void initialize(){
+        carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
+            idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
+            nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
+            yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
+            colorText.setText(carsList.getSelectionModel().getSelectedItem().getColor());
+            powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
+            descText.setText(carsList.getSelectionModel().getSelectedItem().getDesc());
+            try {
+                if(new ReservationDAOSQlImpl().isReserved(carsList.getSelectionModel().getSelectedItem().getId())==1) {
+                    reservedButton.getStyleClass().add("reserved");
+                }
+                else {
+                    reservedButton.getStyleClass().add("notReserved");
+                }
+            } catch (ReservationException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
 
     public void insertButtonClick(ActionEvent actionEvent) {
+        System.out.println(carsList.getSelectionModel().getSelectedItems());
     }
 
     public void updateButtonClick(ActionEvent actionEvent) {

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="changed tostring in car">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for reserved button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,34 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00131" summary="updated insert in CarDaoSQLImpl">
-      <created>1671471311257</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1671471311258</updated>
-    </task>
-    <task id="LOCAL-00132" summary="refactored names of classes">
-      <created>1671471442947</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1671471442947</updated>
-    </task>
-    <task id="LOCAL-00133" summary="added user exception">
-      <created>1671471779439</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1671471779439</updated>
-    </task>
-    <task id="LOCAL-00134" summary="changed getbyid in user">
-      <created>1671471842434</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1671471842434</updated>
     </task>
     <task id="LOCAL-00135" summary="updated insert in UserDaoSQLImpl">
       <created>1671471951926</created>
@@ -421,7 +395,35 @@
       <option name="project" value="LOCAL" />
       <updated>1671572281983</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="added listview initializer">
+      <created>1671572493474</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1671572493474</updated>
+    </task>
+    <task id="LOCAL-00181" summary="implemented method for checking if car is reserved">
+      <created>1671573103554</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1671573103554</updated>
+    </task>
+    <task id="LOCAL-00182" summary="bugfix in isReserved">
+      <created>1671575198089</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1671575198090</updated>
+    </task>
+    <task id="LOCAL-00183" summary="added css for reserved button">
+      <created>1671575210383</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1671575210383</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,10 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added listener for password length in registrationController" />
-    <MESSAGE value="added listener for checking if user is already present in db" />
-    <MESSAGE value="bugfix in update UserDaoSQLImpl" />
-    <MESSAGE value="added component ids for registration.fxml" />
     <MESSAGE value="implemented action for registreing user" />
     <MESSAGE value="implemented action for going to register screen from main" />
     <MESSAGE value="added css styles" />
@@ -461,7 +459,11 @@
     <MESSAGE value="added look for car admin panel" />
     <MESSAGE value="implemented going to car manager from admin panel" />
     <MESSAGE value="changed tostring in car" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed tostring in car" />
+    <MESSAGE value="added listview initializer" />
+    <MESSAGE value="implemented method for checking if car is reserved" />
+    <MESSAGE value="bugfix in isReserved" />
+    <MESSAGE value="added css for reserved button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css for reserved button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
