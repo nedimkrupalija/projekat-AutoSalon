@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented go back to admin panel">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented method that removes all css from text fields">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,27 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00137" summary="updated getall in UserDaoSQLImpl">
-      <created>1671472153007</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1671472153007</updated>
-    </task>
-    <task id="LOCAL-00138" summary="updated update in UserDaoSQLImpl">
-      <created>1671472542523</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1671472542523</updated>
-    </task>
-    <task id="LOCAL-00139" summary="bugfix in update UserDaoSQLImpl">
-      <created>1671472570262</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1671472570262</updated>
     </task>
     <task id="LOCAL-00140" summary="added CategoryException">
       <created>1671472630726</created>
@@ -424,7 +401,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671576437928</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="implemented private method for setting css to fields">
+      <created>1671578248974</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1671578248974</updated>
+    </task>
+    <task id="LOCAL-00187" summary="added css style for text fields">
+      <created>1671578262375</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1671578262375</updated>
+    </task>
+    <task id="LOCAL-00188" summary="implemented method that removes all css from text fields">
+      <created>1671578445465</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1671578445465</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,9 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added css styles" />
-    <MESSAGE value="bugfix in registrationController" />
-    <MESSAGE value="added more css to registration screen" />
     <MESSAGE value="added css for main screen" />
     <MESSAGE value="added css for login screen" />
     <MESSAGE value="deleted adminPanelController and updated look" />
@@ -464,7 +459,10 @@
     <MESSAGE value="added css for reserved button" />
     <MESSAGE value="implemented listener for setting fields" />
     <MESSAGE value="implemented go back to admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented go back to admin panel" />
+    <MESSAGE value="implemented private method for setting css to fields" />
+    <MESSAGE value="added css style for text fields" />
+    <MESSAGE value="implemented method that removes all css from text fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented method that removes all css from text fields" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

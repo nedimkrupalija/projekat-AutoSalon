@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
+import java.time.Year;
 import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -33,6 +34,11 @@ public class carViewerController {
     public TextArea descText;
     public Button insertButton;
     public Button updateButton;
+    public Label nameError;
+    public Label yearError;
+    public Label colorError;
+    public Label powerError;
+    private boolean yearValidation;
 
     private ArrayList<Reservation> reservations;
 
@@ -41,10 +47,12 @@ public class carViewerController {
      * @param textField
      * @param value
      */
-    private void setTextFieldCss(TextField textField, String value){
+    private void setTextFieldCss(TextField textField,Label label, String value){
         textField.getStyleClass().removeAll("textFieldClass");
+        label.setText("");
         if (value.trim().isEmpty() || value.trim().length() > 45) {
             textField.getStyleClass().add("textFieldClass");
+            label.setText("1 do 45 karaktera!");
         }
     }
 
@@ -67,9 +75,6 @@ public class carViewerController {
 
             removeAllCss();
         carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
-
-
-
                     idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
                     nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
                     yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
@@ -87,20 +92,31 @@ public class carViewerController {
                     }
                 });
             nameText.textProperty().addListener((observableValue1, s, t11) ->
-                setTextFieldCss(nameText,t11));
+                setTextFieldCss(nameText,nameError,t11));
         yearText.textProperty().addListener((observableValue1, s, t11) ->
-                setTextFieldCss(yearText  ,t11));
-        colorText.textProperty().addListener((observableValue1, s, t11) ->
-                setTextFieldCss(colorText,t11));
-        powerText.textProperty().addListener((observableValue1, s, t11) ->
-                setTextFieldCss(powerText,t11));
-
-        nameText.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-
+        {
+            yearError.setText("");
+            yearText.getStyleClass().removeAll("textFieldClass");
+            yearValidation = true;
+            try{
+                Integer.parseInt(yearText.getText());
+            }
+            catch(Exception e){
+                yearError.setText("Pogresna godina!");
+                yearText.getStyleClass().add("textFieldClass");
+                yearValidation = false;
+            }
+            if(yearText.getText().trim().length()!=4||Integer.parseInt(yearText.getText())>(Integer.parseInt(String.valueOf(Year.now())))) {
+                yearError.setText("Pogresna godina!");
+                yearText.getStyleClass().add("textFieldClass");
+                yearValidation = false;
             }
         });
+        colorText.textProperty().addListener((observableValue1, s, t11) ->
+                setTextFieldCss(colorText,colorError,t11));
+        powerText.textProperty().addListener((observableValue1, s, t11) ->
+                setTextFieldCss(powerText,powerError,t11));
+
 
     }
 
