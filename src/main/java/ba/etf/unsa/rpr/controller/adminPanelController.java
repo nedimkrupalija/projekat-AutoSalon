@@ -37,6 +37,7 @@ public class adminPanelController {
     public User user;
     public RadioButton radioButtonUser;
     public RadioButton radioButtonReservation;
+    public Button nextButton;
 
     /**
      * Listener for text fields
@@ -72,6 +73,9 @@ public class adminPanelController {
     }
 
     public void acceptClicked(ActionEvent actionEvent) {
+    }
+
+    public void nextButtonClick(ActionEvent actionEvent) {
     }
 }
 

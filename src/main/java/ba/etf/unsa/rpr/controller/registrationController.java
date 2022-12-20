@@ -82,6 +82,8 @@ public class registrationController {
         user.setPassword(passTextField.getText());
         try {
             new UserDaoSQLImpl().insert(user);
+            if(nameTextField.getText().length()<3 || nameTextField.getText().length()>10) throw new UserException("Prekrato ime!");
+            if(passTextField.getText().length()<3 || passTextField.getText().length()>10) throw new UserException("Prekratka sifra!");
         } catch (UserException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Greska!");

@@ -10,7 +10,9 @@
     -fx-background-color: crimson;
     -fx-font-size: large;
     -fx-font-weight: bold;
-
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-border-radius: 10%;
 }
 
 .fieldWrong{

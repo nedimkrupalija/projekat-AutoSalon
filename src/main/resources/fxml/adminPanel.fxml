@@ -107,6 +107,11 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" />
                </VBox.margin>
             </RadioButton>
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextButtonClick" text="Dalje">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
       <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Nazad" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
