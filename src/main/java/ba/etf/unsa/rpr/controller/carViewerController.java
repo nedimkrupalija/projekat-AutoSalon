@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,7 +48,16 @@ public class carViewerController {
         }
     }
 
+    /**
+     * Private method that removes all css from text fields
+     */
+    private void removeAllCss(){
+        nameText.getStyleClass().removeAll("textFieldClass");
+        yearText.getStyleClass().removeAll("textFieldClass");
+        colorText.getStyleClass().removeAll("textFieldClass");
+        powerText.getStyleClass().removeAll("textFieldClass");
 
+    }
 
     /**
      * Initializer for text fields, field validation
@@ -55,6 +65,7 @@ public class carViewerController {
     @FXML
     public void initialize(){
 
+            removeAllCss();
         carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
 
 
@@ -83,6 +94,13 @@ public class carViewerController {
                 setTextFieldCss(colorText,t11));
         powerText.textProperty().addListener((observableValue1, s, t11) ->
                 setTextFieldCss(powerText,t11));
+
+        nameText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+
+            }
+        });
 
     }
 
