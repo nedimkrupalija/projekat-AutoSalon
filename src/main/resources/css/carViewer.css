@@ -1,0 +1,7 @@
+.reserved{
+    -fx-background-color: green;
+}
+
+.notReserved{
+    -fx-background-color: red;
+}
