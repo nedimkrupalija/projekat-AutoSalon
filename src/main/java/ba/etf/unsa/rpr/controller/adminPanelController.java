@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -38,6 +39,7 @@ public class adminPanelController {
     public RadioButton radioButtonUser;
     public RadioButton radioButtonReservation;
     public Button nextButton;
+    private ArrayList<User> users;
 
     /**
      * Listener for text fields
@@ -48,6 +50,15 @@ public class adminPanelController {
         ToggleGroup group = new ToggleGroup();
         radioButtonUser.setToggleGroup(group);
         radioButtonReservation.setToggleGroup(group);
+        users = (ArrayList<User>) new UserDaoSQLImpl().getAll();
+        textName.textProperty().addListener((observableValue, s, t1) -> {
+            textName.getStyleClass().removeAll("fieldWrong");
+            if(t1.trim().length()==0) textName.getStyleClass().add("fieldWrong");
+            for(User x : users) {
+                if(x.getName().equals(t1)) textName.getStyleClass().add("fieldWrong");
+                break;
+            }
+        });
     }
 
 
@@ -73,6 +84,8 @@ public class adminPanelController {
     }
 
     public void acceptClicked(ActionEvent actionEvent) {
+
+
     }
 
     public void nextButtonClick(ActionEvent actionEvent) {

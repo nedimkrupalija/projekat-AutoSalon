@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added buttons to toggle group">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in user registration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00122" summary="implemented new tostring method for car">
-      <created>1671469590393</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1671469590393</updated>
     </task>
     <task id="LOCAL-00123" summary="changed private fields of user / added admin validation within db field">
       <created>1671469700718</created>
@@ -422,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671493794073</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="bugfix in user registration">
+      <created>1671553176512</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1671553176513</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update main screen look" />
     <MESSAGE value="added initialize and listeners to fields" />
     <MESSAGE value="added getbynamepass method to UserDaoSQLImpl" />
     <MESSAGE value="bugfix in getbynamepass UserDaoSQLImpl" />
@@ -462,7 +460,8 @@
     <MESSAGE value="setting data for admin panel from loginController" />
     <MESSAGE value="updated responsivness of admin panel and added css file" />
     <MESSAGE value="added buttons to toggle group" />
-    <option name="LAST_COMMIT_MESSAGE" value="added buttons to toggle group" />
+    <MESSAGE value="bugfix in user registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix in user registration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
