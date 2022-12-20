@@ -59,6 +59,10 @@ public class adminPanelController {
                 break;
             }
         });
+        textPassword.textProperty().addListener((observableValue, s, t1) -> {
+            if(t1.trim().length()==0) textName.getStyleClass().add("fieldWrong");
+            else textName.getStyleClass().removeAll("fieldWrong");
+        });
     }
 
 
@@ -83,8 +87,25 @@ public class adminPanelController {
         thisStage.close();
     }
 
+    /**
+     * Action for admin to change its own credentials
+     * @param actionEvent
+     */
     public void acceptClicked(ActionEvent actionEvent) {
-
+        User user = new User();
+        user.setName(textName.getText());
+        user.setPassword(textPassword.getText());
+        try {
+            new UserDaoSQLImpl().update(user,Integer.parseInt(labelId.getText()));
+            if(textName.getText().trim().isEmpty()||textPassword.getText().isEmpty())
+                throw new UserException("Polja prazna!");
+        } catch (UserException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greska!");
+            alert.setHeaderText(e.getMessage());
+            alert.setContentText("Ispravite podatke i pokusajte opet!");
+            alert.showAndWait();
+        }
 
     }
 

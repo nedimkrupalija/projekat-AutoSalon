@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in user registration">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for field color">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00123" summary="changed private fields of user / added admin validation within db field">
-      <created>1671469700718</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1671469700718</updated>
-    </task>
-    <task id="LOCAL-00124" summary="implemented POJO for user">
-      <created>1671469762835</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1671469762838</updated>
     </task>
     <task id="LOCAL-00125" summary="deleted unnecessary methods">
       <created>1671470250628</created>
@@ -421,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671553176513</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="added listener for name changing">
+      <created>1671553798255</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1671553798255</updated>
+    </task>
+    <task id="LOCAL-00173" summary="added css for field color">
+      <created>1671553808065</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1671553808065</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,8 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added initialize and listeners to fields" />
-    <MESSAGE value="added getbynamepass method to UserDaoSQLImpl" />
     <MESSAGE value="bugfix in getbynamepass UserDaoSQLImpl" />
     <MESSAGE value="renamed panel to adminPanel.fxml" />
     <MESSAGE value="implemented event for logging in" />
@@ -461,7 +458,9 @@
     <MESSAGE value="updated responsivness of admin panel and added css file" />
     <MESSAGE value="added buttons to toggle group" />
     <MESSAGE value="bugfix in user registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix in user registration" />
+    <MESSAGE value="added listener for name changing" />
+    <MESSAGE value="added css for field color" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css for field color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
