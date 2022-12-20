@@ -9,10 +9,17 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class carViewerController {
     public Button reservedButton;
@@ -59,6 +66,23 @@ public class carViewerController {
         System.out.println(carsList.getSelectionModel().getSelectedItems());
     }
 
+
+    /**
+     * Action for going back to main screen from car panel
+     * @param actionEvent
+     */
     public void updateButtonClick(ActionEvent actionEvent) {
     }
+    public void backButtonClick(ActionEvent actionEvent) throws IOException {
+        System.out.println("Povratak na admin panel!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/adminPanel.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root,USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+        stage.setScene(scene);
+        Stage currentStage  = (Stage) idLabel.getScene().getWindow();
+        stage.show();
+        currentStage.close();
+    }
+
 }

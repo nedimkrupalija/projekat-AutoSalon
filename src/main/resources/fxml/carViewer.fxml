@@ -53,12 +53,12 @@
                   </Label>
                   <Label text="Boja">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
                      </VBox.margin>
                   </Label>
                   <Label text="Snaga">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
                      </VBox.margin>
                   </Label>
                   <Label text="Opis">
@@ -77,24 +77,44 @@
                   </Label>
                   <TextField fx:id="nameText">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                        <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
+                  <Label fx:id="nameError" text="Label">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
                   <TextField fx:id="yearText">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                        <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
+                  <Label fx:id="yearError" text="Label">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
                   <TextField fx:id="colorText">
                      <VBox.margin>
-                        <Insets bottom="13.0" left="10.0" right="10.0" top="13.0" />
+                        <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
+                  <Label fx:id="colorError" text="Label">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
                   <TextField fx:id="powerText">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
+                  <Label fx:id="powerError" text="Label">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
                   <TextArea fx:id="descText">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -116,23 +136,9 @@
                   </HBox>
                </children>
             </VBox>
-            <HBox alignment="BOTTOM_RIGHT" minWidth="-Infinity">
-               <children>
-                  <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButtonClick" text="Dodaj">
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClick" text="Izmijeni">
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
          </children>
       </HBox>
-      <Label text="Sva vozila">
+      <Label text="Prikaz svih vozila na stanju">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
@@ -140,5 +146,29 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <HBox alignment="BOTTOM_RIGHT" minWidth="-Infinity" GridPane.columnIndex="1">
+         <children>
+            <Button mnemonicParsing="false" text="Obrisi">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButtonClick" text="Dodaj">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClick" text="Izmijeni">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClick" text="Nazad">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </GridPane>
