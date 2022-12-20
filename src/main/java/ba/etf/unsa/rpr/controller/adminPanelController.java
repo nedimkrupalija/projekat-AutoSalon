@@ -1,11 +1,15 @@
 package ba.etf.unsa.rpr.controller;
 
 
+import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
+import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,10 +40,12 @@ public class adminPanelController {
     public Button acceptButton;
     public Button backButton;
     public User user;
-    public RadioButton radioButtonUser;
+    public RadioButton radioButtonCar;
     public RadioButton radioButtonReservation;
     public Button nextButton;
     private ArrayList<User> users;
+
+    private ArrayList<Car> cars;
 
     /**
      * Listener for text fields
@@ -47,8 +53,9 @@ public class adminPanelController {
      */
     @FXML
     public void initialize() throws UserException {
+        cars = (ArrayList<Car>) new CarDaoSQLImpl().getAll();
         ToggleGroup group = new ToggleGroup();
-        radioButtonUser.setToggleGroup(group);
+        radioButtonCar.setToggleGroup(group);
         radioButtonReservation.setToggleGroup(group);
         users = (ArrayList<User>) new UserDaoSQLImpl().getAll();
         textName.textProperty().addListener((observableValue, s, t1) -> {
@@ -117,10 +124,27 @@ public class adminPanelController {
 
 
     /**
-     *
+     *  Action for going to car or reservation viewer
      * @param actionEvent
      */
-    public void nextButtonClick(ActionEvent actionEvent) {
+    public void nextButtonClick(ActionEvent actionEvent) throws IOException {
+        if(radioButtonCar.isSelected()){
+            System.out.println("Izabran pregled vozila!");
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/carViewer.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
+            stage.setTitle("Login");
+
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+            Stage thisStage = (Stage) labelId.getScene().getWindow();
+            thisStage.close();
+
+
+        }
+
     }
 }
 
