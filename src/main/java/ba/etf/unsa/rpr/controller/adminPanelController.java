@@ -142,7 +142,10 @@ public class adminPanelController {
             Stage thisStage = (Stage) labelId.getScene().getWindow();
             thisStage.close();
 
-
+            //Setting values for listView in car view panel
+            carViewerController carViewerController = loader.getController();
+            ObservableList<Car> list = FXCollections.observableArrayList(cars);
+            carViewerController.carsList.setItems(list);
         }
 
     }
