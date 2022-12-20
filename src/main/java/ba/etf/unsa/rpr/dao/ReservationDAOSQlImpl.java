@@ -122,6 +122,27 @@ public class ReservationDAOSQlImpl implements ReservationDao {
     }
 
     /**
+     * Method that checks if car is reserved
+     * @param id of car
+     * @return 0/1 not reserved/reserved
+     */
+    public int isReserved(int id) throws ReservationException {
+        String query = "SELECT COUNT(*) FROM Reservations where car_fk = ?";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return 1;
+            }
+            else return 0;
+        } catch (SQLException e) {
+            throw new ReservationException("Greska pri provjeri da li je auto rezervisano!");
+        }
+    }
+
+
+    /**
      *
      * @return list of all reservations from database
      */
