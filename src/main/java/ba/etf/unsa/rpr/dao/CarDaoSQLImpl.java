@@ -82,7 +82,7 @@ public class CarDaoSQLImpl implements CarDao {
             stmt.setString(3,item.getColor());
             stmt.setInt(4,item.gethP());
             stmt.setString(5,item.getDesc());
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (Exception e) {
             throw new CarException("Greska pri upisivanju auta!");
         }
