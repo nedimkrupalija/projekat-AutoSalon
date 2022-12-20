@@ -105,7 +105,7 @@ public class CarDaoSQLImpl implements CarDao {
             stmt.setInt(4,item.gethP());
             stmt.setString(5,item.getDesc());
             stmt.setInt(6,id);
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
             return getById(id);
         } catch (Exception e) {
             throw new CarException("Greska pri izmjeni podataka!");
@@ -123,7 +123,7 @@ public class CarDaoSQLImpl implements CarDao {
         try {
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
