@@ -15,14 +15,14 @@ public class Car {
     private String color;
     private int hP;
 
-    String desc;
+    private String description;
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
