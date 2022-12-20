@@ -132,8 +132,9 @@ public class ReservationDAOSQlImpl implements ReservationDao {
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
+            int res = 0;
             if(rs.next()){
-                return 1;
+                return rs.getInt("COUNT(*)");
             }
             else return 0;
         } catch (SQLException e) {
