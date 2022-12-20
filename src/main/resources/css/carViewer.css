@@ -5,3 +5,13 @@
 .notReserved{
     -fx-background-color: red;
 }
+
+
+.labelClass{
+    -fx-text-fill-color: red;
+}
+
+.textFieldClass{
+    -fx-background-color: pink;
+    -fx-opacity: 0.9;
+}
