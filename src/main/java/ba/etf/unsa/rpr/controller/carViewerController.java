@@ -1,11 +1,14 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,6 +42,7 @@ public class carViewerController {
     public Label colorError;
     public Label powerError;
     private boolean yearValidation;
+    private boolean isValidated;
 
     private ArrayList<Reservation> reservations;
 
@@ -48,12 +52,21 @@ public class carViewerController {
      * @param value
      */
     private void setTextFieldCss(TextField textField,Label label, String value){
+        isValidated = true;
         textField.getStyleClass().removeAll("textFieldClass");
         label.setText("");
         if (value.trim().isEmpty() || value.trim().length() > 45) {
             textField.getStyleClass().add("textFieldClass");
             label.setText("1 do 45 karaktera!");
+            isValidated = false;
         }
+    }
+
+    /**
+     * Private method for updating list of cars in db
+     */
+    private void updateList(){
+        carsList.setItems(FXCollections.observableArrayList(new CarDaoSQLImpl().getAll()));
     }
 
     /**
@@ -121,8 +134,10 @@ public class carViewerController {
     }
 
 
-    public void insertButtonClick(ActionEvent actionEvent) {
-        System.out.println(carsList.getSelectionModel().getSelectedItems());
+
+
+
+    public void updateButtonClick(ActionEvent actionEvent) {
     }
 
 
@@ -130,8 +145,6 @@ public class carViewerController {
      * Action for going back to main screen from car panel
      * @param actionEvent
      */
-    public void updateButtonClick(ActionEvent actionEvent) {
-    }
     public void backButtonClick(ActionEvent actionEvent) throws IOException {
         System.out.println("Povratak na admin panel!");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/adminPanel.fxml"));
