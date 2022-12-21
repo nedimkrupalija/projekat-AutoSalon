@@ -150,6 +150,19 @@ public class adminPanelController {
             //carViewerController.user.setId(user.getId());
 
         }
+        else {
+            System.out.println("Odabran pregled rezrvacija");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/reservationViewer"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+            stage.setScene(scene);
+            stage.show();
+            stage.setTitle("Pregled rezervacija");
+
+            Stage thisStage = (Stage) labelId.getScene().getWindow();
+            thisStage.close();
+        }
 
     }
 }

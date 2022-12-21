@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented car update">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added alert for deleting  car">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -82,34 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00150" summary="implemented event for logging in">
-      <created>1671478781607</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1671478781607</updated>
-    </task>
-    <task id="LOCAL-00151" summary="added css style for back button">
-      <created>1671479320247</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1671479320247</updated>
-    </task>
-    <task id="LOCAL-00152" summary="implemented look of registration panel">
-      <created>1671481996714</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1671481996714</updated>
-    </task>
-    <task id="LOCAL-00153" summary="added listener for username length in registrationController">
-      <created>1671482459984</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1671482459984</updated>
     </task>
     <task id="LOCAL-00154" summary="added listener for password length in registrationController">
       <created>1671482550203</created>
@@ -426,7 +396,35 @@
       <option name="project" value="LOCAL" />
       <updated>1671623887689</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="bugfix in CarDaoSQLImpl">
+      <created>1671625079383</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1671625079383</updated>
+    </task>
+    <task id="LOCAL-00200" summary="implemented deleting car from db">
+      <created>1671625109086</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1671625109087</updated>
+    </task>
+    <task id="LOCAL-00201" summary="bugfix in deleting car">
+      <created>1671625147591</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1671625147592</updated>
+    </task>
+    <task id="LOCAL-00202" summary="added alert for deleting  car">
+      <created>1671625229998</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1671625229998</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,9 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented action for changing admin credentials" />
-    <MESSAGE value="bugfixes in changing admin info" />
-    <MESSAGE value="added description field to car" />
     <MESSAGE value="added look for car admin panel" />
     <MESSAGE value="implemented going to car manager from admin panel" />
     <MESSAGE value="changed tostring in car" />
@@ -460,13 +455,16 @@
     <MESSAGE value="implemented method for updating list of cars on update/delete/insert" />
     <MESSAGE value="bugfix in insert" />
     <MESSAGE value="bugfix in update/delete" />
-    <MESSAGE value="bugfix in CarDaoSQLImpl" />
     <MESSAGE value="bugfix in car" />
     <MESSAGE value="implemented car insert from admin panel" />
     <MESSAGE value="implemented action for updating car" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="implemented car update" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented car update" />
+    <MESSAGE value="bugfix in CarDaoSQLImpl" />
+    <MESSAGE value="implemented deleting car from db" />
+    <MESSAGE value="bugfix in deleting car" />
+    <MESSAGE value="added alert for deleting  car" />
+    <option name="LAST_COMMIT_MESSAGE" value="added alert for deleting  car" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
