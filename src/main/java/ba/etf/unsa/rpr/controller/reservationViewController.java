@@ -5,6 +5,8 @@ import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.UserException;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -40,16 +42,28 @@ public class reservationViewController {
     /**
      * Initialization of data
      * Listeners for validation
-     * @throws CarException
-     * @throws UserException
      */
     @FXML
-    public void initialize() throws CarException, UserException {
-        idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
-        labelCar.setText(new CarDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
-        labelUser.setText(new UserDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
-        datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
-        pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
+    public void initialize() {
+        reservationList.getSelectionModel().selectedItemProperty().addListener((observableValue, reservation, t1) -> {
+            if(reservationList.getSelectionModel().getSelectedItem()!=null){
+                idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
+                try {
+                    labelCar.setText(new CarDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
+                } catch (CarException e) {
+                    throw new RuntimeException(e);
+                }
+                try {
+                    labelUser.setText(new UserDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
+                } catch (UserException e) {
+                    throw new RuntimeException(e);
+                }
+                datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
+                pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
+            }
+        });
+
+
 
     }
 
