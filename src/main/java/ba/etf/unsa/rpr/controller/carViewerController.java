@@ -260,6 +260,7 @@ public class carViewerController {
             alert.showAndWait();
             return;
         }
+        updateList();
 
     }
 }
