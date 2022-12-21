@@ -13,5 +13,5 @@ import java.sql.Date;
 
 public interface ReservationDao extends Dao<Reservation> {
     public int isReserved(int id) throws ReservationException;
-    public void updateArrivalDate(Date date, int id);
+    public void updateArrivalDate(Date date, int id) throws ReservationException;
 }

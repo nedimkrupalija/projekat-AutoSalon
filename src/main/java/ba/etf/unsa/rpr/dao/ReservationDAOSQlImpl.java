@@ -88,7 +88,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
      * @param date
      * @param id
      */
-    public void updateArrivalDate(Date date, int id){
+    public void updateArrivalDate(Date date, int id) throws ReservationException {
         String query = "UPDATE Reservations SET arrival_date = ? WHERE id = ?";
         try{
             PreparedStatement stmt = this.conn.prepareStatement(query);
@@ -96,7 +96,7 @@ public class ReservationDAOSQlImpl implements ReservationDao {
             stmt.setInt(2,id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new ReservationException("Greska pri izmjeni datuma!");
         }
     }
 
