@@ -116,14 +116,14 @@ public class CarDaoSQLImpl implements CarDao {
      * @param id
      */
     @Override
-    public void delete(int id) {
+    public void delete(int id) throws CarException {
         String query = "DELETE FROM Cars WHERE id = ?";
         try {
             PreparedStatement stmt = this.conn.prepareStatement(query);
             stmt.setInt(1,id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new CarException("Greska pri brisanju vozila!");
         }
     }
 

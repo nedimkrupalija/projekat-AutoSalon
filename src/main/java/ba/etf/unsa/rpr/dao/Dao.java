@@ -39,7 +39,7 @@ public interface Dao<T> {
      * Delete item from database based on ID
      * @param id
      */
-    void delete(int id) throws UserException;
+    void delete(int id) throws UserException, CarException;
 
 
     /**
