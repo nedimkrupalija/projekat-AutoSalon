@@ -40,13 +40,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation{" +
-                "id=" + id +
-                ", reservationDate=" + reservationDate +
-                ", arrivalDate=" + arrivalDate +
-                ", user=" + user +
-                ", car=" + car +
-                '}';
+        return "id: " + id + ", vozilo: " + getCar().getName() + ", korisnik: " + getUser().getName() + ", datum: " + reservationDate.toString() + ", dolazak: " + arrivalDate.toString()+".";
     }
 
     public Date getReservationDate() {
