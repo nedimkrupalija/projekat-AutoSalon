@@ -97,6 +97,7 @@ public class loginController {
             stage.show();
             currentStage.close();
 
+            //Set fields for admin panel
             adminPanelController adminPanelController = loader.getController();
             adminPanelController.labelId.setText(String.valueOf(user.getId()));
             adminPanelController.textName.setText(user.getName());

@@ -12,10 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -47,6 +44,7 @@ public class reservationViewController {
     public void initialize() {
         reservationList.getSelectionModel().selectedItemProperty().addListener((observableValue, reservation, t1) -> {
             if(reservationList.getSelectionModel().getSelectedItem()!=null){
+
                 idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
                 try {
                     labelCar.setText(new CarDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
@@ -60,8 +58,10 @@ public class reservationViewController {
                 }
                 datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
                 pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
+
             }
         });
+
 
 
 

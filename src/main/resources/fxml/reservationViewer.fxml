@@ -88,7 +88,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Label fx:id="labelDateError" text="Label">
+                  <Label fx:id="labelDateError">
                      <VBox.margin>
                         <Insets left="10.0" />
                      </VBox.margin>

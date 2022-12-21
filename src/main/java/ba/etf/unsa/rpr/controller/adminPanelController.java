@@ -2,9 +2,12 @@ package ba.etf.unsa.rpr.controller;
 
 
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
+import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Car;
+import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -47,12 +50,14 @@ public class adminPanelController {
 
     private ArrayList<Car> cars;
 
+    private ArrayList<Reservation> reservations;
     /**
      * Listener for text fields
      * Sets css style if field is empty
      */
     @FXML
-    public void initialize() throws UserException {
+    public void initialize() throws UserException, ReservationException {
+        reservations = (ArrayList<Reservation>) new ReservationDAOSQlImpl().getAll();
         cars = (ArrayList<Car>) new CarDaoSQLImpl().getAll();
         ToggleGroup group = new ToggleGroup();
         radioButtonCar.setToggleGroup(group);
@@ -152,13 +157,19 @@ public class adminPanelController {
         }
         else {
             System.out.println("Odabran pregled rezrvacija");
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/reservationViewer"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/reservationViewer.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
             stage.setScene(scene);
             stage.show();
             stage.setTitle("Pregled rezervacija");
+
+
+            //Setting data for reservation viewer
+            reservationViewController reservationViewController = loader.getController();
+            ObservableList<Reservation> list = FXCollections.observableArrayList(reservations);
+            reservationViewController.reservationList.setItems(list);
 
             Stage thisStage = (Stage) labelId.getScene().getWindow();
             thisStage.close();

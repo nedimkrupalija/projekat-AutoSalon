@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added data setters in initialize">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented listener for picking reservation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00159" summary="implemented action for registreing user">
-      <created>1671485770498</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1671485770498</updated>
     </task>
     <task id="LOCAL-00160" summary="implemented action for going to register screen from main">
       <created>1671487065118</created>
@@ -422,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671633655764</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="implemented listener for picking reservation">
+      <created>1671633810488</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1671633810488</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugfix in isReserved" />
     <MESSAGE value="added css for reserved button" />
     <MESSAGE value="implemented listener for setting fields" />
     <MESSAGE value="implemented go back to admin panel" />
@@ -462,7 +463,8 @@
     <MESSAGE value="implemented action for going back to admin panel" />
     <MESSAGE value="added method for date of arrival validation" />
     <MESSAGE value="added data setters in initialize" />
-    <option name="LAST_COMMIT_MESSAGE" value="added data setters in initialize" />
+    <MESSAGE value="implemented listener for picking reservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented listener for picking reservation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
