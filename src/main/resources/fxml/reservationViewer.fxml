@@ -52,7 +52,7 @@
                   </Label>
                   <Label text="Vozilo: ">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="50.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
                      </VBox.margin>
                   </Label>
                   <Label text="Korisnik: ">
@@ -64,7 +64,7 @@
             </VBox>
             <VBox>
                <children>
-                  <Label fx:id="idLabel" text="Label">
+                  <Label fx:id="idLabel">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -93,12 +93,12 @@
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="labelCar" text="Label">
+                  <Label fx:id="labelCar">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="labelUser" text="Label">
+                  <Label fx:id="labelUser">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>

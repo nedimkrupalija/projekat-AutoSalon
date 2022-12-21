@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented listener for picking reservation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +62,8 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.dao.Main" />
-      <module name="projekat-AutoSalon" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\irfan\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <module name="projekat" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Nedim Krupalija\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -491,6 +488,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java</url>
           <line>96</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

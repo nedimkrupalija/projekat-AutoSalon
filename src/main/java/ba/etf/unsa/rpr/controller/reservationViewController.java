@@ -8,11 +8,13 @@ import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -46,20 +48,16 @@ public class reservationViewController {
             if(reservationList.getSelectionModel().getSelectedItem()!=null){
 
                 idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
-                try {
-                    labelCar.setText(new CarDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
-                } catch (CarException e) {
-                    throw new RuntimeException(e);
-                }
-                try {
-                    labelUser.setText(new UserDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
-                } catch (UserException e) {
-                    throw new RuntimeException(e);
-                }
+                labelCar.setText(reservationList.getSelectionModel().getSelectedItem().getCar().getName());
+                labelUser.setText(reservationList.getSelectionModel().getSelectedItem().getUser().getName());
                 datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
                 pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
-
             }
+        });
+
+        pickerArrivalDate.pressedProperty().addListener((observableValue, eventHandler, t1) -> {
+            labelDateError.setText("");
+            if(!validateDate()) labelDateError.setText("Datum mora biti veci od dat. rezervacije!");
         });
 
 
@@ -85,11 +83,13 @@ public class reservationViewController {
     }
 
     /**
-     * Private method for validating car
-     * @param date
+     * Private method for validating date
      */
-    private boolean validateDate(Date date) {
-        return date.compareTo(dateOfArrival) > 0;
+    private boolean validateDate() {
+        if(datePickerReservation.getValue()!=null&&pickerArrivalDate.getValue()!=null) {
+            return pickerArrivalDate.getValue().compareTo(datePickerReservation.getValue()) > 0;
+        }
+        return false;
     }
 
 
