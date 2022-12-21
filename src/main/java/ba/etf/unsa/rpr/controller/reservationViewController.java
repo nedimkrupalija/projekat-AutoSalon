@@ -11,6 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -20,12 +21,14 @@ public class reservationViewController {
     public Label idLabel;
     public Label labelDate;
 
+    public Date dateOfArrival;
     public DatePicker pickerArrivalDate;
     public Button changeDateButton;
     public Label labelCar;
     public Label labelUser;
     public Button deleteButton;
     public Button backButton;
+    public Label labelDateError;
 
     /**
      * Action for going back to main admin panel
@@ -44,6 +47,20 @@ public class reservationViewController {
         currentStage.close();
     }
 
-    public void deleteButtonClick(ActionEvent actionEvent) {
+    /**
+     * Private method for validating car
+     * @param date
+     */
+    private boolean validateDate(Date date) {
+        return date.compareTo(dateOfArrival) > 0;
+    }
+
+
+    /**
+     * Action for changing date of arrival of car
+     * @param actionEvent
+     */
+    public void changeDateButtonClick(ActionEvent actionEvent) {
+
     }
 }
