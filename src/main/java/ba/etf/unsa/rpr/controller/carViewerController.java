@@ -6,19 +6,14 @@ import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.time.Year;
@@ -87,13 +82,14 @@ public class carViewerController {
     public void initialize(){
 
             removeAllCss();
-        carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
+            carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
+                if(carsList.getSelectionModel().getSelectedItem()!=null) {
                     idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
                     nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
                     yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
                     colorText.setText(carsList.getSelectionModel().getSelectedItem().getColor());
                     powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
-                    descText.setText(carsList.getSelectionModel().getSelectedItem().getDesc());
+                    descText.setText(carsList.getSelectionModel().getSelectedItem().getDescription());
                     try {
                         if (new ReservationDAOSQlImpl().isReserved(carsList.getSelectionModel().getSelectedItem().getId()) == 1) {
                             reservedButton.getStyleClass().add("reserved");
@@ -103,7 +99,9 @@ public class carViewerController {
                     } catch (ReservationException e) {
                         e.printStackTrace();
                     }
-                });
+                }
+            });
+
             nameText.textProperty().addListener((observableValue1, s, t11) ->
                 setTextFieldCss(nameText,nameError,t11));
         yearText.textProperty().addListener((observableValue1, s, t11) ->
@@ -129,10 +127,44 @@ public class carViewerController {
                 setTextFieldCss(colorText,colorError,t11));
         powerText.textProperty().addListener((observableValue1, s, t11) ->
                 setTextFieldCss(powerText,powerError,t11));
-
-
     }
 
+
+    /**
+     * Action for inserting car into db
+     * @param actionEvent
+     */
+    public void insertButtonClick(ActionEvent actionEvent) {
+
+        if(!(isValidated&&yearValidation)) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greska!");
+            alert.setHeaderText("Greska pri validaciji podataka!");
+            alert.setContentText("Ispravite podatke i pokusajte opet!");
+            alert.showAndWait();
+            return;
+        }
+        Car car = new Car();
+        car.setName(nameText.getText());
+        car.setColor(colorText.getText());
+        if(descText.getText().trim().isEmpty()) descText.setText("");
+        car.setDescription(descText.getText());
+        car.sethP(Integer.parseInt(powerText.getText()));
+        car.setYear(yearText.getText());
+        try {
+            new CarDaoSQLImpl().insert(car);
+
+        } catch (CarException e) {
+            e.printStackTrace();
+            return;
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Uspjesno dodavanje");
+        alert.setHeaderText(null);
+        alert.setContentText("Auto uspjesno dodano, mozete nastaviti dalje!");
+        alert.showAndWait();
+        updateList();
+    }
 
 
 

@@ -15,7 +15,8 @@ import java.util.Properties;
 
 public class ReservationDAOSQlImpl implements ReservationDao {
 
-    private Connection conn ;
+    private Connection conn;
+
 
     /**
      * Default constructor for ReservationDao implementation, makes connection to database
