@@ -25,7 +25,6 @@ public class carViewerController {
     public Button reservedButton;
     public Label idLabel;
     public ListView<Car> carsList;
-    public TextField colorText;
     public TextField nameText;
     public TextField yearText;
     public TextField powerText;
@@ -36,6 +35,7 @@ public class carViewerController {
     public Label yearError;
     public Label colorError;
     public Label powerError;
+    public ChoiceBox<String> colorMenu;
     private boolean yearValidation;
     private boolean isValidated;
 
@@ -70,7 +70,7 @@ public class carViewerController {
     private void removeAllCss(){
         nameText.getStyleClass().removeAll("textFieldClass");
         yearText.getStyleClass().removeAll("textFieldClass");
-        colorText.getStyleClass().removeAll("textFieldClass");
+        colorMenu.getStyleClass().removeAll("textFieldClass");
         powerText.getStyleClass().removeAll("textFieldClass");
 
     }
@@ -80,14 +80,21 @@ public class carViewerController {
      */
     @FXML
     public void initialize(){
-
+        colorMenu.getItems().add("Plava");
+        colorMenu.getItems().add("Crvena");
+        colorMenu.getItems().add("Narandzasta");
+        colorMenu.getItems().add("Sucmurasta");
+        colorMenu.getItems().add("Limun");
+        colorMenu.getItems().add("Zelena");
+        colorMenu.getItems().add("Crna");
+        colorMenu.getItems().add("Bijela");
             removeAllCss();
             carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
                 if(carsList.getSelectionModel().getSelectedItem()!=null) {
                     idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
                     nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
                     yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
-                    colorText.setText(carsList.getSelectionModel().getSelectedItem().getColor());
+                    colorMenu.setValue(carsList.getSelectionModel().getSelectedItem().getColor());
                     powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
                     descText.setText(carsList.getSelectionModel().getSelectedItem().getDescription());
                     try {
@@ -123,8 +130,9 @@ public class carViewerController {
                 yearValidation = false;
             }
         });
-        colorText.textProperty().addListener((observableValue1, s, t11) ->
-                setTextFieldCss(colorText,colorError,t11));
+        colorMenu.selectionModelProperty().addListener((observableValue1, s, t11) -> {
+            isValidated = colorMenu.getValue() != null;
+                });
         powerText.textProperty().addListener((observableValue1, s, t11) ->
                 setTextFieldCss(powerText,powerError,t11));
     }
@@ -146,7 +154,7 @@ public class carViewerController {
         }
         Car car = new Car();
         car.setName(nameText.getText());
-        car.setColor(colorText.getText());
+        car.setColor(colorMenu.getValue());
         if(descText.getText().trim().isEmpty()) descText.setText("");
         car.setDescription(descText.getText());
         car.sethP(Integer.parseInt(powerText.getText()));

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix in update/delete">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented car insert from admin panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,27 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00144" summary="changed getall in ReservationDAOSQlImpl">
-      <created>1671474225237</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1671474225237</updated>
-    </task>
-    <task id="LOCAL-00145" summary="update main screen look">
-      <created>1671476041535</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1671476041535</updated>
-    </task>
-    <task id="LOCAL-00146" summary="added initialize and listeners to fields">
-      <created>1671476688337</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1671476688337</updated>
     </task>
     <task id="LOCAL-00147" summary="added getbynamepass method to UserDaoSQLImpl">
       <created>1671477171312</created>
@@ -423,7 +402,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671579875981</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="bugfix in CarDaoSQLImpl">
+      <created>1671580785889</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1671580785889</updated>
+    </task>
+    <task id="LOCAL-00194" summary="bugfix in car">
+      <created>1671580795769</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1671580795769</updated>
+    </task>
+    <task id="LOCAL-00195" summary="implemented car insert from admin panel">
+      <created>1671580897117</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1671580897126</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -438,9 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="setting data for admin panel from loginController" />
-    <MESSAGE value="updated responsivness of admin panel and added css file" />
-    <MESSAGE value="added buttons to toggle group" />
     <MESSAGE value="bugfix in user registration" />
     <MESSAGE value="added listener for name changing" />
     <MESSAGE value="added css for field color" />
@@ -463,7 +460,10 @@
     <MESSAGE value="implemented method for updating list of cars on update/delete/insert" />
     <MESSAGE value="bugfix in insert" />
     <MESSAGE value="bugfix in update/delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix in update/delete" />
+    <MESSAGE value="bugfix in CarDaoSQLImpl" />
+    <MESSAGE value="bugfix in car" />
+    <MESSAGE value="implemented car insert from admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented car insert from admin panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -483,13 +483,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java</url>
-          <line>76</line>
+          <line>74</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java</url>
-          <line>151</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
