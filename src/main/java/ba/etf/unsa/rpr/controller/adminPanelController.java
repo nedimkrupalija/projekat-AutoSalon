@@ -151,6 +151,7 @@ public class adminPanelController {
             carViewerController carViewerController = loader.getController();
             ObservableList<Car> list = FXCollections.observableArrayList(cars);
             carViewerController.carsList.setItems(list);
+            carViewerController.adminId = Integer.parseInt(labelId.getText());
 
             //carViewerController.user.setId(user.getId());
 
@@ -170,6 +171,7 @@ public class adminPanelController {
             reservationViewController reservationViewController = loader.getController();
             ObservableList<Reservation> list = FXCollections.observableArrayList(reservations);
             reservationViewController.reservationList.setItems(list);
+            reservationViewController.adminId = Integer.parseInt(labelId.getText());
 
             Stage thisStage = (Stage) labelId.getScene().getWindow();
             thisStage.close();

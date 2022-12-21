@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added method to update arrival date">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfixes in ReservationDAOSQlImpl">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00163" summary="added more css to registration screen">
-      <created>1671488717415</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1671488717416</updated>
-    </task>
-    <task id="LOCAL-00164" summary="added css for main screen">
-      <created>1671489274289</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1671489274289</updated>
     </task>
     <task id="LOCAL-00165" summary="added css for login screen">
       <created>1671489577411</created>
@@ -421,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671651321688</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="Implemented action for changing date of arrival for reservarion">
+      <created>1671651633886</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1671651633886</updated>
+    </task>
+    <task id="LOCAL-00213" summary="bugfixes in ReservationDAOSQlImpl">
+      <created>1671651645443</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1671651645445</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,8 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented private method for setting css to fields" />
-    <MESSAGE value="added css style for text fields" />
     <MESSAGE value="implemented method that removes all css from text fields" />
     <MESSAGE value="implemented year validation" />
     <MESSAGE value="implemented method for updating list of cars on update/delete/insert" />
@@ -461,7 +459,9 @@
     <MESSAGE value="bugfixes in listeners" />
     <MESSAGE value="changed tostring" />
     <MESSAGE value="added method to update arrival date" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method to update arrival date" />
+    <MESSAGE value="Implemented action for changing date of arrival for reservarion" />
+    <MESSAGE value="bugfixes in ReservationDAOSQlImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfixes in ReservationDAOSQlImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

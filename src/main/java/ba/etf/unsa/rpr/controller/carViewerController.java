@@ -8,6 +8,7 @@ import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
+import ba.etf.unsa.rpr.exception.UserException;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class carViewerController {
+    public int adminId;
     public Button reservedButton;
     public Label idLabel;
     public ListView<Car> carsList;
@@ -223,7 +225,7 @@ public class carViewerController {
      * Action for going back to main screen from car panel
      * @param actionEvent
      */
-    public void backButtonClick(ActionEvent actionEvent) throws IOException {
+    public void backButtonClick(ActionEvent actionEvent) throws Exception {
         System.out.println("Povratak na admin panel!");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/adminPanel.fxml"));
         Parent root = loader.load();
@@ -234,12 +236,14 @@ public class carViewerController {
         stage.show();
         currentStage.close();
 
-        /*//Set fields in admin panel
+
+        //Setting fields in admin panel
+        User admin = new UserDaoSQLImpl().getById(adminId);
         adminPanelController adminPanelController = loader.getController();
-        adminPanelController.labelId.setText(String.valueOf(user.getId()));
-        adminPanelController.textName.setText(user.getName());
-        adminPanelController.textPassword.setText(user.getPassword());
-        adminPanelController.labelUser.setText(user.getName());*/
+        adminPanelController.labelId.setText(String.valueOf(admin.getId()));
+        adminPanelController.textName.setText(admin.getName());
+        adminPanelController.textPassword.setText(admin.getPassword());
+        adminPanelController.labelUser.setText(admin.getName());
 
     }
 
