@@ -84,6 +84,23 @@ public class ReservationDAOSQlImpl implements ReservationDao {
     }
 
     /**
+     * Help method for updating date of arrival
+     * @param date
+     * @param id
+     */
+    public void updateArrivalDate(Date date, int id){
+        String query = "UPDATE Reservations SET arrival_date = ? WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setDate(1,date);
+            stmt.setInt(2,id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
      * Updates specific reservation item
      * @param item from which attributes are taken
      * @param id of item to change
