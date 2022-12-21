@@ -187,9 +187,11 @@ public class carViewerController {
         Car car = new Car();
         car.setColor(colorMenu.getValue());
         car.setYear(yearText.getText());
-        if(descText.getText().isEmpty()) descText.setText("");
+        if(descText.getText().trim().isEmpty()) descText.setText("");
         car.setDescription(descText.getText());
         car.sethP(Integer.parseInt(powerText.getText()));
+        car.setName(nameText.getText());
+
         if(!(isValidated&&yearValidation)) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Greska!");
@@ -199,11 +201,13 @@ public class carViewerController {
             return;
         }
         try {
+            System.out.println(idLabel.getText());
             new CarDaoSQLImpl().update(car,Integer.parseInt(idLabel.getText()));
         } catch (CarException e) {
             e.printStackTrace();
             return;
         }
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Uspjesno dodavanje");
         alert.setHeaderText(null);
