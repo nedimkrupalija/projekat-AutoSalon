@@ -1,9 +1,11 @@
 package ba.etf.unsa.rpr.controller;
 
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
+import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.exception.CarException;
+import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -98,6 +100,22 @@ public class reservationViewController {
      * @param actionEvent
      */
     public void changeDateButtonClick(ActionEvent actionEvent) {
-
+        Date date = Date.valueOf(pickerArrivalDate.getValue());
+        System.out.println("Izmjena datuma!");
+        try {
+            new ReservationDAOSQlImpl().updateArrivalDate(date, reservationList.getSelectionModel().getSelectedItem().getId());
+        } catch (ReservationException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greska!");
+            alert.setHeaderText(e.getMessage());
+            alert.setContentText("Ispravite podatke i pokusajte opet!");
+            alert.showAndWait();
+            return;
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Uspjesna izmjena");
+        alert.setHeaderText(null);
+        alert.setContentText("Podaci uspjesno izmjenjeni, mozete nastaviti dalje!");
+        alert.showAndWait();
     }
 }
