@@ -260,6 +260,11 @@ public class carViewerController {
             alert.showAndWait();
             return;
         }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Uspjesno brisanje");
+        alert.setHeaderText(null);
+        alert.setContentText("Auto uspjesno obrisano, mozete nastaviti dalje!");
+        alert.showAndWait();
         updateList();
 
     }
