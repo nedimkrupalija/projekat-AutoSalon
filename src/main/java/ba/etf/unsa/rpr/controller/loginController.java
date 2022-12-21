@@ -105,6 +105,7 @@ public class loginController {
             adminPanelController.labelUser.setText(user.getName());
 
 
+
         }
         else{
             System.out.println("Login korisnika: " + user.getName());

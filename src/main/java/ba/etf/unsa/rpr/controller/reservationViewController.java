@@ -4,6 +4,7 @@ import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
@@ -40,6 +41,8 @@ public class reservationViewController {
     public Label labelDateError;
     public DatePicker datePickerReservation;
 
+    public int adminId;
+
     /**
      * Initialization of data
      * Listeners for validation
@@ -71,7 +74,7 @@ public class reservationViewController {
      * Action for going back to main admin panel
      * @param actionEvent
      */
-    public void backButtonClick(ActionEvent actionEvent) throws IOException {
+    public void backButtonClick(ActionEvent actionEvent) throws Exception {
         System.out.println("Nazad na admin panel!");
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/adminPanel.fxml"));
@@ -81,6 +84,16 @@ public class reservationViewController {
         stage.setScene(scene);
         Stage currentStage = (Stage) idLabel.getScene().getWindow();
         stage.show();
+
+        //Setting field in admin panel
+        User admin = new UserDaoSQLImpl().getById(adminId);
+        adminPanelController adminPanelController = loader.getController();
+        adminPanelController.labelId.setText(String.valueOf(admin.getId()));
+        adminPanelController.textName.setText(admin.getName());
+        adminPanelController.textPassword.setText(admin.getPassword());
+        adminPanelController.labelUser.setText(admin.getName());
+
+
         currentStage.close();
     }
 
