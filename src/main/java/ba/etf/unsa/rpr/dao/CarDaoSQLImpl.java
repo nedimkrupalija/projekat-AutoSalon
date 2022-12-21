@@ -51,7 +51,7 @@ public class CarDaoSQLImpl implements CarDao {
             if(rs.next()){
                 Car car = new Car();
                 car.setId(rs.getInt("id"));
-                car.setName(rs.getString("make"));
+                car.setName(rs.getString("name"));
                 car.setYear(rs.getString("year"));
                 car.setColor(rs.getString("color"));
                 car.sethP(rs.getInt("hp"));
