@@ -47,7 +47,7 @@
                   </Label>
                   <Label text="Vrijeme dolaska: ">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
                   </Label>
                   <Label text="Vozilo: ">
@@ -69,11 +69,11 @@
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="labelDate" text="Label">
+                  <DatePicker fx:id="datePickerReservation" editable="false">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
-                  </Label>
+                  </DatePicker>
                   <HBox>
                      <children>
                         <DatePicker fx:id="pickerArrivalDate">
@@ -95,7 +95,7 @@
                   </Label>
                   <Label fx:id="labelCar" text="Label">
                      <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
                      </VBox.margin>
                   </Label>
                   <Label fx:id="labelUser" text="Label">

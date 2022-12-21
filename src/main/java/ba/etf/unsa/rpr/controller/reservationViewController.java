@@ -1,6 +1,12 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
+import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
+import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.exception.CarException;
+import ba.etf.unsa.rpr.exception.UserException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,7 +23,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class reservationViewController {
 
-    public ListView reservationList;
+    public ListView<Reservation> reservationList;
     public Label idLabel;
     public Label labelDate;
 
@@ -29,6 +35,23 @@ public class reservationViewController {
     public Button deleteButton;
     public Button backButton;
     public Label labelDateError;
+    public DatePicker datePickerReservation;
+
+    /**
+     * Initialization of data
+     * Listeners for validation
+     * @throws CarException
+     * @throws UserException
+     */
+    @FXML
+    public void initialize() throws CarException, UserException {
+        idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
+        labelCar.setText(new CarDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
+        labelUser.setText(new UserDaoSQLImpl().getById(reservationList.getSelectionModel().getSelectedItem().getId()).getName());
+        datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
+        pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
+
+    }
 
     /**
      * Action for going back to main admin panel
