@@ -146,6 +146,9 @@ public class adminPanelController {
             carViewerController carViewerController = loader.getController();
             ObservableList<Car> list = FXCollections.observableArrayList(cars);
             carViewerController.carsList.setItems(list);
+
+            //carViewerController.user.setId(user.getId());
+
         }
 
     }

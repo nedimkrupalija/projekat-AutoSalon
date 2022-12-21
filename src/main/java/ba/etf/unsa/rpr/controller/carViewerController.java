@@ -38,6 +38,7 @@ public class carViewerController {
     public Label colorError;
     public Label powerError;
     public ChoiceBox<String> colorMenu;
+    public Button deleteButton;
     private boolean yearValidation;
     private boolean isValidated;
 
@@ -209,9 +210,9 @@ public class carViewerController {
         }
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesno dodavanje");
+        alert.setTitle("Uspjesna izmjena");
         alert.setHeaderText(null);
-        alert.setContentText("Auto uspjesno dodano, mozete nastaviti dalje!");
+        alert.setContentText("Auto uspjesno izmjenjeno, mozete nastaviti dalje!");
         alert.showAndWait();
         updateList();
 
@@ -242,4 +243,23 @@ public class carViewerController {
 
     }
 
+    /**
+     * Action for deleting car from database
+     * @param actionEvent
+     */
+    public void deleteButtonClick(ActionEvent actionEvent) {
+        System.out.printf("Odabrano brisanje vozila");
+
+        try {
+            new CarDaoSQLImpl().delete(Integer.parseInt(idLabel.getText()));
+        } catch (CarException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greska!");
+            alert.setHeaderText("Greska pri brisanju vozila!");
+            alert.setContentText("Odaberite vozilo i pokusajte opet!");
+            alert.showAndWait();
+            return;
+        }
+
+    }
 }
