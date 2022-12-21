@@ -2,8 +2,10 @@ package ba.etf.unsa.rpr.controller;
 
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
+import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import javafx.collections.FXCollections;
@@ -38,6 +40,8 @@ public class carViewerController {
     public ChoiceBox<String> colorMenu;
     private boolean yearValidation;
     private boolean isValidated;
+
+    public User user;
 
     private ArrayList<Reservation> reservations;
 
@@ -175,9 +179,38 @@ public class carViewerController {
     }
 
 
-
-
+    /**
+     * Action for updating car
+     * @param actionEvent
+     */
     public void updateButtonClick(ActionEvent actionEvent) {
+        Car car = new Car();
+        car.setColor(colorMenu.getValue());
+        car.setYear(yearText.getText());
+        if(descText.getText().isEmpty()) descText.setText("");
+        car.setDescription(descText.getText());
+        car.sethP(Integer.parseInt(powerText.getText()));
+        if(!(isValidated&&yearValidation)) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greska!");
+            alert.setHeaderText("Greska pri validaciji podataka!");
+            alert.setContentText("Ispravite podatke i pokusajte opet!");
+            alert.showAndWait();
+            return;
+        }
+        try {
+            new CarDaoSQLImpl().update(car,Integer.parseInt(idLabel.getText()));
+        } catch (CarException e) {
+            e.printStackTrace();
+            return;
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Uspjesno dodavanje");
+        alert.setHeaderText(null);
+        alert.setContentText("Auto uspjesno dodano, mozete nastaviti dalje!");
+        alert.showAndWait();
+        updateList();
+
     }
 
 
@@ -195,6 +228,14 @@ public class carViewerController {
         Stage currentStage  = (Stage) idLabel.getScene().getWindow();
         stage.show();
         currentStage.close();
+
+        /*//Set fields in admin panel
+        adminPanelController adminPanelController = loader.getController();
+        adminPanelController.labelId.setText(String.valueOf(user.getId()));
+        adminPanelController.textName.setText(user.getName());
+        adminPanelController.textPassword.setText(user.getPassword());
+        adminPanelController.labelUser.setText(user.getName());*/
+
     }
 
 }
