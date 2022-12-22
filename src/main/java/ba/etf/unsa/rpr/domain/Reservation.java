@@ -10,7 +10,7 @@ import java.util.Objects;
  * Reservation class that reporesent reservation in database
  * POJO specification class (setters, getters, equals, tostring, hashcode)
  */
-public class Reservation {
+public class Reservation  {
     private int id;
     private Date reservationDate;
     private Date arrivalDate;
