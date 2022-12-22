@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added saving of admin data when going back to admin panel from reservationViewController">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="forced domain classes to use id">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +15,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -75,20 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00167" summary="set id from login to admin panel">
-      <created>1671491868829</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1671491868829</updated>
-    </task>
-    <task id="LOCAL-00168" summary="setting data for admin panel from loginController">
-      <created>1671493354881</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1671493354881</updated>
     </task>
     <task id="LOCAL-00169" summary="updated responsivness of admin panel and added css file">
       <created>1671493373932</created>
@@ -419,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671652091048</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="added idable interface">
+      <created>1671745449395</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1671745449396</updated>
+    </task>
+    <task id="LOCAL-00217" summary="forced domain classes to use id">
+      <created>1671745509749</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1671745509749</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented method for updating list of cars on update/delete/insert" />
-    <MESSAGE value="bugfix in insert" />
     <MESSAGE value="bugfix in update/delete" />
     <MESSAGE value="bugfix in car" />
     <MESSAGE value="implemented car insert from admin panel" />
@@ -459,7 +457,9 @@
     <MESSAGE value="bugfixes in ReservationDAOSQlImpl" />
     <MESSAGE value="added saving of admin data when going back to admin panel from carviewer" />
     <MESSAGE value="added saving of admin data when going back to admin panel from reservationViewController" />
-    <option name="LAST_COMMIT_MESSAGE" value="added saving of admin data when going back to admin panel from reservationViewController" />
+    <MESSAGE value="added idable interface" />
+    <MESSAGE value="forced domain classes to use id" />
+    <option name="LAST_COMMIT_MESSAGE" value="forced domain classes to use id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
