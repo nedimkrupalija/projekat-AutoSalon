@@ -8,7 +8,7 @@ import java.util.Objects;
  * POJO specification
  */
 
-public class Car {
+public class Car implements Idable{
     private int id;
     private String name;
     private String year;
