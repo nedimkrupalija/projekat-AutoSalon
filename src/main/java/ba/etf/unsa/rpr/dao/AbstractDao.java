@@ -189,9 +189,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
      * @param object
      * @return
      */
-    public Map<String, Object> object2row(T object) {
-        return null;
-    }
+    public abstract Map<String, Object> object2row(T object);
 
     /**
      * Method for getting all items of type T from db
