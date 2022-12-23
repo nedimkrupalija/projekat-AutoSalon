@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl insert in AbstractDao">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored CarDaoSQLImpl">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,20 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00177" summary="added look for car admin panel">
-      <created>1671559475902</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1671559475902</updated>
-    </task>
-    <task id="LOCAL-00178" summary="implemented going to car manager from admin panel">
-      <created>1671560339056</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1671560339057</updated>
     </task>
     <task id="LOCAL-00179" summary="changed tostring in car">
       <created>1671572281983</created>
@@ -419,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671836515949</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="impl priv. method that prepares string for updating object">
+      <created>1671836727841</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1671836727841</updated>
+    </task>
+    <task id="LOCAL-00227" summary="refactored CarDaoSQLImpl">
+      <created>1671836861351</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1671836861351</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugfix in deleting car" />
-    <MESSAGE value="added alert for deleting  car" />
     <MESSAGE value="added action for going to reservationViewController" />
     <MESSAGE value="made look of reservationViewer.fxml" />
     <MESSAGE value="implemented action for going back to admin panel" />
@@ -459,7 +457,9 @@
     <MESSAGE value="implemented update in AbstractDao" />
     <MESSAGE value="impl preparation for insert" />
     <MESSAGE value="impl insert in AbstractDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl insert in AbstractDao" />
+    <MESSAGE value="impl priv. method that prepares string for updating object" />
+    <MESSAGE value="refactored CarDaoSQLImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored CarDaoSQLImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -476,21 +476,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java</url>
-          <line>178</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
