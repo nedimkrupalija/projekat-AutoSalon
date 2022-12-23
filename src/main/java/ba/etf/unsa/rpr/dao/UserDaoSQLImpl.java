@@ -5,10 +5,7 @@ import ba.etf.unsa.rpr.exception.UserException;
 
 import java.io.FileReader;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
 
@@ -81,8 +78,17 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
         }
     }
 
+    /**
+     * Method that "translates" object to data for sql query
+     * @param object to translate
+     * @return map - str/obj
+     */
     @Override
     public Map<String, Object> object2row(User object) {
-        return null;
+        Map<String, Object> row = new TreeMap<String, Object>();
+        row.put("id",object.getId());
+        row.put("name",object.getName());
+        row.put("password",object.getPassword());
+        return row;
     }
 }

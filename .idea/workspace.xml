@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. row2obj in ReservationDAOSQlImpl">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl row2obj in UserDaoSQLImpl">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,20 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00184" summary="implemented listener for setting fields">
-      <created>1671575522206</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1671575522206</updated>
-    </task>
-    <task id="LOCAL-00185" summary="implemented go back to admin panel">
-      <created>1671576437928</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1671576437928</updated>
     </task>
     <task id="LOCAL-00186" summary="implemented private method for setting css to fields">
       <created>1671578248974</created>
@@ -419,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671838963361</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="impl. obj2row in ReservationDAOSQlImpl">
+      <created>1671839226974</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1671839226974</updated>
+    </task>
+    <task id="LOCAL-00234" summary="impl row2obj in UserDaoSQLImpl">
+      <created>1671839399582</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1671839399582</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented listener for picking reservation" />
-    <MESSAGE value="bugfixes in listeners" />
     <MESSAGE value="changed tostring" />
     <MESSAGE value="added method to update arrival date" />
     <MESSAGE value="Implemented action for changing date of arrival for reservarion" />
@@ -459,7 +457,9 @@
     <MESSAGE value="impl. row2obj in CarDaoSQLImpl" />
     <MESSAGE value="impl obj2row in CarDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in ReservationDAOSQlImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl. row2obj in ReservationDAOSQlImpl" />
+    <MESSAGE value="impl. obj2row in ReservationDAOSQlImpl" />
+    <MESSAGE value="impl row2obj in UserDaoSQLImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl row2obj in UserDaoSQLImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,7 +470,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java</url>
-          <line>50</line>
+          <line>47</line>
           <properties class="ba.etf.unsa.rpr.dao.UserDaoSQLImpl">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
