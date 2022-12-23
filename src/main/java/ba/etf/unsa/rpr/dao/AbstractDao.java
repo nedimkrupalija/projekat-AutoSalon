@@ -81,6 +81,27 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
    }
 
     /**
+     * Private method that prepares string for update method
+     *
+     * @param row - map returned from obj2row
+     * @return String with values
+     */
+   private String prepareUpdate(Map<String, Object> row){
+       StringBuilder columns = new StringBuilder();
+
+       int counter = 0;
+       for(Map.Entry<String, Object> entry : row.entrySet()){
+           counter++;
+           if(entry.getKey().equals("id")) continue;;
+           columns.append(entry.getKey()).append("= ?");
+           if(row.size()!=counter){
+               columns.append(", ");
+           }
+       }
+       return columns.toString();
+   }
+
+    /**
      * Method for updating item in database
      * @param item from which data is taken for update
      * @param id of item to update
@@ -88,7 +109,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
      */
     public T update(T item, int id){
         Map<String, Object> row = object2row(item);
-        String columnsToUpdate = "";
+        String columnsToUpdate = prepareUpdate(row);
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("UPDATE ").append(this.tableName).append(" SET ").append(columnsToUpdate)
                 .append(" WHERE id = ?");

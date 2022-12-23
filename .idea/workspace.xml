@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented update in AbstractDao">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl insert in AbstractDao">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,20 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00175" summary="bugfixes in changing admin info">
-      <created>1671554682895</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1671554682896</updated>
-    </task>
-    <task id="LOCAL-00176" summary="added description field to car">
-      <created>1671557520861</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1671557520864</updated>
     </task>
     <task id="LOCAL-00177" summary="added look for car admin panel">
       <created>1671559475902</created>
@@ -420,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671833577689</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="impl preparation for insert">
+      <created>1671836428415</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1671836428415</updated>
+    </task>
+    <task id="LOCAL-00225" summary="impl insert in AbstractDao">
+      <created>1671836515949</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1671836515949</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugfix in CarDaoSQLImpl" />
-    <MESSAGE value="implemented deleting car from db" />
     <MESSAGE value="bugfix in deleting car" />
     <MESSAGE value="added alert for deleting  car" />
     <MESSAGE value="added action for going to reservationViewController" />
@@ -460,7 +457,9 @@
     <MESSAGE value="implemented getall in AbstractDao" />
     <MESSAGE value="implemented getbyid in AbstractDao" />
     <MESSAGE value="implemented update in AbstractDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented update in AbstractDao" />
+    <MESSAGE value="impl preparation for insert" />
+    <MESSAGE value="impl insert in AbstractDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl insert in AbstractDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
