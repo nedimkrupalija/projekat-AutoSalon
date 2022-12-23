@@ -3,8 +3,8 @@ package ba.etf.unsa.rpr.dao;
 import ba.etf.unsa.rpr.domain.Idable;
 
 import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 
@@ -16,6 +16,10 @@ import java.util.Properties;
 public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     private Connection conn;
     private String tableName;
+
+    public Connection getConn() {
+        return conn;
+    }
 
     /**
      * Constructor for abstract dao
@@ -33,4 +37,25 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Method for deleting object from db
+     * @param id of object to delete
+     */
+   public void delete(int id){
+        String query = "DELETE FROM " + this.tableName + " WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+
+        }
+
+   }
+
+
+
+
 }
