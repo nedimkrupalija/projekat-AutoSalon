@@ -55,6 +55,9 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
    }
 
+
+
+
     /**
      * ORM - transforms result set into object
      * @param rs
@@ -69,6 +72,28 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
      */
    public abstract T object2row(T object);
 
+    /**
+     * Method for getting all items of type T from db
+     * @return ArrayList of objects
+     */
+    public ArrayList<T> getAll(){
+        String query = "SELECT * FROM " + this.tableName;
+        ArrayList<T> items = new ArrayList<T>();
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            ResultSet rs =  stmt.executeQuery();
+            while(rs.next()){
+               T item = row2object(rs);
+               items.add(item);
+            }
+            rs.close();
+            return items;
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
 
