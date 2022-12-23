@@ -9,10 +9,8 @@ import ba.etf.unsa.rpr.exception.UserException;
 
 import java.io.FileReader;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.sql.Date;
+import java.util.*;
 
 public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements ReservationDao {
 
@@ -93,10 +91,21 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
+
+    /**
+     * Method that translates given object into form for accessing db
+     * @param object to "translate"
+     * @return map - string/obj
+     */
     @Override
     public Map<String, Object> object2row(Reservation object) {
-        return null;
+        Map<String, Object> row = new TreeMap<String ,Object>();
+        row.put("id",object.getId());
+        row.put("reservation_date",object.getReservationDate());
+        row.put("arrival_date",object.getArrivalDate());
+        row.put("user_fk",object.getUser().getId());
+        row.put("car_fk",object.getCar().getId());
+        return row;
     }
 }

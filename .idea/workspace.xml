@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl obj2row in CarDaoSQLImpl">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. row2obj in ReservationDAOSQlImpl">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00183" summary="added css for reserved button">
-      <created>1671575210383</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1671575210383</updated>
     </task>
     <task id="LOCAL-00184" summary="implemented listener for setting fields">
       <created>1671575522206</created>
@@ -420,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671837924409</updated>
     </task>
-    <option name="localTasksCounter" value="232" />
+    <task id="LOCAL-00232" summary="impl. row2obj in ReservationDAOSQlImpl">
+      <created>1671838963361</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1671838963361</updated>
+    </task>
+    <option name="localTasksCounter" value="233" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added data setters in initialize" />
     <MESSAGE value="implemented listener for picking reservation" />
     <MESSAGE value="bugfixes in listeners" />
     <MESSAGE value="changed tostring" />
@@ -460,7 +458,8 @@
     <MESSAGE value="Refactored UserDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in CarDaoSQLImpl" />
     <MESSAGE value="impl obj2row in CarDaoSQLImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl obj2row in CarDaoSQLImpl" />
+    <MESSAGE value="impl. row2obj in ReservationDAOSQlImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl. row2obj in ReservationDAOSQlImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
