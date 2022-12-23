@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="delete implementation in AbstractDao">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented getall in AbstractDao">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,20 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00171" summary="bugfix in user registration">
-      <created>1671553176512</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1671553176513</updated>
-    </task>
-    <task id="LOCAL-00172" summary="added listener for name changing">
-      <created>1671553798255</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1671553798255</updated>
     </task>
     <task id="LOCAL-00173" summary="added css for field color">
       <created>1671553808065</created>
@@ -419,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671831270159</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="obj2row and row2obj rel mapping">
+      <created>1671832038422</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1671832038422</updated>
+    </task>
+    <task id="LOCAL-00221" summary="implemented getall in AbstractDao">
+      <created>1671832298798</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1671832298798</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented car insert from admin panel" />
-    <MESSAGE value="implemented action for updating car" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="implemented car update" />
     <MESSAGE value="bugfix in CarDaoSQLImpl" />
@@ -459,7 +457,9 @@
     <MESSAGE value="forced domain classes to use id" />
     <MESSAGE value="implementec constructor" />
     <MESSAGE value="delete implementation in AbstractDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete implementation in AbstractDao" />
+    <MESSAGE value="obj2row and row2obj rel mapping" />
+    <MESSAGE value="implemented getall in AbstractDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented getall in AbstractDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

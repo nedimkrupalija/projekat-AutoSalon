@@ -52,7 +52,30 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             throw new RuntimeException(e);
 
         }
+   }
 
+    /**
+     * method for getting item by its id
+     * @param id of item
+     * @return item from db
+     */
+   public T getById(int id){
+       String query = "SELECT * FROM " + this.tableName + " WHERE id = ?";
+       try{
+           PreparedStatement stmt = this.conn.prepareStatement(query);
+           stmt.setInt(1,id);
+           ResultSet rs = stmt.executeQuery();
+           if(rs.next()){
+               T item = row2object(rs);
+               rs.close();
+               return item;
+           }
+           else {
+               throw new Exception("Not found!");
+           }
+       } catch (Exception e) {
+           throw new RuntimeException(e);
+       }
    }
 
 
