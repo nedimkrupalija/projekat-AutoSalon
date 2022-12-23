@@ -4,6 +4,7 @@ import ba.etf.unsa.rpr.domain.Idable;
 
 import java.io.FileReader;
 import java.sql.*;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Properties;
@@ -108,6 +109,27 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     }
 
 
+
+    /**
+     * Help method that prepares names of columns for inserting + ? sign for that column
+     * @param row - map returned from obj2row
+     * @return - map of name-?
+     */
+    private Map.Entry<String, String> prepareInsert(Map<String, Object> row){
+        StringBuilder columnName = new StringBuilder();
+        StringBuilder columnQuestion = new StringBuilder();
+        int counter = 0;
+        for(Map.Entry<String, Object> entry : row.entrySet()){
+            if(entry.getKey().equals("id")) continue;
+            columnName.append(entry.getKey());
+            columnQuestion.append("?");
+            if(row.size()!= counter){
+                columnName.append(", ");
+                columnQuestion.append(", ");
+            }
+        }
+        return new AbstractMap.SimpleEntry<String, String>(columnName.toString(),columnQuestion.toString());
+    }
 
     /**
      * ORM - transforms result set into object

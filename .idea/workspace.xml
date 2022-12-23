@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented getbyid in AbstractDao">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented update in AbstractDao">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00174" summary="implemented action for changing admin credentials">
-      <created>1671554486142</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1671554486142</updated>
     </task>
     <task id="LOCAL-00175" summary="bugfixes in changing admin info">
       <created>1671554682895</created>
@@ -419,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671832741229</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="implemented update in AbstractDao">
+      <created>1671833577689</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1671833577689</updated>
+    </task>
+    <option name="localTasksCounter" value="224" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented car update" />
     <MESSAGE value="bugfix in CarDaoSQLImpl" />
     <MESSAGE value="implemented deleting car from db" />
     <MESSAGE value="bugfix in deleting car" />
@@ -459,7 +459,8 @@
     <MESSAGE value="obj2row and row2obj rel mapping" />
     <MESSAGE value="implemented getall in AbstractDao" />
     <MESSAGE value="implemented getbyid in AbstractDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented getbyid in AbstractDao" />
+    <MESSAGE value="implemented update in AbstractDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented update in AbstractDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
