@@ -5,10 +5,7 @@ import ba.etf.unsa.rpr.exception.CarException;
 
 import java.io.FileReader;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * CarDao interface SQL implementation
@@ -50,8 +47,20 @@ public class CarDaoSQLImpl extends AbstractDao<Car> implements CarDao {
 
     }
 
+    /**
+     * ORM - object to sql query
+     * @param object to map
+     * @return map - String/Object
+     */
     @Override
     public Map<String, Object> object2row(Car object) {
-        return null;
+        Map<String, Object> row = new TreeMap<String, Object>();
+        row.put("id", object.getId());
+        row.put("name",object.getName());
+        row.put("year",object.getYear());
+        row.put("color",object.getColor());
+        row.put("hp",object.gethP());
+        row.put("description",object.getDescription());
+        return row;
     }
 }

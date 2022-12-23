@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored CarDaoSQLImpl">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. row2obj in CarDaoSQLImpl">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,27 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00179" summary="changed tostring in car">
-      <created>1671572281983</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1671572281983</updated>
-    </task>
-    <task id="LOCAL-00180" summary="added listview initializer">
-      <created>1671572493474</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1671572493474</updated>
-    </task>
-    <task id="LOCAL-00181" summary="implemented method for checking if car is reserved">
-      <created>1671573103554</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1671573103554</updated>
     </task>
     <task id="LOCAL-00182" summary="bugfix in isReserved">
       <created>1671575198089</created>
@@ -419,7 +399,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671836861351</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="refactored ReservationDAOSQlImpl">
+      <created>1671837078898</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1671837078899</updated>
+    </task>
+    <task id="LOCAL-00229" summary="Refactored UserDaoSQLImpl">
+      <created>1671837132533</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1671837132533</updated>
+    </task>
+    <task id="LOCAL-00230" summary="impl. row2obj in CarDaoSQLImpl">
+      <created>1671837294100</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1671837294100</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,9 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added action for going to reservationViewController" />
-    <MESSAGE value="made look of reservationViewer.fxml" />
-    <MESSAGE value="implemented action for going back to admin panel" />
     <MESSAGE value="added method for date of arrival validation" />
     <MESSAGE value="added data setters in initialize" />
     <MESSAGE value="implemented listener for picking reservation" />
@@ -459,7 +457,10 @@
     <MESSAGE value="impl insert in AbstractDao" />
     <MESSAGE value="impl priv. method that prepares string for updating object" />
     <MESSAGE value="refactored CarDaoSQLImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored CarDaoSQLImpl" />
+    <MESSAGE value="refactored ReservationDAOSQlImpl" />
+    <MESSAGE value="Refactored UserDaoSQLImpl" />
+    <MESSAGE value="impl. row2obj in CarDaoSQLImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl. row2obj in CarDaoSQLImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,7 +471,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java</url>
-          <line>162</line>
+          <line>50</line>
           <properties class="ba.etf.unsa.rpr.dao.UserDaoSQLImpl">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
