@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented getall in AbstractDao">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implemented getbyid in AbstractDao">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00173" summary="added css for field color">
-      <created>1671553808065</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1671553808065</updated>
     </task>
     <task id="LOCAL-00174" summary="implemented action for changing admin credentials">
       <created>1671554486142</created>
@@ -419,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671832298798</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="implemented getbyid in AbstractDao">
+      <created>1671832741228</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1671832741229</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugfix" />
     <MESSAGE value="implemented car update" />
     <MESSAGE value="bugfix in CarDaoSQLImpl" />
     <MESSAGE value="implemented deleting car from db" />
@@ -459,7 +458,8 @@
     <MESSAGE value="delete implementation in AbstractDao" />
     <MESSAGE value="obj2row and row2obj rel mapping" />
     <MESSAGE value="implemented getall in AbstractDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented getall in AbstractDao" />
+    <MESSAGE value="implemented getbyid in AbstractDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented getbyid in AbstractDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

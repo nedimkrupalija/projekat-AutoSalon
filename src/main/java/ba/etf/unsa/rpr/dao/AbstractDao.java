@@ -5,6 +5,7 @@ import ba.etf.unsa.rpr.domain.Idable;
 import java.io.FileReader;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Properties;
 
 
@@ -78,6 +79,33 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
        }
    }
 
+    /**
+     * Method for updating item in database
+     * @param item from which data is taken for update
+     * @param id of item to update
+     * @return updated item
+     */
+    public T update(T item, int id){
+        Map<String, Object> row = object2row(item);
+        String columnsToUpdate = "";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("UPDATE ").append(this.tableName).append(" SET ").append(columnsToUpdate)
+                .append(" WHERE id = ?");
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(stringBuilder.toString());
+            int counter = 1;
+            for(Map.Entry<String, Object> entry : row.entrySet()){
+                if(entry.getKey().equals("id")) continue;
+                stmt.setObject(counter,entry.getValue());
+                counter++;
+            }
+            stmt.setObject(counter,id);
+            stmt.executeUpdate();
+            return item;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
 
@@ -90,10 +118,13 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     /**
      * ORM - transforms object params. into fields for query
+     *
      * @param object
      * @return
      */
-   public abstract T object2row(T object);
+    public Map<String, Object> object2row(T object) {
+        return null;
+    }
 
     /**
      * Method for getting all items of type T from db
