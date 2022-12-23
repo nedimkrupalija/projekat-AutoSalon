@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. row2obj in CarDaoSQLImpl">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl obj2row in CarDaoSQLImpl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00182" summary="bugfix in isReserved">
-      <created>1671575198089</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1671575198090</updated>
     </task>
     <task id="LOCAL-00183" summary="added css for reserved button">
       <created>1671575210383</created>
@@ -420,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671837294100</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="impl obj2row in CarDaoSQLImpl">
+      <created>1671837924409</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1671837924409</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method for date of arrival validation" />
     <MESSAGE value="added data setters in initialize" />
     <MESSAGE value="implemented listener for picking reservation" />
     <MESSAGE value="bugfixes in listeners" />
@@ -460,7 +459,8 @@
     <MESSAGE value="refactored ReservationDAOSQlImpl" />
     <MESSAGE value="Refactored UserDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in CarDaoSQLImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl. row2obj in CarDaoSQLImpl" />
+    <MESSAGE value="impl obj2row in CarDaoSQLImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl obj2row in CarDaoSQLImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

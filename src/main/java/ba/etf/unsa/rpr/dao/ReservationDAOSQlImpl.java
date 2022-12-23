@@ -74,11 +74,27 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
     }
 
 
+    /**
+     * ORM - row2res mapping
+     * Sets parems. of reservation returned from db
+     * @param rs resultset
+     * @return Reservation object
+     */
     @Override
     public Reservation row2object(ResultSet rs) {
-        return null;
-    }
+        try{
+            Reservation reservation = new Reservation();
+            reservation.setId(rs.getInt("id"));
+            reservation.setReservationDate(rs.getDate("reservation_date"));
+            reservation.setArrivalDate(rs.getDate("arrival_date"));
+            reservation.setUser(new UserDaoSQLImpl().getById(rs.getInt("user_fk")));
+            reservation.setCar(new CarDaoSQLImpl().getById(rs.getInt("car_fk")));
+            return reservation;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
+    }
     @Override
     public Map<String, Object> object2row(Reservation object) {
         return null;
