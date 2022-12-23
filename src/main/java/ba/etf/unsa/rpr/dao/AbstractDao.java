@@ -1,6 +1,7 @@
 package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.domain.Idable;
+import ba.etf.unsa.rpr.exception.UserException;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -181,7 +182,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
      * @param rs
      * @return
      */
-   public abstract T row2object(ResultSet rs);
+   public abstract T row2object(ResultSet rs) throws SQLException, UserException;
 
     /**
      * ORM - transforms object params. into fields for query

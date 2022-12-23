@@ -61,9 +61,24 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
 
     }
 
+    /**
+     * row2obj method that "translates" data from db into objects
+     * @param rs from query
+     * @return User object
+     * @throws UserException custom exept.
+     */
     @Override
-    public User row2object(ResultSet rs) {
-        return null;
+    public User row2object(ResultSet rs) throws UserException {
+        try {
+            User user = new User();
+            user.setId(rs.getInt("id"));
+            user.setName(rs.getString("name"));
+            user.setPassword(rs.getString("password"));
+            return user;
+        }
+        catch (SQLException e){
+            throw new UserException("Nemoguce napraviti operaciju!");
+        }
     }
 
     @Override
