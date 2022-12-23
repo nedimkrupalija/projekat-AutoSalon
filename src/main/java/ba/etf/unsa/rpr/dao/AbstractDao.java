@@ -55,6 +55,20 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
    }
 
+    /**
+     * ORM - transforms result set into object
+     * @param rs
+     * @return
+     */
+   public abstract T row2object(ResultSet rs);
+
+    /**
+     * ORM - transforms object params. into fields for query
+     * @param object
+     * @return
+     */
+   public abstract T object2row(T object);
+
 
 
 

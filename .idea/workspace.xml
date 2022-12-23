@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="implementec constructor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="delete implementation in AbstractDao">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00170" summary="added buttons to toggle group">
-      <created>1671493794072</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1671493794073</updated>
     </task>
     <task id="LOCAL-00171" summary="bugfix in user registration">
       <created>1671553176512</created>
@@ -420,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671746085078</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="delete implementation in AbstractDao">
+      <created>1671831270158</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1671831270159</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugfix in car" />
     <MESSAGE value="implemented car insert from admin panel" />
     <MESSAGE value="implemented action for updating car" />
     <MESSAGE value="bugfix" />
@@ -460,7 +458,8 @@
     <MESSAGE value="added idable interface" />
     <MESSAGE value="forced domain classes to use id" />
     <MESSAGE value="implementec constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementec constructor" />
+    <MESSAGE value="delete implementation in AbstractDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete implementation in AbstractDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
