@@ -27,10 +27,27 @@ public class CarDaoSQLImpl extends AbstractDao<Car> implements CarDao {
         super("Cars");
     }
 
-
+    /**
+     * ORM - row2car mapping
+     * Sets parems. of car returned from db
+     * @param rs resultset
+     * @return Car object
+     */
     @Override
     public Car row2object(ResultSet rs) {
-        return null;
+        try{
+            Car car = new Car();
+            car.setId(rs.getInt("id"));
+            car.setName(rs.getString("name"));
+            car.setColor(rs.getString("color"));
+            car.sethP(rs.getInt("hp"));
+            car.setDescription(rs.getString("desc"));
+            car.setYear(rs.getString("year"));
+            return car;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Override
