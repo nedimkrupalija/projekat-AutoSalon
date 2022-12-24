@@ -164,12 +164,13 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     private Map.Entry<String, String> prepareInsert(Map<String, Object> row){
         StringBuilder columnName = new StringBuilder();
         StringBuilder columnQuestion = new StringBuilder();
-        int counter = 0;
+        int counter = 1;
         for(Map.Entry<String, Object> entry : row.entrySet()){
+            counter++;
             if(entry.getKey().equals("id")) continue;
             columnName.append(entry.getKey());
             columnQuestion.append("?");
-            if(row.size()!= counter){
+            if(row.size()!= counter-1){
                 columnName.append(", ");
                 columnQuestion.append(", ");
             }
@@ -211,6 +212,8 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
         catch(SQLException e){
             e.printStackTrace();
+        } catch (UserException e) {
+            throw new RuntimeException(e);
         }
         return null;
     }

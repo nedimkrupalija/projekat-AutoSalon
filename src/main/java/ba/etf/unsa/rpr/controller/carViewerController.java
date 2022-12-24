@@ -98,6 +98,7 @@ public class carViewerController {
             removeAllCss();
             carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
                 if(carsList.getSelectionModel().getSelectedItem()!=null) {
+                    reservedButton.getStyleClass().add("notReserved");
                     idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
                     nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
                     yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
@@ -166,13 +167,8 @@ public class carViewerController {
         car.setDescription(descText.getText());
         car.sethP(Integer.parseInt(powerText.getText()));
         car.setYear(yearText.getText());
-        try {
-            new CarDaoSQLImpl().insert(car);
+        new CarDaoSQLImpl().insert(car);
 
-        } catch (CarException e) {
-            e.printStackTrace();
-            return;
-        }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Uspjesno dodavanje");
         alert.setHeaderText(null);
@@ -203,13 +199,8 @@ public class carViewerController {
             alert.showAndWait();
             return;
         }
-        try {
-            System.out.println(idLabel.getText());
-            new CarDaoSQLImpl().update(car,Integer.parseInt(idLabel.getText()));
-        } catch (CarException e) {
-            e.printStackTrace();
-            return;
-        }
+        System.out.println(idLabel.getText());
+        new CarDaoSQLImpl().update(car,Integer.parseInt(idLabel.getText()));
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Uspjesna izmjena");
@@ -254,16 +245,7 @@ public class carViewerController {
     public void deleteButtonClick(ActionEvent actionEvent) {
         System.out.printf("Odabrano brisanje vozila");
 
-        try {
-            new CarDaoSQLImpl().delete(Integer.parseInt(idLabel.getText()));
-        } catch (CarException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText("Greska pri brisanju vozila!");
-            alert.setContentText("Odaberite vozilo i pokusajte opet!");
-            alert.showAndWait();
-            return;
-        }
+        new CarDaoSQLImpl().delete(Integer.parseInt(idLabel.getText()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Uspjesno brisanje");
         alert.setHeaderText(null);

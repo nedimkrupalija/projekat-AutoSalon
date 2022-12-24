@@ -36,10 +36,10 @@ public class CarDaoSQLImpl extends AbstractDao<Car> implements CarDao {
             Car car = new Car();
             car.setId(rs.getInt("id"));
             car.setName(rs.getString("name"));
+            car.setYear(rs.getString("year"));
             car.setColor(rs.getString("color"));
             car.sethP(rs.getInt("hp"));
-            car.setDescription(rs.getString("desc"));
-            car.setYear(rs.getString("year"));
+            car.setDescription(rs.getString("description"));
             return car;
         } catch (SQLException e) {
             throw new RuntimeException(e);

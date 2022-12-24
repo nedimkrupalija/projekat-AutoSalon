@@ -9,23 +9,17 @@ import java.util.*;
 
 public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
 
-    private Connection connection;
-
-
-
 
     /**
      * Default constructor
      * makes database connection
      * username and password are hidden
      */
+
+
     public UserDaoSQLImpl(){
         super("Users");
     }
-
-
-
-
 
 
     /**
@@ -38,7 +32,7 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
     public User getByNamePass(String name, String password) throws UserException {
         String query = "SELECT * FROM Users where name = ? AND password = ?";
         try{
-            PreparedStatement stmt = this.connection.prepareStatement(query);
+            PreparedStatement stmt =  getConn().prepareStatement(query);
             stmt.setString(1,name);
             stmt.setString(2,password);
             ResultSet rs = stmt.executeQuery();
@@ -57,6 +51,7 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
         }
 
     }
+
 
     /**
      * row2obj method that "translates" data from db into objects
@@ -77,6 +72,8 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
             throw new UserException("Nemoguce napraviti operaciju!");
         }
     }
+
+
 
     /**
      * Method that "translates" object to data for sql query

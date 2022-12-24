@@ -58,7 +58,7 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
     public int isReserved(int id) throws ReservationException {
         String query = "SELECT COUNT(*) FROM Reservations where car_fk = ?";
         try{
-            PreparedStatement stmt = this.conn.prepareStatement(query);
+            PreparedStatement stmt = getConn().prepareStatement(query);
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
             int res = 0;
