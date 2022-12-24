@@ -62,10 +62,13 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
             int res = 0;
+            int count = 0;
             if(rs.next()){
-                return rs.getInt("COUNT(*)");
+                count =  rs.getInt("COUNT(*)");
             }
-            else return 0;
+            rs.close();
+            return count;
+
         } catch (SQLException e) {
             throw new ReservationException("Greska pri provjeri da li je auto rezervisano!");
         }
