@@ -26,6 +26,14 @@ public class ReservationManager {
         return DaoFactory.reservationDao().getAll();
     }
 
-
+    /**
+     * Delete instance from db
+     * @param id of res.
+     * @throws CarException exc
+     * @throws UserException exc
+     */
+    public void delete(int id) throws CarException, UserException {
+        DaoFactory.reservationDao().delete(id);
+    }
 
 }
