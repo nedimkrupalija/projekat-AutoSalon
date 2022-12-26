@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.business;
 
+import ba.etf.unsa.rpr.dao.Dao;
 import ba.etf.unsa.rpr.dao.DaoFactory;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
@@ -65,6 +66,17 @@ public class UserManager {
      */
     public User update(User item, int id) throws Exception {
         return DaoFactory.userDao().update(item,id);
+    }
+
+    /**
+     * Get user by usr, pw
+     * @param username .
+     * @param password .
+     * @return user
+     * @throws UserException exc
+     */
+    public User getByUserPass(String username, String password) throws UserException {
+        return DaoFactory.userDao().getByNamePass(username,password);
     }
 
 

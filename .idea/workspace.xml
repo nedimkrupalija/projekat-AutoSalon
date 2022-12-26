@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="rs.close() bugfix">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. CRUD oper. in CarManager">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,27 +90,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00195" summary="implemented car insert from admin panel">
-      <created>1671580897117</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1671580897126</updated>
-    </task>
-    <task id="LOCAL-00196" summary="implemented action for updating car">
-      <created>1671622887010</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1671622887011</updated>
-    </task>
-    <task id="LOCAL-00197" summary="bugfix">
-      <created>1671623869093</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1671623869094</updated>
     </task>
     <task id="LOCAL-00198" summary="implemented car update">
       <created>1671623887689</created>
@@ -433,7 +413,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672057116296</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="impl. CRUD in UserManager">
+      <created>1672082432710</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1672082432711</updated>
+    </task>
+    <task id="LOCAL-00245" summary="added update to ReservationManager">
+      <created>1672082530732</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1672082530733</updated>
+    </task>
+    <task id="LOCAL-00246" summary="impl. CRUD oper. in CarManager">
+      <created>1672082699652</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1672082699653</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,9 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete implementation in AbstractDao" />
-    <MESSAGE value="obj2row and row2obj rel mapping" />
-    <MESSAGE value="implemented getall in AbstractDao" />
     <MESSAGE value="implemented getbyid in AbstractDao" />
     <MESSAGE value="implemented update in AbstractDao" />
     <MESSAGE value="impl preparation for insert" />
@@ -473,7 +471,10 @@
     <MESSAGE value="business l. structure" />
     <MESSAGE value="impl. getall in ReservationManager" />
     <MESSAGE value="impl. delete in ReservationManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl. delete in ReservationManager" />
+    <MESSAGE value="impl. CRUD in UserManager" />
+    <MESSAGE value="added update to ReservationManager" />
+    <MESSAGE value="impl. CRUD oper. in CarManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl. CRUD oper. in CarManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

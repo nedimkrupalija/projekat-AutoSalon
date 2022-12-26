@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.UserDao;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
@@ -24,11 +25,17 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class loginController {
 
+
+    // manager
+    private final UserManager userManager = new UserManager();
+
+
     /**
      * Private method to set css style of user field
      */
 
     private void setWrongUser(){
+
         usernameField.getStyleClass().removeAll("fieldWrong");
         usernameField.getStyleClass().add("fieldWrong");
     }
@@ -138,4 +145,7 @@ public class loginController {
         currentStage.close();
         System.out.println("Korisnik se vratio na pocetak");
     }
+
+
+
 }

@@ -14,7 +14,6 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MainController {
 
-
     public Button loginButton;
 
     public void loginButtonClick(ActionEvent actionEvent) throws IOException {
@@ -24,7 +23,6 @@ public class MainController {
         Parent root = loader.load();
         Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
         stage.setTitle("Login");
-        // scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
