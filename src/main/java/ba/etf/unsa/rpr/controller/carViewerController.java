@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
@@ -169,11 +170,7 @@ public class carViewerController {
         car.setYear(yearText.getText());
         new CarDaoSQLImpl().insert(car);
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesno dodavanje");
-        alert.setHeaderText(null);
-        alert.setContentText("Auto uspjesno dodano, mozete nastaviti dalje!");
-        alert.showAndWait();
+        new MyAlerts().showOkAlert("Uspjesno dodavanje","Auto uspjesno dodano, mozete nastaviti dalje!");
         updateList();
     }
 
@@ -192,21 +189,13 @@ public class carViewerController {
         car.setName(nameText.getText());
 
         if(!(isValidated&&yearValidation)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText("Greska pri validaciji podataka!");
-            alert.setContentText("Ispravite podatke i pokusajte opet!");
-            alert.showAndWait();
+            new MyAlerts().showWrongAlert("Greska pri validaciji podataka!");
             return;
         }
         System.out.println(idLabel.getText());
         new CarDaoSQLImpl().update(car,Integer.parseInt(idLabel.getText()));
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesna izmjena");
-        alert.setHeaderText(null);
-        alert.setContentText("Auto uspjesno izmjenjeno, mozete nastaviti dalje!");
-        alert.showAndWait();
+        new MyAlerts().showOkAlert("Uspjesna izmejena", "Auto uspjesno izmjenjeno, mozete nastaviti dalje!");
         updateList();
 
     }
@@ -246,11 +235,8 @@ public class carViewerController {
         System.out.printf("Odabrano brisanje vozila");
 
         new CarDaoSQLImpl().delete(Integer.parseInt(idLabel.getText()));
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesno brisanje");
-        alert.setHeaderText(null);
-        alert.setContentText("Auto uspjesno obrisano, mozete nastaviti dalje!");
-        alert.showAndWait();
+
+        new MyAlerts().showOkAlert("Uspjesno brisanje", "Auto uspjesno obrisanje mozete nastaviti dalje!");
         updateList();
 
     }

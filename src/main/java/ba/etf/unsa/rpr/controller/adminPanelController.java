@@ -1,6 +1,7 @@
 package ba.etf.unsa.rpr.controller;
 
 
+import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
@@ -9,8 +10,6 @@ import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,13 +18,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -53,29 +48,10 @@ public class adminPanelController {
     private ArrayList<Reservation> reservations;
 
 
-    /**
-     * Method for showing alert
-     * @param e
-     */
-    private void showWrongAlert(Exception e)
-    {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Greska!");
-        alert.setHeaderText(e.getMessage());
-        alert.setContentText("Ispravite podatke i pokusajte opet!");
-        alert.showAndWait();
-    }
 
-    /**
-     * Private method - shows alert
-     */
-    private void showOkAlert(String message){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesna izmjena");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
+
+
+
 
 
 
@@ -141,18 +117,10 @@ public class adminPanelController {
             if(textName.getText().trim().isEmpty()||textPassword.getText().isEmpty())
                 throw new UserException("Polja prazna!");
         } catch (UserException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText(e.getMessage());
-            alert.setContentText("Ispravite podatke i pokusajte opet!");
-            alert.showAndWait();
+            new MyAlerts().showWrongAlert(e);
             return;
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesna izmjena");
-        alert.setHeaderText(null);
-        alert.setContentText("Podaci uspjesno izmjenjeni, mozete nastaviti dalje!");
-        alert.showAndWait();
+        new MyAlerts().showOkAlert("Izmjena podataka","Podaci uspjesno izmjenjeni");
 
     }
 

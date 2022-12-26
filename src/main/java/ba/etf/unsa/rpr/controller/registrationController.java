@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.UserDao;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.User;
@@ -81,20 +82,15 @@ public class registrationController {
             if(nameTextField.getText().length()<3 || nameTextField.getText().length()>10) throw new UserException("Prekrato ime!");
             if(passTextField.getText().length()<3 || passTextField.getText().length()>10) throw new UserException("Prekratka sifra!");
         } catch (UserException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText(e.getMessage());
-            alert.setContentText("Ispravite podatke i probajte opet!");
-            alert.showAndWait();
+
+            new MyAlerts().showWrongAlert(e);
+
             System.out.println("Registracija neuspjesna!");
             return;
         }
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesna registracija");
-        alert.setHeaderText(null);
-        alert.setContentText("Cestitamo, uspjesno ste registrovani. Nastavite na pocetnu stranicu!");
-        alert.showAndWait();
+        new MyAlerts().showOkAlert("Uspjesna registracija", "Cestitamo, uspjesno ste registrovani. Nastavite na pocetnu stranicu!");
+
 
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));

@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
@@ -118,17 +119,10 @@ public class reservationViewController {
         try {
             new ReservationDAOSQlImpl().updateArrivalDate(date, reservationList.getSelectionModel().getSelectedItem().getId());
         } catch (ReservationException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText(e.getMessage());
-            alert.setContentText("Ispravite podatke i pokusajte opet!");
-            alert.showAndWait();
+
+            new MyAlerts().showWrongAlert(e.getMessage());
             return;
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Uspjesna izmjena");
-        alert.setHeaderText(null);
-        alert.setContentText("Podaci uspjesno izmjenjeni, mozete nastaviti dalje!");
-        alert.showAndWait();
+        new MyAlerts().showOkAlert("Uspejsna izmjena", "Podaci uspjesno izmjenjeni, mozete nastaviti dalje!");
     }
 }

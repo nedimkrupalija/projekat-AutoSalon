@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.UserDao;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.User;
@@ -77,11 +78,9 @@ public class loginController {
         try {
              user = new UserDaoSQLImpl().getByNamePass(usernameField.getText(),passwordField.getText());
         } catch (UserException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText(e.getMessage());
-            alert.setContentText("Ispravite podatke i pokusajte opet!");
-            alert.showAndWait();
+
+            new MyAlerts().showWrongAlert(e);
+
             return;
         }
         Stage stage = new Stage();
