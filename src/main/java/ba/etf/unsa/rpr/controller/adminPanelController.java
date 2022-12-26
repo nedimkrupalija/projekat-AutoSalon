@@ -51,6 +51,10 @@ public class adminPanelController {
     private ArrayList<Car> cars;
 
     private ArrayList<Reservation> reservations;
+
+
+
+
     /**
      * Listener for text fields
      * Sets css style if field is empty
