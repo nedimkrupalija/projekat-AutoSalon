@@ -3,6 +3,7 @@ package ba.etf.unsa.rpr.business;
 import ba.etf.unsa.rpr.dao.Dao;
 import ba.etf.unsa.rpr.dao.DaoFactory;
 import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
@@ -56,5 +57,17 @@ public class ReservationManager {
     public Reservation getByid(int id) throws Exception {
         return DaoFactory.reservationDao().getById(id);
     }
+
+    /**
+     * Update item in db
+     * @param item to take data from
+     * @param id to update
+     * @return updated item
+     * @throws Exception exc
+     */
+    public Reservation update(Reservation item, int id) throws Exception {
+        return DaoFactory.reservationDao().update(item,id);
+    }
+
 
 }
