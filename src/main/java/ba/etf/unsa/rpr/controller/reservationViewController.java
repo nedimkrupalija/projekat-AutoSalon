@@ -1,5 +1,8 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.CarManager;
+import ba.etf.unsa.rpr.business.ReservationManager;
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
@@ -26,6 +29,12 @@ import java.sql.Date;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+
+/**
+ * Controller class for managing reservation screen in admin panel
+ * @author Nedim Krupalija
+ */
+
 public class reservationViewController {
 
     public ListView<Reservation> reservationList;
@@ -42,6 +51,19 @@ public class reservationViewController {
     public Label labelDateError;
     public DatePicker datePickerReservation;
 
+    // managers
+    private final UserManager userManager = new UserManager();
+
+
+
+    private void setLabels(){
+        idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
+        labelCar.setText(reservationList.getSelectionModel().getSelectedItem().getCar().getName());
+        labelUser.setText(reservationList.getSelectionModel().getSelectedItem().getUser().getName());
+        datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
+        pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
+    }
+
     public int adminId;
 
     /**
@@ -52,12 +74,7 @@ public class reservationViewController {
     public void initialize() {
         reservationList.getSelectionModel().selectedItemProperty().addListener((observableValue, reservation, t1) -> {
             if(reservationList.getSelectionModel().getSelectedItem()!=null){
-
-                idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
-                labelCar.setText(reservationList.getSelectionModel().getSelectedItem().getCar().getName());
-                labelUser.setText(reservationList.getSelectionModel().getSelectedItem().getUser().getName());
-                datePickerReservation.setValue(reservationList.getSelectionModel().getSelectedItem().getReservationDate().toLocalDate());
-                pickerArrivalDate.setValue(reservationList.getSelectionModel().getSelectedItem().getArrivalDate().toLocalDate());
+                setLabels();
             }
         });
 
@@ -87,7 +104,7 @@ public class reservationViewController {
         stage.show();
 
         //Setting field in admin panel
-        User admin = new UserDaoSQLImpl().getById(adminId);
+        User admin = userManager.getByid(adminId);
         adminPanelController adminPanelController = loader.getController();
         adminPanelController.labelId.setText(String.valueOf(admin.getId()));
         adminPanelController.textName.setText(admin.getName());
