@@ -69,5 +69,15 @@ public class ReservationManager {
         return DaoFactory.reservationDao().update(item,id);
     }
 
+    /**
+     * Is car reserved
+     * @param id of car
+     * @return 0 or 1
+     * @throws Exception exc
+     */
+    public int isReserved(int id) throws Exception {
+        return DaoFactory.reservationDao().isReserved(id);
+    }
+
 
 }

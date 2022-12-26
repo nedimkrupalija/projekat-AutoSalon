@@ -83,11 +83,9 @@ public class loginController {
     public void loginClick(ActionEvent actionEvent) throws Exception {
         User user = null;
         try {
-             user = new UserDaoSQLImpl().getByNamePass(usernameField.getText(),passwordField.getText());
+            user = userManager.getByUserPass(usernameField.getText(),passwordField.getText());
         } catch (UserException e) {
-
             new MyAlerts().showWrongAlert(e);
-
             return;
         }
         Stage stage = new Stage();
