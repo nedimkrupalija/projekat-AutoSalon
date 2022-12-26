@@ -39,12 +39,22 @@ public class ReservationManager {
     }
 
     /**
-     *
+     * Insert into db
      * @param item to insert
      * @throws Exception ex
      */
     public void insert(Reservation item) throws Exception {
         DaoFactory.reservationDao().insert(item);
+    }
+
+    /**
+     * Get item by id
+     * @param id of item
+     * @return item from db
+     * @throws Exception exc
+     */
+    public Reservation getByid(int id) throws Exception {
+        return DaoFactory.reservationDao().getById(id);
     }
 
 }
