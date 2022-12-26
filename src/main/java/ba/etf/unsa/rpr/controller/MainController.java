@@ -14,18 +14,24 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MainController {
 
+    private void setNewScene(String path, String title) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("path"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        stage.setTitle(title);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+
     public Button loginButton;
 
     public void loginButtonClick(ActionEvent actionEvent) throws IOException {
         System.out.println("Izabran login");
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
-        stage.setTitle("Login");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        setNewScene("/fxml/login.fxml","Login");
+
         Stage primaryStage = (Stage) loginButton.getScene().getWindow();
         primaryStage.hide();
     }
@@ -37,12 +43,7 @@ public class MainController {
      */
     public void registrationButtonClick(ActionEvent actionEvent) throws IOException {
         System.out.println("Izabrana registracija!");
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/registration.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
-        stage.setScene(scene);
-        stage.show();
+        setNewScene("/fxml/registration.fxml","Registracija");
         Stage thisStage = (Stage) loginButton.getScene().getWindow();
         thisStage.close();
     }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored adminPanelController">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored carViewerController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +88,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00202" summary="added alert for deleting  car">
-      <created>1671625229998</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1671625229998</updated>
     </task>
     <task id="LOCAL-00203" summary="added action for going to reservationViewController">
       <created>1671627221817</created>
@@ -433,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672087618987</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="refactored carViewerController">
+      <created>1672089646870</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1672089646872</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,7 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl priv. method that prepares string for updating object" />
     <MESSAGE value="refactored CarDaoSQLImpl" />
     <MESSAGE value="refactored ReservationDAOSQlImpl" />
     <MESSAGE value="Refactored UserDaoSQLImpl" />
@@ -473,7 +471,8 @@
     <MESSAGE value="added method isreserved to ReservationManager" />
     <MESSAGE value="added method to update date in db to ReservationManager" />
     <MESSAGE value="refactored adminPanelController" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored adminPanelController" />
+    <MESSAGE value="refactored carViewerController" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored carViewerController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
