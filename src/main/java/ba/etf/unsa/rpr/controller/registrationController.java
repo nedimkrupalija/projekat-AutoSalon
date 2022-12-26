@@ -1,5 +1,8 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.CarManager;
+import ba.etf.unsa.rpr.business.ReservationManager;
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.UserDao;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
@@ -25,6 +28,10 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class registrationController {
 
+    // managers
+    private final CarManager carManager = new CarManager();
+    private final UserManager userManager = new UserManager();
+    private final ReservationManager reservationManager = new ReservationManager();
 
     public TextField nameTextField;
     public Label nameLabel;
@@ -78,27 +85,18 @@ public class registrationController {
         user.setName(nameTextField.getText());
         user.setPassword(passTextField.getText());
         try {
-            new UserDaoSQLImpl().insert(user);
+            userManager.insert(user);
             if(nameTextField.getText().length()<3 || nameTextField.getText().length()>10) throw new UserException("Prekrato ime!");
             if(passTextField.getText().length()<3 || passTextField.getText().length()>10) throw new UserException("Prekratka sifra!");
-        } catch (UserException e) {
+        } catch (Exception e) {
 
             new MyAlerts().showWrongAlert(e);
 
             System.out.println("Registracija neuspjesna!");
             return;
         }
-
         new MyAlerts().showOkAlert("Uspjesna registracija", "Cestitamo, uspjesno ste registrovani. Nastavite na pocetnu stranicu!");
-
-
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        setMainScene();
         Stage currentStage = (Stage) nameLabel.getScene().getWindow();
         currentStage.close();
         System.out.println("Registracija uspjesna!");
@@ -111,6 +109,12 @@ public class registrationController {
      */
     public void backButtonClick(ActionEvent actionEvent) throws IOException {
         System.out.println("Nazad na pocetni ekran");
+        setMainScene();
+        Stage currentStage = (Stage) nameLabel.getScene().getWindow();
+        currentStage.close();
+    }
+
+    private void setMainScene() throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         Parent root = loader.load();
@@ -118,7 +122,8 @@ public class registrationController {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-        Stage currentStage = (Stage) nameLabel.getScene().getWindow();
-        currentStage.close();
     }
+
+
+
 }
