@@ -1,6 +1,9 @@
 package ba.etf.unsa.rpr.controller;
 
 
+import ba.etf.unsa.rpr.business.CarManager;
+import ba.etf.unsa.rpr.business.ReservationManager;
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
@@ -47,9 +50,10 @@ public class adminPanelController {
 
     private ArrayList<Reservation> reservations;
 
-
-
-
+    // managers
+    private final CarManager carManager = new CarManager();
+    private final ReservationManager reservationManager = new ReservationManager();
+    private final UserManager userManager = new UserManager();
 
 
 
@@ -61,13 +65,13 @@ public class adminPanelController {
      * Sets css style if field is empty
      */
     @FXML
-    public void initialize() throws UserException, ReservationException {
-        reservations = (ArrayList<Reservation>) new ReservationDAOSQlImpl().getAll();
-        cars = (ArrayList<Car>) new CarDaoSQLImpl().getAll();
+    public void initialize() throws Exception {
+        reservations = (ArrayList<Reservation>) reservationManager.getAll();
+        cars = (ArrayList<Car>) carManager.getAll();
         ToggleGroup group = new ToggleGroup();
         radioButtonCar.setToggleGroup(group);
         radioButtonReservation.setToggleGroup(group);
-        users = (ArrayList<User>) new UserDaoSQLImpl().getAll();
+        users = (ArrayList<User>) userManager.getAll();
         textName.textProperty().addListener((observableValue, s, t1) -> {
             textName.getStyleClass().removeAll("fieldWrong");
             if(t1.trim().length()==0) textName.getStyleClass().add("fieldWrong");
@@ -97,7 +101,6 @@ public class adminPanelController {
         Parent root = loader.load();
         Scene scene = new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
         stage.setTitle("Login");
-        // scene.getStylesheets().add(String.valueOf(this.getClass().getResource("/css/style.css")));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -114,10 +117,10 @@ public class adminPanelController {
         user.setName(textName.getText());
         user.setPassword(textPassword.getText());
         try {
-            new UserDaoSQLImpl().update(user,Integer.parseInt(labelId.getText()));
+            userManager.update(user,Integer.parseInt(labelId.getText()));
             if(textName.getText().trim().isEmpty()||textPassword.getText().isEmpty())
                 throw new UserException("Polja prazna!");
-        } catch (UserException e) {
+        } catch (Exception e) {
             new MyAlerts().showWrongAlert(e);
             return;
         }
@@ -132,16 +135,11 @@ public class adminPanelController {
      */
     public void nextButtonClick(ActionEvent actionEvent) throws IOException {
         if(radioButtonCar.isSelected()){
-            System.out.println("Izabran pregled vozila!");
-            Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/carViewer.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE);
-            stage.setTitle("Login");
 
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            System.out.println("Izabran pregled vozila!");
+            FXMLLoader loader = openScreen("/fxml/carViewer.fxml","Pregled vozila");
+
+            //close current scene
             Stage thisStage = (Stage) labelId.getScene().getWindow();
             thisStage.close();
 
@@ -151,19 +149,12 @@ public class adminPanelController {
             carViewerController.carsList.setItems(list);
             carViewerController.adminId = Integer.parseInt(labelId.getText());
 
-            //carViewerController.user.setId(user.getId());
+
 
         }
         else {
             System.out.println("Odabran pregled rezrvacija");
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/reservationViewer.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
-            stage.setScene(scene);
-            stage.show();
-            stage.setTitle("Pregled rezervacija");
-
+            FXMLLoader loader = openScreen("/fxml/reservationViewer.fxml","Pregled rezervacija");
 
             //Setting data for reservation viewer
             reservationViewController reservationViewController = loader.getController();
@@ -174,8 +165,19 @@ public class adminPanelController {
             Stage thisStage = (Stage) labelId.getScene().getWindow();
             thisStage.close();
         }
-
     }
+
+    private FXMLLoader openScreen(String fxmlPath,String title) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        stage.setScene(scene);
+        stage.show();
+        stage.setTitle(title);
+        return loader;
+    }
+
 }
 
 

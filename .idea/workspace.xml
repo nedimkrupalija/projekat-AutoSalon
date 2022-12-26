@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added method to UserManager">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added method to update date in db to ReservationManager">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/adminPanelController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,20 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00199" summary="bugfix in CarDaoSQLImpl">
-      <created>1671625079383</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1671625079383</updated>
-    </task>
-    <task id="LOCAL-00200" summary="implemented deleting car from db">
-      <created>1671625109086</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1671625109087</updated>
     </task>
     <task id="LOCAL-00201" summary="bugfix in deleting car">
       <created>1671625147591</created>
@@ -433,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672085978075</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="added method isreserved to ReservationManager">
+      <created>1672086208924</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1672086208924</updated>
+    </task>
+    <task id="LOCAL-00249" summary="added method to update date in db to ReservationManager">
+      <created>1672086260430</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1672086260431</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,8 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented update in AbstractDao" />
-    <MESSAGE value="impl preparation for insert" />
     <MESSAGE value="impl insert in AbstractDao" />
     <MESSAGE value="impl priv. method that prepares string for updating object" />
     <MESSAGE value="refactored CarDaoSQLImpl" />
@@ -473,7 +471,9 @@
     <MESSAGE value="added update to ReservationManager" />
     <MESSAGE value="impl. CRUD oper. in CarManager" />
     <MESSAGE value="added method to UserManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method to UserManager" />
+    <MESSAGE value="added method isreserved to ReservationManager" />
+    <MESSAGE value="added method to update date in db to ReservationManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method to update date in db to ReservationManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
