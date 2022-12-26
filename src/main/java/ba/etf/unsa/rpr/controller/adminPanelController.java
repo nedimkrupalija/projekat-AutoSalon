@@ -53,6 +53,31 @@ public class adminPanelController {
     private ArrayList<Reservation> reservations;
 
 
+    /**
+     * Method for showing alert
+     * @param e
+     */
+    private void showWrongAlert(Exception e)
+    {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Greska!");
+        alert.setHeaderText(e.getMessage());
+        alert.setContentText("Ispravite podatke i pokusajte opet!");
+        alert.showAndWait();
+    }
+
+    /**
+     * Private method - shows alert
+     */
+    private void showOkAlert(String message){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Uspjesna izmjena");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+
 
 
     /**
