@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="business l. structure">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. delete in ReservationManager">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/DaoFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,20 +88,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00193" summary="bugfix in CarDaoSQLImpl">
-      <created>1671580785889</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1671580785889</updated>
-    </task>
-    <task id="LOCAL-00194" summary="bugfix in car">
-      <created>1671580795769</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1671580795769</updated>
     </task>
     <task id="LOCAL-00195" summary="implemented car insert from admin panel">
       <created>1671580897117</created>
@@ -433,7 +418,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672056572648</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="impl. getall in ReservationManager">
+      <created>1672057049563</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1672057049564</updated>
+    </task>
+    <task id="LOCAL-00243" summary="impl. delete in ReservationManager">
+      <created>1672057116296</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1672057116296</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,8 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="forced domain classes to use id" />
-    <MESSAGE value="implementec constructor" />
     <MESSAGE value="delete implementation in AbstractDao" />
     <MESSAGE value="obj2row and row2obj rel mapping" />
     <MESSAGE value="implemented getall in AbstractDao" />
@@ -473,7 +470,9 @@
     <MESSAGE value="refactored alert showing" />
     <MESSAGE value="implemented daofactory" />
     <MESSAGE value="business l. structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="business l. structure" />
+    <MESSAGE value="impl. getall in ReservationManager" />
+    <MESSAGE value="impl. delete in ReservationManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl. delete in ReservationManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
