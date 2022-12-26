@@ -8,6 +8,7 @@ import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -79,5 +80,9 @@ public class ReservationManager {
         return DaoFactory.reservationDao().isReserved(id);
     }
 
+
+    public void updateArrivalDate(Date date, int id) throws ReservationException{
+        DaoFactory.reservationDao().updateArrivalDate(date,id);
+    }
 
 }
