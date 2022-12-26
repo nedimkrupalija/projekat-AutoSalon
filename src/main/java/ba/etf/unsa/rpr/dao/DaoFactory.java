@@ -13,7 +13,6 @@ public class DaoFactory {
     private static final UserDao userDao = new UserDaoSQLImpl();
 
     private DaoFactory(){
-
     }
     public static CarDao carDao() {return carDao;}
 
