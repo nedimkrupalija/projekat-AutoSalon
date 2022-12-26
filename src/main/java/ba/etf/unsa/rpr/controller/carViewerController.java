@@ -1,5 +1,8 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.CarManager;
+import ba.etf.unsa.rpr.business.ReservationManager;
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
@@ -49,6 +52,11 @@ public class carViewerController {
 
     private ArrayList<Reservation> reservations;
 
+    // managers
+    private final CarManager carManager = new CarManager();
+    private final ReservationManager reservationManager = new ReservationManager();
+    private final UserManager userManager = new UserManager();
+
     /**
      * Private method for setting css to text fields
      * @param textField
@@ -83,11 +91,7 @@ public class carViewerController {
 
     }
 
-    /**
-     * Initializer for text fields, field validation
-     */
-    @FXML
-    public void initialize(){
+    private void addAllToButton(){
         colorMenu.getItems().add("Plava");
         colorMenu.getItems().add("Crvena");
         colorMenu.getItems().add("Narandzasta");
@@ -96,23 +100,45 @@ public class carViewerController {
         colorMenu.getItems().add("Zelena");
         colorMenu.getItems().add("Crna");
         colorMenu.getItems().add("Bijela");
+    }
+
+    private void setLabels(){
+        reservedButton.getStyleClass().add("notReserved");
+        idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
+        nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
+        yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
+        colorMenu.setValue(carsList.getSelectionModel().getSelectedItem().getColor());
+        powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
+        descText.setText(carsList.getSelectionModel().getSelectedItem().getDescription());
+    }
+
+    private void setCarParms(Car car){
+        car.setName(nameText.getText());
+        car.setColor(colorMenu.getValue());
+        if(descText.getText().trim().isEmpty()) descText.setText("");
+        car.setDescription(descText.getText());
+        car.sethP(Integer.parseInt(powerText.getText()));
+        car.setYear(yearText.getText());
+    }
+
+
+    /**
+     * Initializer for text fields, field validation
+     */
+    @FXML
+    public void initialize(){
+            addAllToButton();
             removeAllCss();
             carsList.getSelectionModel().selectedItemProperty().addListener((observableValue, car, t1) -> {
                 if(carsList.getSelectionModel().getSelectedItem()!=null) {
-                    reservedButton.getStyleClass().add("notReserved");
-                    idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
-                    nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
-                    yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
-                    colorMenu.setValue(carsList.getSelectionModel().getSelectedItem().getColor());
-                    powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
-                    descText.setText(carsList.getSelectionModel().getSelectedItem().getDescription());
+                    setLabels();
                     try {
-                        if (new ReservationDAOSQlImpl().isReserved(carsList.getSelectionModel().getSelectedItem().getId()) == 1) {
+                        if (reservationManager.isReserved(carsList.getSelectionModel().getSelectedItem().getId()) == 1) {
                             reservedButton.getStyleClass().add("reserved");
                         } else {
                             reservedButton.getStyleClass().add("notReserved");
                         }
-                    } catch (ReservationException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -147,6 +173,8 @@ public class carViewerController {
     }
 
 
+
+
     /**
      * Action for inserting car into db
      * @param actionEvent
@@ -154,21 +182,17 @@ public class carViewerController {
     public void insertButtonClick(ActionEvent actionEvent) {
 
         if(!(isValidated&&yearValidation)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Greska!");
-            alert.setHeaderText("Greska pri validaciji podataka!");
-            alert.setContentText("Ispravite podatke i pokusajte opet!");
-            alert.showAndWait();
+            new MyAlerts().showWrongAlert("Greska pri validaciji podataka");
             return;
         }
         Car car = new Car();
-        car.setName(nameText.getText());
-        car.setColor(colorMenu.getValue());
-        if(descText.getText().trim().isEmpty()) descText.setText("");
-        car.setDescription(descText.getText());
-        car.sethP(Integer.parseInt(powerText.getText()));
-        car.setYear(yearText.getText());
-        new CarDaoSQLImpl().insert(car);
+        setCarParms(car);
+
+        try {
+            carManager.insert(car);
+        } catch (Exception e) {
+            new MyAlerts().showWrongAlert(e);
+        }
 
         new MyAlerts().showOkAlert("Uspjesno dodavanje","Auto uspjesno dodano, mozete nastaviti dalje!");
         updateList();
@@ -193,7 +217,12 @@ public class carViewerController {
             return;
         }
         System.out.println(idLabel.getText());
-        new CarDaoSQLImpl().update(car,Integer.parseInt(idLabel.getText()));
+        try {
+            carManager.update(car,Integer.parseInt(idLabel.getText()));
+        } catch (Exception e) {
+            new MyAlerts().showWrongAlert(e);
+        }
+
 
         new MyAlerts().showOkAlert("Uspjesna izmejena", "Auto uspjesno izmjenjeno, mozete nastaviti dalje!");
         updateList();
@@ -218,7 +247,7 @@ public class carViewerController {
 
 
         //Setting fields in admin panel
-        User admin = new UserDaoSQLImpl().getById(adminId);
+        User admin = userManager.getByid(adminId);
         adminPanelController adminPanelController = loader.getController();
         adminPanelController.labelId.setText(String.valueOf(admin.getId()));
         adminPanelController.textName.setText(admin.getName());
@@ -234,7 +263,11 @@ public class carViewerController {
     public void deleteButtonClick(ActionEvent actionEvent) {
         System.out.printf("Odabrano brisanje vozila");
 
-        new CarDaoSQLImpl().delete(Integer.parseInt(idLabel.getText()));
+        try {
+            carManager.delete(Integer.parseInt(idLabel.getText()));
+        } catch (Exception e) {
+            new MyAlerts().showWrongAlert(e);
+        }
 
         new MyAlerts().showOkAlert("Uspjesno brisanje", "Auto uspjesno obrisanje mozete nastaviti dalje!");
         updateList();
