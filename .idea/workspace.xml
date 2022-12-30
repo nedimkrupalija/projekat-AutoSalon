@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for admin panel">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/porsche.jpg" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for carViewer">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/reservationViewer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/porsche4s.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +92,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00207" summary="added data setters in initialize">
-      <created>1671633655763</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1671633655764</updated>
     </task>
     <task id="LOCAL-00208" summary="implemented listener for picking reservation">
       <created>1671633810488</created>
@@ -435,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672441541628</updated>
     </task>
-    <option name="localTasksCounter" value="256" />
+    <task id="LOCAL-00256" summary="added css for carViewer">
+      <created>1672442282029</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1672442282029</updated>
+    </task>
+    <option name="localTasksCounter" value="257" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -450,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl obj2row in CarDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in ReservationDAOSQlImpl" />
     <MESSAGE value="impl. obj2row in ReservationDAOSQlImpl" />
     <MESSAGE value="impl row2obj in UserDaoSQLImpl" />
@@ -475,7 +475,8 @@
     <MESSAGE value="refactored registrationController" />
     <MESSAGE value="refactored reservationViewController" />
     <MESSAGE value="added css for admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="added css for admin panel" />
+    <MESSAGE value="added css for carViewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css for carViewer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

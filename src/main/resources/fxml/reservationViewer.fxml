@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.reservationViewController">
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.reservationViewController">
    <stylesheets>
-      <URL value="@/css/carViewer.css" />
+      <URL value="@/css/reservationViewer.css" />
    </stylesheets>
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -35,27 +35,27 @@
          <children>
             <VBox minWidth="-Infinity">
                <children>
-                  <Label text="id: ">
+                  <Label styleClass="labelClass" text="id: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Datum rezervacije: ">
+                  <Label styleClass="labelClass" text="Datum rezervacije: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Vrijeme dolaska: ">
+                  <Label styleClass="labelClass" text="Vrijeme dolaska: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Vozilo: ">
+                  <Label styleClass="labelClass" text="Vozilo: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Korisnik: ">
+                  <Label styleClass="labelClass" text="Korisnik: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
@@ -64,7 +64,7 @@
             </VBox>
             <VBox>
                <children>
-                  <Label fx:id="idLabel">
+                  <Label fx:id="idLabel" styleClass="labelClass">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -88,17 +88,17 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Label fx:id="labelDateError">
+                  <Label fx:id="labelDateError" styleClass="labelClass">
                      <VBox.margin>
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="labelCar">
+                  <Label fx:id="labelCar" styleClass="labelClass">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="labelUser">
+                  <Label fx:id="labelUser" styleClass="labelClass">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
@@ -107,7 +107,7 @@
             </VBox>
          </children>
       </HBox>
-      <Label text="Prikaz svih rezervacija">
+      <Label styleClass="labelClass" text="Prikaz svih rezervacija">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>

@@ -1,0 +1,22 @@
+
+
+#gridPane{
+    -fx-background-image: url("/img/porsche4s.jpg");
+    -fx-background-size: cover;
+}
+
+.labelClass{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+}
+
+#backButton{
+    -fx-background-color: crimson;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#changeDateButton{
+    -fx-background-color: deepskyblue;
+}
