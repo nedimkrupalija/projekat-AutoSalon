@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:controller="ba.etf.unsa.rpr.controller.carViewerController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.carViewerController">
   <stylesheets>
      <URL value="@/css/carViewer.css" />
   </stylesheets>
@@ -37,32 +37,32 @@
          <children>
             <VBox minWidth="-Infinity">
                <children>
-                  <Label text="id: ">
+                  <Label styleClass="labelClass" text="id: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Naziv:">
+                  <Label styleClass="labelClass" text="Naziv:">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Godiste">
+                  <Label styleClass="labelClass" text="Godiste">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Boja">
+                  <Label styleClass="labelClass" text="Boja">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Snaga">
+                  <Label styleClass="labelClass" text="Snaga">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Opis">
+                  <Label styleClass="labelClass" text="Opis">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
@@ -71,7 +71,7 @@
             </VBox>
             <VBox>
                <children>
-                  <Label fx:id="idLabel" text="Label">
+                  <Label fx:id="idLabel" styleClass="labelClass" text="Label">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -128,7 +128,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Label text="Rezervisan">
+                        <Label styleClass="labelClass" text="Rezervisan">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
                            </HBox.margin>
@@ -139,7 +139,7 @@
             </VBox>
          </children>
       </HBox>
-      <Label text="Prikaz svih vozila na stanju">
+      <Label styleClass="labelClass" text="Prikaz svih vozila na stanju">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
@@ -149,22 +149,22 @@
       </Label>
       <HBox alignment="BOTTOM_RIGHT" minWidth="-Infinity" GridPane.columnIndex="1">
          <children>
-            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonClick" text="Obrisi">
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonClick" styleClass="redClass" text="Obrisi">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButtonClick" text="Dodaj">
+            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButtonClick" styleClass="blueClass" text="Dodaj">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClick" text="Izmijeni">
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClick" styleClass="blueClass" text="Izmijeni">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClick" text="Nazad">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClick" styleClass="redClass" text="Nazad">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>

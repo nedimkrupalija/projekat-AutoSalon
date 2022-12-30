@@ -15,3 +15,28 @@
     -fx-background-color: pink;
     -fx-opacity: 0.9;
 }
+
+#gridPane{
+    -fx-background-image: url("/img/porsche.jpg");
+    -fx-background-size: 800px 700px;
+
+}
+
+.redClass{
+    -fx-background-color: crimson;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.labelClass{
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+
+}
+
+.blueClass{
+    -fx-background-color: deepskyblue;
+    -fx-font-weight: bold;
+
+}
+

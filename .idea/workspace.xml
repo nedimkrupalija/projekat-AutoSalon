@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored reservationViewController">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/carbon.jpg" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for admin panel">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/porsche.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/carViewer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,13 +91,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00206" summary="added method for date of arrival validation">
-      <created>1671632541002</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1671632541002</updated>
     </task>
     <task id="LOCAL-00207" summary="added data setters in initialize">
       <created>1671633655763</created>
@@ -436,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672090877691</updated>
     </task>
-    <option name="localTasksCounter" value="255" />
+    <task id="LOCAL-00255" summary="added css for admin panel">
+      <created>1672441541627</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1672441541628</updated>
+    </task>
+    <option name="localTasksCounter" value="256" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -451,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl. row2obj in CarDaoSQLImpl" />
     <MESSAGE value="impl obj2row in CarDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in ReservationDAOSQlImpl" />
     <MESSAGE value="impl. obj2row in ReservationDAOSQlImpl" />
@@ -476,7 +474,8 @@
     <MESSAGE value="refactored MainController" />
     <MESSAGE value="refactored registrationController" />
     <MESSAGE value="refactored reservationViewController" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored reservationViewController" />
+    <MESSAGE value="added css for admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css for admin panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
