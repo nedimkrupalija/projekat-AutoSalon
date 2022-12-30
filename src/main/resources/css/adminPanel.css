@@ -2,3 +2,32 @@
     -fx-background-color: pink;
     -fx-opacity: 0.9;
 }
+
+#gridPane{
+-fx-background-image: url("/img/carbon.jpg");
+-fx-background-size: cover;
+
+}
+
+.labelClass{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#backButton{
+    -fx-background-color: crimson;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+#nextButton{
+    -fx-background-color: aqua;
+    -fx-font-weight: bold;
+}
+
+#acceptButton{
+    -fx-background-color: limegreen;
+    -fx-font-weight: bold;
+
+}

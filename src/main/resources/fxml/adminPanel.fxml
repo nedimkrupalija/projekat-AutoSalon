@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.adminPanelController">
+<GridPane fx:id="gridPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.unsa.rpr.controller.adminPanelController">
    <stylesheets>
       <URL value="@/css/adminPanel.css" />
    </stylesheets>
@@ -28,14 +28,14 @@
       <RowConstraints vgrow="NEVER" />
   </rowConstraints>
    <children>
-      <Label text="Dobrodosao korisnice: ">
+      <Label styleClass="labelClass" text="Dobrodosao korisnice: ">
          <font>
             <Font size="15.0" />
          </font>
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin></Label>
-      <Label text="Odaberi stavku za pregled" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      <Label styleClass="labelClass" text="Odaberi stavku za pregled" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <font>
             <Font size="13.0" />
          </font>
@@ -43,7 +43,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
       </Label>
-      <Label text="Vasi podaci: " GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Label styleClass="labelClass" text="Vasi podaci: " GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
@@ -52,17 +52,17 @@
          <children>
             <VBox>
                <children>
-                  <Label text="id: ">
+                  <Label styleClass="labelClass" text="id: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Ime:">
+                  <Label styleClass="labelClass" text="Ime:">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Password: ">
+                  <Label styleClass="labelClass" text="Password: ">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -71,7 +71,7 @@
             </VBox>
             <VBox alignment="TOP_RIGHT">
                <children>
-                  <Label fx:id="labelId" text="Label">
+                  <Label fx:id="labelId" styleClass="labelClass" text="Label">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -97,12 +97,12 @@
       </HBox>
       <VBox GridPane.rowIndex="2">
          <children>
-            <RadioButton fx:id="radioButtonCar" mnemonicParsing="false" text="Vozila">
+            <RadioButton fx:id="radioButtonCar" mnemonicParsing="false" styleClass="labelClass" text="Vozila">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </RadioButton>
-            <RadioButton fx:id="radioButtonReservation" mnemonicParsing="false" text="Rezervacije">
+            <RadioButton fx:id="radioButtonReservation" mnemonicParsing="false" styleClass="labelClass" text="Rezervacije">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" />
                </VBox.margin>
@@ -119,7 +119,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
       </Button>
-      <Label fx:id="labelUser" text="Label" GridPane.columnIndex="1">
+      <Label fx:id="labelUser" styleClass="labelClass" text="Label" GridPane.columnIndex="1">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>

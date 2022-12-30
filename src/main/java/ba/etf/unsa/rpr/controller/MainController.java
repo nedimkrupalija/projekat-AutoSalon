@@ -16,7 +16,7 @@ public class MainController {
 
     private void setNewScene(String path, String title) throws IOException {
         Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("path"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root = loader.load();
         Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
         stage.setTitle(title);

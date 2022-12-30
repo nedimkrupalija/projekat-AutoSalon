@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored registrationController">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/reservationViewController.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="refactored reservationViewController">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/carbon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/adminPanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/adminPanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,19 +45,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Student/projekat-AutoSalon&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.33793104&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/projekat/src/main/resources/img",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.33793104",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nedim Krupalija\RPR\projekat\src\main\resources\img" />
@@ -73,8 +77,8 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.dao.Main" />
-      <module name="projekat-AutoSalon" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Student\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <module name="projekat" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Nedim Krupalija\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,13 +92,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00205" summary="implemented action for going back to admin panel">
-      <created>1671631920227</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1671631920227</updated>
     </task>
     <task id="LOCAL-00206" summary="added method for date of arrival validation">
       <created>1671632541002</created>
@@ -432,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672090668582</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="refactored reservationViewController">
+      <created>1672090877691</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1672090877691</updated>
+    </task>
+    <option name="localTasksCounter" value="255" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -447,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored UserDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in CarDaoSQLImpl" />
     <MESSAGE value="impl obj2row in CarDaoSQLImpl" />
     <MESSAGE value="impl. row2obj in ReservationDAOSQlImpl" />
@@ -472,7 +475,8 @@
     <MESSAGE value="refactored carViewerController" />
     <MESSAGE value="refactored MainController" />
     <MESSAGE value="refactored registrationController" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored registrationController" />
+    <MESSAGE value="refactored reservationViewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored reservationViewController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
