@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for carViewer">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/reservationViewer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/porsche4s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/reservationViewer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/projekat/src/main/resources/img",
+    "last_opened_file_path": "C:/Users/Student/projekat-AutoSalon",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33793104",
@@ -77,8 +76,8 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.dao.Main" />
-      <module name="projekat" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Nedim Krupalija\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <module name="projekat-AutoSalon" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Student\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

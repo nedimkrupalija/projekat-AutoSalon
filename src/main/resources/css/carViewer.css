@@ -18,7 +18,8 @@
 
 #gridPane{
     -fx-background-image: url("/img/porsche.jpg");
-    -fx-background-size: 800px 700px;
+    -fx-background-size: cover;
+
 
 }
 
