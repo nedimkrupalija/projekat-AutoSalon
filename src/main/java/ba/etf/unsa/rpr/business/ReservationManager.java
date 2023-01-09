@@ -10,6 +10,7 @@ import ba.etf.unsa.rpr.exception.UserException;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -84,5 +85,10 @@ public class ReservationManager {
     public void updateArrivalDate(Date date, int id) throws ReservationException{
         DaoFactory.reservationDao().updateArrivalDate(date,id);
     }
+
+    public ArrayList<Reservation> getNotReservated(){
+        return null;
+    }
+
 
 }

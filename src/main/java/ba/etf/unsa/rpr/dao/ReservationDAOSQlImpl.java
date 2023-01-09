@@ -47,7 +47,17 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
         }
     }
 
+    @Override
+    public ArrayList<Reservation> getNotReservated() throws ReservationException {
+        String query = "SELECT * FROM Cars WHERE id NOT IN (SELECT car_fk FROM Reservations)";
+        try{
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            stmt.executeQuery();
+        } catch (SQLException e) {
+            throw new ReservationException("Greska pri dohvacanju vozila");
+        }
 
+    }
 
 
     /**

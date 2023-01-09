@@ -5,6 +5,7 @@ import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.exception.ReservationException;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 /**
  * DAO interface for category
@@ -14,4 +15,5 @@ import java.sql.Date;
 public interface ReservationDao extends Dao<Reservation> {
     public int isReserved(int id) throws ReservationException;
     public void updateArrivalDate(Date date, int id) throws ReservationException;
+    public ArrayList<Reservation> getNotReservated() throws ReservationException;
 }

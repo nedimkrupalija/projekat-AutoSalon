@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added css for carViewer">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added user panel design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/carViewer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/userPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +92,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00208" summary="implemented listener for picking reservation">
-      <created>1671633810488</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1671633810488</updated>
     </task>
     <task id="LOCAL-00209" summary="bugfixes in listeners">
       <created>1671650788274</created>
@@ -435,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672442282029</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="added user panel design">
+      <created>1673264757614</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1673264757615</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -450,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl. row2obj in ReservationDAOSQlImpl" />
     <MESSAGE value="impl. obj2row in ReservationDAOSQlImpl" />
     <MESSAGE value="impl row2obj in UserDaoSQLImpl" />
     <MESSAGE value="impl obj2row in UserDaoSQLImpl" />
@@ -475,7 +475,8 @@
     <MESSAGE value="refactored reservationViewController" />
     <MESSAGE value="added css for admin panel" />
     <MESSAGE value="added css for carViewer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added css for carViewer" />
+    <MESSAGE value="added user panel design" />
+    <option name="LAST_COMMIT_MESSAGE" value="added user panel design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -484,20 +485,6 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java</url>
-          <line>41</line>
-          <properties class="ba.etf.unsa.rpr.dao.UserDaoSQLImpl">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java</url>
-          <line>164</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -121,6 +121,13 @@ public class loginController {
             stage.setScene(scene);
             stage.show();
             currentStage.close();
+
+
+            //set field for user
+            userController userController = loader.getController();
+            //userController.carListView.
+
+
         }
 
     }
