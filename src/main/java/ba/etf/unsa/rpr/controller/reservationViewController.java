@@ -53,7 +53,16 @@ public class reservationViewController {
 
     // managers
     private final UserManager userManager = new UserManager();
+    private final ReservationManager reservationManager = new ReservationManager();
 
+    static void setAdminFields(FXMLLoader loader, UserManager userManager, int adminId) throws Exception {
+        User admin = userManager.getByid(adminId);
+        adminPanelController adminPanelController = loader.getController();
+        adminPanelController.labelId.setText(String.valueOf(admin.getId()));
+        adminPanelController.textName.setText(admin.getName());
+        adminPanelController.textPassword.setText(admin.getPassword());
+        adminPanelController.labelUser.setText(admin.getName());
+    }
 
 
     private void setLabels(){
@@ -104,16 +113,13 @@ public class reservationViewController {
         stage.show();
 
         //Setting field in admin panel
-        User admin = userManager.getByid(adminId);
-        adminPanelController adminPanelController = loader.getController();
-        adminPanelController.labelId.setText(String.valueOf(admin.getId()));
-        adminPanelController.textName.setText(admin.getName());
-        adminPanelController.textPassword.setText(admin.getPassword());
-        adminPanelController.labelUser.setText(admin.getName());
+        setAdminFields(loader, userManager, adminId);
 
 
         currentStage.close();
     }
+
+
 
     /**
      * Private method for validating date
@@ -134,7 +140,7 @@ public class reservationViewController {
         Date date = Date.valueOf(pickerArrivalDate.getValue());
         System.out.println("Izmjena datuma!");
         try {
-            new ReservationDAOSQlImpl().updateArrivalDate(date, reservationList.getSelectionModel().getSelectedItem().getId());
+            reservationManager.updateArrivalDate(date, reservationList.getSelectionModel().getSelectedItem().getId());
         } catch (ReservationException e) {
 
             new MyAlerts().showWrongAlert(e.getMessage());
