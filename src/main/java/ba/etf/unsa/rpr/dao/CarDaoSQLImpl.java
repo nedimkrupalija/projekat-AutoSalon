@@ -77,7 +77,7 @@ public class CarDaoSQLImpl extends AbstractDao<Car> implements CarDao {
         ArrayList<Car> cars = new ArrayList<Car>();
         try{
 
-            PreparedStatement stmt = this.conn.prepareStatement(query);
+            PreparedStatement stmt = getConn().prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             while(rs.next()){
                 Car item = row2object(rs);

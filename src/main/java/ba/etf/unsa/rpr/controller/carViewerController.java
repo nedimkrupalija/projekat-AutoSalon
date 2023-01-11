@@ -249,12 +249,7 @@ public class carViewerController {
 
 
         //Setting fields in admin panel
-        User admin = userManager.getByid(adminId);
-        adminPanelController adminPanelController = loader.getController();
-        adminPanelController.labelId.setText(String.valueOf(admin.getId()));
-        adminPanelController.textName.setText(admin.getName());
-        adminPanelController.textPassword.setText(admin.getPassword());
-        adminPanelController.labelUser.setText(admin.getName());
+        reservationViewController.setAdminFields(loader, userManager, adminId);
 
     }
 

@@ -1,13 +1,17 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.CarManager;
 import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.UserDao;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
+import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +23,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -28,6 +34,7 @@ public class loginController {
 
     // manager
     private final UserManager userManager = new UserManager();
+    private final CarManager carManager = new CarManager();
 
 
     /**
@@ -125,7 +132,9 @@ public class loginController {
 
             //set field for user
             userController userController = loader.getController();
-            //userController.carListView.
+            ArrayList<Car> cars = carManager.getNotReservated();
+            ObservableList<Car> list = FXCollections.observableArrayList(cars);
+            userController.carListView.setItems(list);
 
 
         }
