@@ -14,8 +14,6 @@ import java.util.*;
 
 public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements ReservationDao {
 
-    private Connection conn;
-
 
     /**
      * Default constructor for ReservationDao implementation, makes connection to database
@@ -38,7 +36,7 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
     public void updateArrivalDate(Date date, int id) throws ReservationException {
         String query = "UPDATE Reservations SET arrival_date = ? WHERE id = ?";
         try{
-            PreparedStatement stmt = this.conn.prepareStatement(query);
+            PreparedStatement stmt = getConn().prepareStatement(query);
             stmt.setDate(1,date);
             stmt.setInt(2,id);
             stmt.executeUpdate();

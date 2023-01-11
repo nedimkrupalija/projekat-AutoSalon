@@ -7,6 +7,7 @@ import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -54,6 +55,16 @@ public class CarManager {
      */
     public Car getByid(int id) throws Exception {
         return DaoFactory.carDao().getById(id);
+    }
+
+    /**
+     * Return not res. cars from db
+     * @return
+     * @throws CarException
+     * @throws ReservationException
+     */
+    public ArrayList<Car> getNotReservated() throws CarException, ReservationException {
+        return DaoFactory.carDao().getNotReservated();
     }
 
     /**
