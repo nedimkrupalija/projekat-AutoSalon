@@ -82,6 +82,7 @@ public class ReservationManager {
     }
 
 
+
     public void updateArrivalDate(Date date, int id) throws ReservationException{
         DaoFactory.reservationDao().updateArrivalDate(date,id);
     }

@@ -15,5 +15,5 @@ import java.util.ArrayList;
 public interface ReservationDao extends Dao<Reservation> {
     public int isReserved(int id) throws ReservationException;
     public void updateArrivalDate(Date date, int id) throws ReservationException;
-    public ArrayList<Reservation> getNotReservated() throws ReservationException;
+
 }

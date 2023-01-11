@@ -1,7 +1,9 @@
 package ba.etf.unsa.rpr.dao;
 
 import ba.etf.unsa.rpr.domain.Car;
+import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.exception.CarException;
+import ba.etf.unsa.rpr.exception.ReservationException;
 
 import java.io.FileReader;
 import java.sql.*;
@@ -62,5 +64,29 @@ public class CarDaoSQLImpl extends AbstractDao<Car> implements CarDao {
         row.put("hp",object.gethP());
         row.put("description",object.getDescription());
         return row;
+    }
+
+    /**
+     * Return all cars thath are not reservated from db
+     * @return ArrayList of cars
+     * @throws CarException user def. exc
+     */
+    @Override
+    public ArrayList<Car> getNotReservated() throws CarException {
+        String query = "SELECT * FROM Cars WHERE id NOT IN (SELECT car_fk FROM Reservations)";
+        ArrayList<Car> cars = new ArrayList<Car>();
+        try{
+
+            PreparedStatement stmt = this.conn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                Car item = row2object(rs);
+                cars.add(item);
+            }
+            rs.close();
+            return cars;
+        } catch (SQLException e) {
+            throw new CarException("Greska pri dohvacanju vozila");
+        }
     }
 }

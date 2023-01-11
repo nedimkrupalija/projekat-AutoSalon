@@ -103,13 +103,14 @@ public class carViewerController {
     }
 
     private void setLabels(){
-        reservedButton.getStyleClass().add("notReserved");
+
         idLabel.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().getId()));
         nameText.setText(carsList.getSelectionModel().getSelectedItem().getName());
         yearText.setText(carsList.getSelectionModel().getSelectedItem().getYear());
         colorMenu.setValue(carsList.getSelectionModel().getSelectedItem().getColor());
         powerText.setText(String.valueOf(carsList.getSelectionModel().getSelectedItem().gethP()));
         descText.setText(carsList.getSelectionModel().getSelectedItem().getDescription());
+
     }
 
     private void setCarParms(Car car){
@@ -133,6 +134,7 @@ public class carViewerController {
                 if(carsList.getSelectionModel().getSelectedItem()!=null) {
                     setLabels();
                     try {
+                        reservedButton.getStyleClass().removeAll("reserved","notReserved");
                         if (reservationManager.isReserved(carsList.getSelectionModel().getSelectedItem().getId()) == 1) {
                             reservedButton.getStyleClass().add("reserved");
                         } else {
