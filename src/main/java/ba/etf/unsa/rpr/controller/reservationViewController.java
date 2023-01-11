@@ -14,6 +14,8 @@ import ba.etf.unsa.rpr.exception.ReservationException;
 import ba.etf.unsa.rpr.exception.UserException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -64,6 +66,9 @@ public class reservationViewController {
         adminPanelController.labelUser.setText(admin.getName());
     }
 
+    private void updateList() throws ReservationException, UserException {
+       reservationList.setItems(FXCollections.observableArrayList(reservationManager.getAll()));
+    }
 
     private void setLabels(){
         idLabel.setText(String.valueOf(reservationList.getSelectionModel().getSelectedItem().getId()));
@@ -141,7 +146,8 @@ public class reservationViewController {
         System.out.println("Izmjena datuma!");
         try {
             reservationManager.updateArrivalDate(date, reservationList.getSelectionModel().getSelectedItem().getId());
-        } catch (ReservationException e) {
+            updateList();
+        } catch (Exception e) {
 
             new MyAlerts().showWrongAlert(e.getMessage());
             return;
