@@ -24,8 +24,24 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
 
     }
 
-
-
+    /**
+     * Method that inserts reservation into db
+     * @param reservation
+     * @throws ReservationException
+     */
+    public void insertReservation(Reservation reservation) throws ReservationException {
+        String query = "INSERT INTO Reservation (reservation_date, arrival_date, user_fk, car_fk) VALUES (?,?,?,?)";
+        try{
+            PreparedStatement stmt = getConn().prepareStatement(query);
+            stmt.setDate(1, reservation.getReservationDate());
+            stmt.setDate(2, reservation.getReservationDate());
+            stmt.setInt(3, reservation.getUser().getId());
+            stmt.setInt(4, reservation.getCar().getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new ReservationException("Greska pri unosu rezervacije!");
+        }
+    }
 
 
     /**

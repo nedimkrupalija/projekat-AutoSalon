@@ -82,13 +82,24 @@ public class ReservationManager {
     }
 
 
-
+    /**
+     * Update arrival date of res.
+     * @param date
+     * @param id
+     * @throws ReservationException
+     */
     public void updateArrivalDate(Date date, int id) throws ReservationException{
         DaoFactory.reservationDao().updateArrivalDate(date,id);
     }
 
-    public ArrayList<Reservation> getNotReservated(){
-        return null;
+
+    /**
+     * Insert reservation into db
+     * @param reservation
+     * @throws ReservationException
+     */
+    public void insertReservation(Reservation reservation) throws ReservationException{
+        DaoFactory.reservationDao().insertReservation(reservation);
     }
 
 
