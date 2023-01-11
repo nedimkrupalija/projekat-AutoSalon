@@ -135,6 +135,7 @@ public class loginController {
             ArrayList<Car> cars = carManager.getNotReservated();
             ObservableList<Car> list = FXCollections.observableArrayList(cars);
             userController.carListView.setItems(list);
+            userController.userId = user.getId();
 
 
         }

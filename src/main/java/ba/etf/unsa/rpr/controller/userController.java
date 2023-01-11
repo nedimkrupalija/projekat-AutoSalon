@@ -1,8 +1,16 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.CarManager;
+import ba.etf.unsa.rpr.business.ReservationManager;
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.domain.Car;
+import ba.etf.unsa.rpr.domain.Reservation;
+import ba.etf.unsa.rpr.domain.User;
+import ba.etf.unsa.rpr.exception.CarException;
+import ba.etf.unsa.rpr.exception.ReservationException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +22,10 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -24,6 +36,15 @@ public class userController {
     public Button reservationButton;
     public Button backButton;
     public TextArea textArea;
+    public int userId;
+    //Managers
+    public final ReservationManager reservationManager = new ReservationManager();
+    public final CarManager carManager = new CarManager();
+    public final UserManager userManager = new UserManager();
+
+    public void updateList() throws ReservationException, CarException {
+        carListView.setItems(FXCollections.observableArrayList(carManager.getNotReservated()));
+    }
 
     @FXML
     public void initialize(){
@@ -52,7 +73,22 @@ public class userController {
     public void showResClick(ActionEvent actionEvent) {
     }
 
-    public void reservateButtonClick(ActionEvent actionEvent) {
-
+    /**
+     * Action that reserves car for certain user
+     * @param actionEvent
+     * @throws Exception
+     */
+    public void reservateButtonClick(ActionEvent actionEvent) throws Exception {
+        if(carListView.getSelectionModel().getSelectedItem()==null) return;
+        Reservation reservation = new Reservation();
+        Date date = new Date(System.currentTimeMillis());
+        Car car = new Car();
+        car.setId(carListView.getSelectionModel().getSelectedItem().getId());
+        User user = new User();
+        user.setId(userId);
+        reservation.setCar(car);
+        reservation.setUser(user);
+        reservationManager.insertReservation(reservation);
+        updateList();
     }
 }
