@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. insert reservation">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl reservate action button">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,13 +96,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-    </task>
-    <task id="LOCAL-00215" summary="added saving of admin data when going back to admin panel from reservationViewController">
-      <created>1671652091047</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1671652091048</updated>
     </task>
     <task id="LOCAL-00216" summary="added idable interface">
       <created>1671745449395</created>
@@ -440,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673471124290</updated>
     </task>
-    <option name="localTasksCounter" value="264" />
+    <task id="LOCAL-00264" summary="impl reservate action button">
+      <created>1673471402910</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1673471402910</updated>
+    </task>
+    <option name="localTasksCounter" value="265" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,7 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added show alert methods" />
     <MESSAGE value="refactored alert showing" />
     <MESSAGE value="implemented daofactory" />
     <MESSAGE value="business l. structure" />
@@ -480,7 +479,8 @@
     <MESSAGE value="bugfixes in db conn" />
     <MESSAGE value="impl. listener on listview" />
     <MESSAGE value="impl. insert reservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl. insert reservation" />
+    <MESSAGE value="impl reservate action button" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl reservate action button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

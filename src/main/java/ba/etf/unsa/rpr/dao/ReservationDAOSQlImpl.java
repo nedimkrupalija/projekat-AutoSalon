@@ -30,7 +30,7 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
      * @throws ReservationException
      */
     public void insertReservation(Reservation reservation) throws ReservationException {
-        String query = "INSERT INTO Reservation (reservation_date, arrival_date, user_fk, car_fk) VALUES (?,?,?,?)";
+        String query = "INSERT INTO Reservations (reservation_date, arrival_date, user_fk, car_fk) VALUES (?,?,?,?)";
         try{
             PreparedStatement stmt = getConn().prepareStatement(query);
             stmt.setDate(1, reservation.getReservationDate());
@@ -39,7 +39,8 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
             stmt.setInt(4, reservation.getCar().getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new ReservationException("Greska pri unosu rezervacije!");
+           // throw new ReservationException("Greska pri unosu rezervacije!");
+            e.printStackTrace();
         }
     }
 

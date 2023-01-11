@@ -20,9 +20,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+import org.apache.commons.lang.time.DateUtils;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -88,6 +90,10 @@ public class userController {
         user.setId(userId);
         reservation.setCar(car);
         reservation.setUser(user);
+        reservation.setReservationDate(date);
+        LocalDate ld = date.toLocalDate();
+        ld.plusMonths(1);
+        reservation.setArrivalDate(Date.valueOf(ld));
         reservationManager.insertReservation(reservation);
         updateList();
     }
