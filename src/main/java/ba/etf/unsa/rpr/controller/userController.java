@@ -109,7 +109,7 @@ public class userController {
         reservation.setUser(user);
         reservation.setReservationDate(date);
         LocalDate ld = date.toLocalDate();
-        ld.plusMonths(1);
+        ld = ld.plusMonths(1);
         reservation.setArrivalDate(Date.valueOf(ld));
         reservationManager.insert(reservation);
         updateList();
