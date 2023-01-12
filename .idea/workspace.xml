@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added look for viewing user res.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. getUserReservation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/userReservation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/userReservation.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-      <workItem from="1673528012323" duration="4832000" />
-    </task>
-    <task id="LOCAL-00219" summary="delete implementation in AbstractDao">
-      <created>1671831270158</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1671831270159</updated>
+      <workItem from="1673528012323" duration="6703000" />
     </task>
     <task id="LOCAL-00220" summary="obj2row and row2obj rel mapping">
       <created>1671832038422</created>
@@ -444,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673534207183</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="impl. getUserReservation">
+      <created>1673535977530</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1673535977530</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl. getall in ReservationManager" />
     <MESSAGE value="impl. delete in ReservationManager" />
     <MESSAGE value="impl. CRUD in UserManager" />
     <MESSAGE value="added update to ReservationManager" />
@@ -487,7 +489,8 @@
     <MESSAGE value="bugfixes" />
     <MESSAGE value="bugfixes in adding car" />
     <MESSAGE value="added look for viewing user res." />
-    <option name="LAST_COMMIT_MESSAGE" value="added look for viewing user res." />
+    <MESSAGE value="impl. getUserReservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl. getUserReservation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -497,9 +500,9 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

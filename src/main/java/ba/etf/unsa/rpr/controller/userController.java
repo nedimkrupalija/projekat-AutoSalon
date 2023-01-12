@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -71,10 +72,7 @@ public class userController {
      * @param actionEvent
      * @throws IOException
      */
-    public void showResClick(ActionEvent actionEvent) throws IOException {
-
-        //Remember userID
-
+    public void showResClick(ActionEvent actionEvent) throws IOException, ReservationException {
 
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userReservation.fxml"));
@@ -82,10 +80,14 @@ public class userController {
         Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
         stage.setResizable(false);
         stage.setScene(scene);
-        stage.showAndWait();
 
+
+        //Remember userID
         userReservationController uRC = loader.getController();
         uRC.userId = userId;
+        uRC.listView.setItems(FXCollections.observableArrayList(reservationManager.getUserReservations(userId)));
+
+        stage.showAndWait();
 
 
     }
