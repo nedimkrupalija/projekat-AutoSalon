@@ -3,6 +3,7 @@ package ba.etf.unsa.rpr.controller;
 import ba.etf.unsa.rpr.business.CarManager;
 import ba.etf.unsa.rpr.business.ReservationManager;
 import ba.etf.unsa.rpr.business.UserManager;
+import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
@@ -80,14 +81,13 @@ public class userController {
         Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
         stage.setResizable(false);
         stage.setScene(scene);
-
-
         //Remember userID
         userReservationController uRC = loader.getController();
         uRC.userId = userId;
         uRC.listView.setItems(FXCollections.observableArrayList(reservationManager.getUserReservations(userId)));
-
-        stage.showAndWait();
+        stage.show();
+        Stage currentStage = (Stage) backButton.getScene().getWindow();
+        currentStage.close();
 
 
     }
@@ -113,5 +113,7 @@ public class userController {
         reservation.setArrivalDate(Date.valueOf(ld));
         reservationManager.insert(reservation);
         updateList();
+
+        new MyAlerts().showOkAlert("Uspjeh","Cestitamo na rezervaciji vozila, ocekujte ga za 30 dana!");
     }
 }

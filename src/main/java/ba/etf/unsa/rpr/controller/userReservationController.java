@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.controller;
 
+import ba.etf.unsa.rpr.business.CarManager;
 import ba.etf.unsa.rpr.business.ReservationManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.domain.Reservation;
@@ -29,6 +30,7 @@ public class userReservationController {
 
 
     private final ReservationManager  reservationManager = new ReservationManager();
+    private final CarManager carManager = new CarManager();
     private void updateList() throws ReservationException {
         listView.setItems(FXCollections.observableArrayList(reservationManager.getUserReservations(userId)));
     }
@@ -55,5 +57,29 @@ public class userReservationController {
         }
         new MyAlerts().showOkAlert("Uspjeh","Brisanje uspjesno!");
         updateList();
+    }
+
+    /**
+     * Go back to previous screen
+     * @param actionEvent
+     * @throws ReservationException
+     * @throws CarException
+     */
+    public void backButtonClick(ActionEvent actionEvent) throws ReservationException, CarException, IOException {
+        Stage mainStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userPanel.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root, USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        mainStage.setResizable(false);
+        mainStage.setScene(scene);
+        mainStage.show();
+
+        userController userController = loader.getController();
+        userController.carListView.setItems(FXCollections.observableArrayList(carManager.getNotReservated()));
+
+
+        Stage currentStage = (Stage) listView.getScene().getWindow();
+        currentStage.close();
+        System.out.println("Korisnik se vratio na user panel");
     }
 }

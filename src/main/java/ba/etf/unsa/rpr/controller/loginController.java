@@ -37,6 +37,7 @@ public class loginController {
     private final CarManager carManager = new CarManager();
 
 
+
     /**
      * Private method to set css style of user field
      */
@@ -160,7 +161,6 @@ public class loginController {
         currentStage.close();
         System.out.println("Korisnik se vratio na pocetak");
     }
-
 
 
 }

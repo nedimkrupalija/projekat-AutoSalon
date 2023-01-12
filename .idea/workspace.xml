@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. initialize in res. manager">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl. action for removing reservation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/userReservation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/userReservation.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-      <workItem from="1673528012323" duration="7005000" />
-    </task>
-    <task id="LOCAL-00221" summary="implemented getall in AbstractDao">
-      <created>1671832298798</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1671832298798</updated>
+      <workItem from="1673528012323" duration="7934000" />
     </task>
     <task id="LOCAL-00222" summary="implemented getbyid in AbstractDao">
       <created>1671832741228</created>
@@ -444,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673537634978</updated>
     </task>
-    <option name="localTasksCounter" value="270" />
+    <task id="LOCAL-00270" summary="impl. action for removing reservation">
+      <created>1673537949915</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1673537949915</updated>
+    </task>
+    <option name="localTasksCounter" value="271" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +466,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl. CRUD in UserManager" />
     <MESSAGE value="added update to ReservationManager" />
     <MESSAGE value="impl. CRUD oper. in CarManager" />
     <MESSAGE value="added method to UserManager" />
@@ -487,7 +490,8 @@
     <MESSAGE value="added look for viewing user res." />
     <MESSAGE value="impl. getUserReservation" />
     <MESSAGE value="impl. initialize in res. manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl. initialize in res. manager" />
+    <MESSAGE value="impl. action for removing reservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl. action for removing reservation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,7 +502,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java</url>
-          <line>85</line>
+          <line>84</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
