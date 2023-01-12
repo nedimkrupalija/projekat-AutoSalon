@@ -113,13 +113,20 @@ public class carViewerController {
 
     }
 
-    private void setCarParms(Car car){
+    private int setCarParms(Car car) throws CarException {
+
+        String regex = "[0-9]+";
+        if(!powerText.getText().matches(regex)){
+            new MyAlerts().showWrongAlert(new CarException("Pogresni podaci unesite opet!"));
+            return -1;
+        }
         car.setName(nameText.getText());
         car.setColor(colorMenu.getValue());
         if(descText.getText().trim().isEmpty()) descText.setText("");
         car.setDescription(descText.getText());
         car.sethP(Integer.parseInt(powerText.getText()));
         car.setYear(yearText.getText());
+        return 0;
     }
 
 
@@ -181,14 +188,15 @@ public class carViewerController {
      * Action for inserting car into db
      * @param actionEvent
      */
-    public void insertButtonClick(ActionEvent actionEvent) {
+    public void insertButtonClick(ActionEvent actionEvent) throws CarException {
 
         if(!(isValidated&&yearValidation)) {
             new MyAlerts().showWrongAlert("Greska pri validaciji podataka");
             return;
         }
         Car car = new Car();
-        setCarParms(car);
+        if(setCarParms(car)==-1)
+            return;
 
         try {
             carManager.insert(car);
