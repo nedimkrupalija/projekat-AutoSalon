@@ -8,8 +8,6 @@ import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
 import ba.etf.unsa.rpr.exception.CarException;
 import ba.etf.unsa.rpr.exception.ReservationException;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,14 +18,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import org.apache.commons.lang.time.DateUtils;
 
 import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.ArrayList;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -72,7 +66,28 @@ public class userController {
         System.out.println("Korisnik se vratio na pocetak");
     }
 
-    public void showResClick(ActionEvent actionEvent) {
+    /**
+     * Show reservations for current user
+     * @param actionEvent
+     * @throws IOException
+     */
+    public void showResClick(ActionEvent actionEvent) throws IOException {
+
+        //Remember userID
+
+
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/userReservation.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.showAndWait();
+
+        userReservationController uRC = loader.getController();
+        uRC.userId = userId;
+
+
     }
 
     /**
@@ -94,7 +109,7 @@ public class userController {
         LocalDate ld = date.toLocalDate();
         ld.plusMonths(1);
         reservation.setArrivalDate(Date.valueOf(ld));
-        reservationManager.insertReservation(reservation);
+        reservationManager.insert(reservation);
         updateList();
     }
 }
