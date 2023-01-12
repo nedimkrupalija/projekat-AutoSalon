@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userReservationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/userReservation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added look for viewing user res.">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,21 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-      <workItem from="1673528012323" duration="3345000" />
-    </task>
-    <task id="LOCAL-00217" summary="forced domain classes to use id">
-      <created>1671745509749</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1671745509749</updated>
-    </task>
-    <task id="LOCAL-00218" summary="implementec constructor">
-      <created>1671746085078</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1671746085078</updated>
+      <workItem from="1673528012323" duration="4832000" />
     </task>
     <task id="LOCAL-00219" summary="delete implementation in AbstractDao">
       <created>1671831270158</created>
@@ -449,7 +430,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673471983876</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="bugfixes in adding car">
+      <created>1673534179452</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1673534179453</updated>
+    </task>
+    <task id="LOCAL-00267" summary="added look for viewing user res.">
+      <created>1673534207183</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1673534207183</updated>
+    </task>
+    <option name="localTasksCounter" value="268" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,8 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented daofactory" />
-    <MESSAGE value="business l. structure" />
     <MESSAGE value="impl. getall in ReservationManager" />
     <MESSAGE value="impl. delete in ReservationManager" />
     <MESSAGE value="impl. CRUD in UserManager" />
@@ -492,7 +485,9 @@
     <MESSAGE value="impl. insert reservation" />
     <MESSAGE value="impl reservate action button" />
     <MESSAGE value="bugfixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfixes" />
+    <MESSAGE value="bugfixes in adding car" />
+    <MESSAGE value="added look for viewing user res." />
+    <option name="LAST_COMMIT_MESSAGE" value="added look for viewing user res." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

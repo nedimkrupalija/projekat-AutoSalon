@@ -102,5 +102,9 @@ public class ReservationManager {
         DaoFactory.reservationDao().insertReservation(reservation);
     }
 
+    public ArrayList<Reservation> getUserReservations(int id) throws ReservationException{
+        return DaoFactory.reservationDao().getUserReservations(id);
+    }
+
 
 }

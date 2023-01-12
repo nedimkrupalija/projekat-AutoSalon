@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 
 public interface ReservationDao extends Dao<Reservation> {
+    public ArrayList<Reservation> getUserReservations(int id) throws ReservationException;
     public void insertReservation(Reservation reservation) throws ReservationException;
     public int isReserved(int id) throws ReservationException;
     public void updateArrivalDate(Date date, int id) throws ReservationException;

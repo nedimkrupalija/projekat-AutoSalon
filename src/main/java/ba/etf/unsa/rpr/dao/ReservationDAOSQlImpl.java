@@ -1,5 +1,6 @@
 package ba.etf.unsa.rpr.dao;
 
+import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.domain.Car;
 import ba.etf.unsa.rpr.domain.Reservation;
 import ba.etf.unsa.rpr.domain.User;
@@ -127,6 +128,28 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
         return row;
     }
 
+    public ArrayList<Reservation> getUserReservations(int id) throws ReservationException {
+        String query = "SELECT * FROM Reservations WHERE user_fk = " + id;
+        ArrayList<Reservation> reservations = new ArrayList<Reservation>();
+        try {
+            PreparedStatement stmt = getConn().prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                    Reservation reservation = new Reservation();
+                    reservation.setId(rs.getInt("id"));
+                    reservation.setReservationDate(rs.getDate("reservation_date"));
+                    reservation.setArrivalDate(rs.getDate("arrival_date"));
+                    reservation.setUser(new UserDaoSQLImpl().getById(rs.getInt("user_fk")));
+                    reservation.setCar(new CarDaoSQLImpl().getById(rs.getInt("car_fk")));
+                    reservations.add(reservation);
+            }
+            rs.close();
+            return reservations;
+        } catch (Exception e) {
+            throw new ReservationException("Greska pri dohvacanju rezervacija!");
+        }
 
+
+    }
 
 }
