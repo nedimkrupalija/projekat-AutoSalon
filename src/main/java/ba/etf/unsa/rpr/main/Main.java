@@ -1,4 +1,4 @@
-package ba.etf.unsa.rpr.dao;
+package ba.etf.unsa.rpr.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="impl action for going back to user panel" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/AppCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,10 +53,11 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/Student/projekat-AutoSalon",
+    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/quote-maker",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33793104",
@@ -81,7 +88,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
-      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.dao.Main" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.main.Main" />
       <module name="projekat" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Nedim Krupalija\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
@@ -97,14 +104,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670282683199</updated>
-      <workItem from="1673528012323" duration="8259000" />
-    </task>
-    <task id="LOCAL-00223" summary="implemented update in AbstractDao">
-      <created>1671833577689</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1671833577689</updated>
+      <workItem from="1673528012323" duration="9232000" />
+      <workItem from="1674596641917" duration="2180000" />
+      <workItem from="1674642249938" duration="29000" />
+      <workItem from="1675728601331" duration="629000" />
+      <workItem from="1675729487920" duration="1077000" />
+      <workItem from="1675777661074" duration="8188000" />
     </task>
     <task id="LOCAL-00224" summary="impl preparation for insert">
       <created>1671836428415</created>
@@ -442,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673538962471</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <task id="LOCAL-00272" summary="bugfix">
+      <created>1673539454948</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1673539454949</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl. CRUD oper. in CarManager" />
     <MESSAGE value="added method to UserManager" />
     <MESSAGE value="added method isreserved to ReservationManager" />
     <MESSAGE value="added method to update date in db to ReservationManager" />
@@ -485,7 +496,8 @@
     <MESSAGE value="impl. initialize in res. manager" />
     <MESSAGE value="impl. action for removing reservation" />
     <MESSAGE value="impl action for going back to user panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl action for going back to user panel" />
+    <MESSAGE value="bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,8 +513,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="7" />
+          <line>110</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
