@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfixes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/UserManagerTest.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Updated javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/UserManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +105,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AppFX">
     <configuration name="AppFX" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.AppFX" />
@@ -176,7 +178,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserManagerTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projekat" />
       <extension name="coverage">
         <pattern>
@@ -185,7 +187,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
-      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.UserManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.UserDaoTest" />
       <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -194,7 +196,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserManagerTest.test2" />
+        <item itemvalue="JUnit.UserDaoTest.test2" />
         <item itemvalue="JUnit.ReservationManagerTest.getByid" />
         <item itemvalue="JUnit.ReservationManagerTest.getAll" />
         <item itemvalue="JUnit.ReservationManagerTest" />
@@ -219,21 +221,7 @@
       <workItem from="1675861746388" duration="8457000" />
       <workItem from="1675874149180" duration="1334000" />
       <workItem from="1675875516485" duration="294000" />
-      <workItem from="1675886821275" duration="2713000" />
-    </task>
-    <task id="LOCAL-00233" summary="impl. obj2row in ReservationDAOSQlImpl">
-      <created>1671839226974</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1671839226974</updated>
-    </task>
-    <task id="LOCAL-00234" summary="impl row2obj in UserDaoSQLImpl">
-      <created>1671839399582</created>
-      <option name="number" value="00234" />
-      <option name="presentableId" value="LOCAL-00234" />
-      <option name="project" value="LOCAL" />
-      <updated>1671839399582</updated>
+      <workItem from="1675886821275" duration="4407000" />
     </task>
     <task id="LOCAL-00235" summary="impl obj2row in UserDaoSQLImpl">
       <created>1671839888508</created>
@@ -564,7 +552,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675875799461</updated>
     </task>
-    <option name="localTasksCounter" value="282" />
+    <task id="LOCAL-00282" summary="added mocking tests">
+      <created>1675889685343</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1675889685344</updated>
+    </task>
+    <task id="LOCAL-00283" summary="Updated javadoc">
+      <created>1675889781414</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
+      <option name="project" value="LOCAL" />
+      <updated>1675889781414</updated>
+    </task>
+    <option name="localTasksCounter" value="284" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,8 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added css for admin panel" />
-    <MESSAGE value="added css for carViewer" />
     <MESSAGE value="added user panel design" />
     <MESSAGE value="impl. method that gets not reservated cars" />
     <MESSAGE value="refactored setting some fields" />
@@ -607,7 +607,9 @@
     <MESSAGE value="Added CLI" />
     <MESSAGE value="updated pom.xml" />
     <MESSAGE value="bugfixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfixes" />
+    <MESSAGE value="added mocking tests" />
+    <MESSAGE value="Updated javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -44,7 +44,10 @@ public class App {
         CommandLine cl = commandLineParser.parse(options,args);
         if((cl.hasOption(getCars.getOpt())||cl.hasOption(getCars.getLongOpt()))){
             CarManager carManager = new CarManager();
-            carManager.getAll().forEach(c->System.out.println(c.getName()));
+            ArrayList<Car> cars = (ArrayList<Car>) carManager.getAll();
+            for(Car x : cars){
+                System.out.println(x.toString() + "\n");
+            }
         }
         else if((cl.hasOption(getReservations.getOpt())||cl.hasOption(getReservations.getLongOpt()))){
             ReservationManager reservationManager = new ReservationManager();
@@ -55,7 +58,10 @@ public class App {
         }
         else if((cl.hasOption(getUsers.getOpt())||cl.hasOption(getUsers.getLongOpt()))){
             UserManager userManager = new UserManager();
-            userManager.getAll().forEach(c->System.out.println(c.getName()));
+            ArrayList<User> users = (ArrayList<User>) userManager.getAll();
+            for(User x : users){
+                System.out.println(x.toString() + "\n");
+            }
         }
         else if((cl.hasOption(addCar.getOpt())||cl.hasOption((addCar.getLongOpt())))){
             CarManager carManager = new CarManager();
@@ -97,3 +103,4 @@ public class App {
 
     }
 }
+

@@ -1,38 +1,18 @@
 package ba.etf.unsa.rpr.business;
 
-import ba.etf.unsa.rpr.dao.AbstractDao;
-import ba.etf.unsa.rpr.dao.DaoFactory;
 import ba.etf.unsa.rpr.dao.UserDao;
-import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.User;
-import ba.etf.unsa.rpr.exception.CarException;
-import ba.etf.unsa.rpr.exception.ReservationException;
-import ba.etf.unsa.rpr.exception.UserException;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import javax.sql.DataSource;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.when;
-
 /**
  * Author Nedim Krupalija
  */
 
-class UserManagerTest {
+class UserDaoTest {
     @Mock
     UserDao userDao;
     @BeforeEach
