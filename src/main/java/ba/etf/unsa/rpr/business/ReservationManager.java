@@ -28,7 +28,12 @@ public class ReservationManager {
      * @throws UserException exc
      */
     public List<Reservation> getAll() throws ReservationException, UserException {
-        return DaoFactory.reservationDao().getAll();
+        try{
+            return DaoFactory.reservationDao().getAll();
+        }
+        catch (Exception e) {
+            throw new ReservationException("Greska pri dobavljanju rezervacija!");
+        }
     }
 
     /**
@@ -37,8 +42,12 @@ public class ReservationManager {
      * @throws CarException exc
      * @throws UserException exc
      */
-    public void delete(int id) throws CarException, UserException {
-        DaoFactory.reservationDao().delete(id);
+    public void delete(int id) throws Exception {
+        try{
+            DaoFactory.reservationDao().delete(id);
+        }catch (Exception e){
+            throw new ReservationException("Greska pri brisanju rezervacije!");
+        }
     }
 
     /**
@@ -47,7 +56,13 @@ public class ReservationManager {
      * @throws Exception ex
      */
     public void insert(Reservation item) throws Exception {
-        DaoFactory.reservationDao().insert(item);
+        if(item.getId()!=0) throw new ReservationException("ID se ne smije navoditi!");
+
+        try{
+            DaoFactory.reservationDao().insert(item);
+        }catch (Exception e){
+            throw new ReservationException("Greska pri dodavanju rezervacije!");
+        }
     }
 
     /**
@@ -57,7 +72,11 @@ public class ReservationManager {
      * @throws Exception exc
      */
     public Reservation getByid(int id) throws Exception {
-        return DaoFactory.reservationDao().getById(id);
+        try{
+            return DaoFactory.reservationDao().getById(id);
+        }catch (Exception e){
+            throw new ReservationException("Greska pri dobavljanju rezervacije!");
+        }
     }
 
     /**
@@ -68,7 +87,12 @@ public class ReservationManager {
      * @throws Exception exc
      */
     public Reservation update(Reservation item, int id) throws Exception {
-        return DaoFactory.reservationDao().update(item,id);
+
+        try{
+            return DaoFactory.reservationDao().update(item,id);
+        }catch (Exception e){
+            throw new ReservationException("Greska pri azuriranju rezervacije!");
+        }
     }
 
     /**

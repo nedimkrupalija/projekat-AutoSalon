@@ -51,6 +51,9 @@ public class userReservationController {
      */
     public void removeClick(ActionEvent actionEvent) throws ReservationException {
         try {
+            if(listView.getSelectionModel().getSelectedItem()==null){
+                return;
+            }
             reservationManager.delete(listView.getSelectionModel().getSelectedItem().getId());
         } catch (Exception e) {
             new MyAlerts().showWrongAlert("Greska pri brisanju");
