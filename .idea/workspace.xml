@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added validation for user in BL">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added validation for ReservationManager in BL">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/AppCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/CarManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/ReservationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,7 @@
         <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -55,8 +58,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/quote-maker",
+    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/projekat",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -81,6 +86,12 @@
       <recent name="C:\Users\Nedim Krupalija\RPR\projekat\src\main\java\ba\etf\unsa\rpr\controller" />
       <recent name="C:\Users\Nedim Krupalija\RPR\projekat\src\main\resources\img" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ba.etf.unsa.rpr.business" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -98,6 +109,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CarManagerTest.getByidTestIvalidID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.CarManagerTest" />
+      <option name="METHOD_NAME" value="getByidTestIvalidID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarManagerTest.insertTestCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.CarManagerTest" />
+      <option name="METHOD_NAME" value="insertTestCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CarManagerTest.insertTestCar" />
+        <item itemvalue="JUnit.CarManagerTest.getByidTestIvalidID" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -112,14 +161,8 @@
       <workItem from="1674642249938" duration="29000" />
       <workItem from="1675728601331" duration="629000" />
       <workItem from="1675729487920" duration="1077000" />
-      <workItem from="1675777661074" duration="10732000" />
-    </task>
-    <task id="LOCAL-00226" summary="impl priv. method that prepares string for updating object">
-      <created>1671836727841</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1671836727841</updated>
+      <workItem from="1675777661074" duration="11693000" />
+      <workItem from="1675861746388" duration="1502000" />
     </task>
     <task id="LOCAL-00227" summary="refactored CarDaoSQLImpl">
       <created>1671836861351</created>
@@ -457,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675815846610</updated>
     </task>
-    <option name="localTasksCounter" value="275" />
+    <task id="LOCAL-00275" summary="Added validation for ReservationManager in BL">
+      <created>1675816787130</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1675816787130</updated>
+    </task>
+    <option name="localTasksCounter" value="276" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method to update date in db to ReservationManager" />
     <MESSAGE value="refactored adminPanelController" />
     <MESSAGE value="refactored carViewerController" />
     <MESSAGE value="refactored MainController" />
@@ -500,7 +549,8 @@
     <MESSAGE value="bugfix" />
     <MESSAGE value="added car validation in business logic" />
     <MESSAGE value="Added validation for user in BL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation for user in BL" />
+    <MESSAGE value="Added validation for ReservationManager in BL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validation for ReservationManager in BL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -518,6 +568,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/userController.java</url>
           <line>110</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
