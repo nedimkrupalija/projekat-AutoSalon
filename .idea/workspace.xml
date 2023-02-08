@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated pom.xml">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfixes">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/UserManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,33 +51,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/quote-maker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.33793104",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nedim Krupalija/RPR/projekat&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.33793104&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nedim Krupalija\RPR\projekat\src\main\resources" />
@@ -103,28 +103,12 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReservationManagerTest.getByid">
+  <component name="RunManager">
     <configuration name="AppFX" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.AppFX" />
       <module name="projekat" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Nedim Krupalija\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarManagerTest.getByidTestIvalidID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="projekat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
-      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.CarManagerTest" />
-      <option name="METHOD_NAME" value="getByidTestIvalidID" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,13 +176,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserManagerTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.UserManagerTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserManagerTest.test2" />
         <item itemvalue="JUnit.ReservationManagerTest.getByid" />
         <item itemvalue="JUnit.ReservationManagerTest.getAll" />
         <item itemvalue="JUnit.ReservationManagerTest" />
         <item itemvalue="JUnit.CarManagerTest.insertTestCar" />
-        <item itemvalue="JUnit.CarManagerTest.getByidTestIvalidID" />
       </list>
     </recent_temporary>
   </component>
@@ -218,13 +218,8 @@
       <workItem from="1675777661074" duration="11693000" />
       <workItem from="1675861746388" duration="8457000" />
       <workItem from="1675874149180" duration="1334000" />
-    </task>
-    <task id="LOCAL-00232" summary="impl. row2obj in ReservationDAOSQlImpl">
-      <created>1671838963361</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1671838963361</updated>
+      <workItem from="1675875516485" duration="294000" />
+      <workItem from="1675886821275" duration="2713000" />
     </task>
     <task id="LOCAL-00233" summary="impl. obj2row in ReservationDAOSQlImpl">
       <created>1671839226974</created>
@@ -562,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675873993991</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="bugfixes">
+      <created>1675875799460</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1675875799461</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +591,6 @@
     <MESSAGE value="impl. listener on listview" />
     <MESSAGE value="impl. insert reservation" />
     <MESSAGE value="impl reservate action button" />
-    <MESSAGE value="bugfixes" />
     <MESSAGE value="bugfixes in adding car" />
     <MESSAGE value="added look for viewing user res." />
     <MESSAGE value="impl. getUserReservation" />
@@ -605,7 +606,8 @@
     <MESSAGE value="tests for reservations" />
     <MESSAGE value="Added CLI" />
     <MESSAGE value="updated pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated pom.xml" />
+    <MESSAGE value="bugfixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Author Nedim Krupalija
+ */
 class CarManagerTest {
 
     @org.junit.jupiter.api.Test
