@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Updated javadoc">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Rename">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/UserManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +218,8 @@
       <workItem from="1675861746388" duration="8457000" />
       <workItem from="1675874149180" duration="1334000" />
       <workItem from="1675875516485" duration="294000" />
-      <workItem from="1675886821275" duration="4407000" />
-    </task>
-    <task id="LOCAL-00235" summary="impl obj2row in UserDaoSQLImpl">
-      <created>1671839888508</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1671839888508</updated>
+      <workItem from="1675886821275" duration="4648000" />
+      <workItem from="1675891619280" duration="658000" />
     </task>
     <task id="LOCAL-00236" summary="bugfix">
       <created>1671843005952</created>
@@ -566,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675889781414</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="Rename">
+      <created>1675891267115</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1675891267115</updated>
+    </task>
+    <option name="localTasksCounter" value="285" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added user panel design" />
     <MESSAGE value="impl. method that gets not reservated cars" />
     <MESSAGE value="refactored setting some fields" />
     <MESSAGE value="bugfixes in db conn" />
@@ -609,7 +606,8 @@
     <MESSAGE value="bugfixes" />
     <MESSAGE value="added mocking tests" />
     <MESSAGE value="Updated javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated javadoc" />
+    <MESSAGE value="Rename" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
