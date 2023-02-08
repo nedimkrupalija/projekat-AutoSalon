@@ -9,10 +9,9 @@ import ba.etf.unsa.rpr.domain.User;
 import org.apache.commons.cli.*;
 
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class AppCLI {
+public class App {
     private static final Option addCar = new Option("c", "add-car",false ,"Adding new car to database. Params: name, year, color, power, desc");
     private static final Option addUser = new Option("u", "add-user", false, "Adding new user to database. Params: name, password, adminPrivilege{0,1}");
     private static final Option getReservations = new Option("getR", "get-reservations", false, "Get all reservations from database");
