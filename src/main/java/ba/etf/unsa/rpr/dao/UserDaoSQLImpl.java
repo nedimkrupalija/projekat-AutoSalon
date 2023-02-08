@@ -9,19 +9,28 @@ import java.util.*;
 
 public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
 
+    private static UserDaoSQLImpl INSTANCE = null;
+
 
     /**
      * Default constructor
      * makes database connection
      * username and password are hidden
      */
-
-
-    public UserDaoSQLImpl(){
+    private UserDaoSQLImpl(){
         super("Users");
     }
 
+    public static void removeInstance(){
+        if(INSTANCE != null)
+            INSTANCE = null;
+    }
 
+    public static UserDaoSQLImpl getInstance(){
+        if(INSTANCE == null)
+            INSTANCE = new UserDaoSQLImpl();
+        return INSTANCE;
+    }
     /**
      * Help method that gets user by name and password
      * @param name of user
@@ -32,7 +41,7 @@ public class UserDaoSQLImpl extends AbstractDao<User> implements UserDao {
     public User getByNamePass(String name, String password) throws UserException {
         String query = "SELECT * FROM Users where name = ? AND password = ?";
         try{
-            PreparedStatement stmt =  getConn().prepareStatement(query);
+            PreparedStatement stmt =  AbstractDao.getConn().prepareStatement(query);
             stmt.setString(1,name);
             stmt.setString(2,password);
             ResultSet rs = stmt.executeQuery();

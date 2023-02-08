@@ -5,6 +5,7 @@ import ba.etf.unsa.rpr.business.ReservationManager;
 import ba.etf.unsa.rpr.business.UserManager;
 import ba.etf.unsa.rpr.controller.alert.MyAlerts;
 import ba.etf.unsa.rpr.dao.CarDaoSQLImpl;
+import ba.etf.unsa.rpr.dao.DaoFactory;
 import ba.etf.unsa.rpr.dao.ReservationDAOSQlImpl;
 import ba.etf.unsa.rpr.dao.UserDaoSQLImpl;
 import ba.etf.unsa.rpr.domain.Car;
@@ -77,7 +78,7 @@ public class carViewerController {
      * Private method for updating list of cars in db
      */
     private void updateList(){
-        carsList.setItems(FXCollections.observableArrayList(new CarDaoSQLImpl().getAll()));
+        carsList.setItems(FXCollections.observableArrayList(CarDaoSQLImpl.getInstance().getAll()));
     }
 
     /**
@@ -272,6 +273,7 @@ public class carViewerController {
             carManager.delete(Integer.parseInt(idLabel.getText()));
         } catch (Exception e) {
             new MyAlerts().showWrongAlert(e);
+            return;
         }
 
         new MyAlerts().showOkAlert("Uspjesno brisanje", "Auto uspjesno obrisanje mozete nastaviti dalje!");

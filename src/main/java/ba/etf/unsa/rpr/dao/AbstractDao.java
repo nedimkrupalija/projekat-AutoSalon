@@ -3,6 +3,7 @@ package ba.etf.unsa.rpr.dao;
 import ba.etf.unsa.rpr.domain.Idable;
 import ba.etf.unsa.rpr.exception.UserException;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.*;
 import java.util.AbstractMap;
@@ -17,11 +18,37 @@ import java.util.Properties;
  */
 
 public abstract class AbstractDao<T extends Idable> implements Dao<T> {
-    private Connection conn;
+    private static Connection conn = null;
     private String tableName;
 
-    public Connection getConn() {
-        return conn;
+    public static Connection getConn(){return AbstractDao.conn;}
+
+    private static void createConnection(){
+        if(AbstractDao.conn==null){
+            FileReader reader = null;
+            try {
+                reader = new FileReader("db.properties");
+                Properties property = new Properties();
+                property.load(reader);
+                AbstractDao.conn = DriverManager.getConnection("jdbc:mysql://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),
+                        property.getProperty("username"),property.getProperty("password"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            finally {
+                Runtime.getRuntime().addShutdownHook(new Thread(){
+                    @Override
+                    public void run(){
+                        try {
+                            conn.close();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+
+        }
     }
 
     /**
@@ -30,15 +57,8 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
      * @param tableName String name of table in database
      */
     public AbstractDao(String tableName){
-            this.tableName = tableName;
-        try{
-            FileReader reader = new FileReader("db.properties");
-            Properties property = new Properties();
-            property.load(reader);
-            this.conn = DriverManager.getConnection("jdbc:mysql://sql7.freemysqlhosting.net:3306/"+property.getProperty("username"),property.getProperty("username"),property.getProperty("password"));
-        } catch (Exception  e) {
-            e.printStackTrace();
-        }
+        this.tableName = tableName;
+        createConnection();
     }
 
     /**

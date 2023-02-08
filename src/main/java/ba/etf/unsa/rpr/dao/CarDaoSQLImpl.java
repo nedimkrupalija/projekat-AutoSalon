@@ -16,15 +16,26 @@ import java.util.*;
 
 
 public class CarDaoSQLImpl extends AbstractDao<Car> implements CarDao {
-    private Connection conn;
+    private static CarDaoSQLImpl INSTANCE = null;
 
     /**
      * Constructor for CarDao implementation, makes DB connection, username and password hidden
      */
-    public CarDaoSQLImpl()
+    private CarDaoSQLImpl()
     {
         super("Cars");
     }
+    public static CarDaoSQLImpl getInstance(){
+        if(INSTANCE==null)
+            INSTANCE = new CarDaoSQLImpl();
+        return INSTANCE;
+    }
+
+    public static void removeInstance(){
+        if(INSTANCE!=null)
+            INSTANCE = null;
+    }
+
 
     /**
      * ORM - row2car mapping

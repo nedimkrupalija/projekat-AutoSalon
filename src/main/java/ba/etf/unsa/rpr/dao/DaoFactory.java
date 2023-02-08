@@ -6,11 +6,11 @@ package ba.etf.unsa.rpr.dao;
  */
 public class DaoFactory {
 
-    private static final CarDao carDao = new CarDaoSQLImpl();
+    private static final CarDao carDao = CarDaoSQLImpl.getInstance();
 
-    private static final ReservationDao reservationDao = new ReservationDAOSQlImpl();
+    private static final ReservationDao reservationDao = ReservationDAOSQlImpl.getInstance();
 
-    private static final UserDao userDao = new UserDaoSQLImpl();
+    private static final UserDao userDao = UserDaoSQLImpl.getInstance();
 
     private DaoFactory(){
     }

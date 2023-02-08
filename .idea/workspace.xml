@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Added validation for ReservationManager in BL">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added tests for carmanager">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/AppCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/CarManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/unsa/rpr/business/ReservationManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/carViewerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/registrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/controller/registrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/CarDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/ReservationDAOSQlImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/UserDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +104,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.main.Main" />
@@ -162,14 +167,7 @@
       <workItem from="1675728601331" duration="629000" />
       <workItem from="1675729487920" duration="1077000" />
       <workItem from="1675777661074" duration="11693000" />
-      <workItem from="1675861746388" duration="1502000" />
-    </task>
-    <task id="LOCAL-00227" summary="refactored CarDaoSQLImpl">
-      <created>1671836861351</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1671836861351</updated>
+      <workItem from="1675861746388" duration="4293000" />
     </task>
     <task id="LOCAL-00228" summary="refactored ReservationDAOSQlImpl">
       <created>1671837078898</created>
@@ -507,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675816787130</updated>
     </task>
-    <option name="localTasksCounter" value="276" />
+    <task id="LOCAL-00276" summary="added tests for carmanager">
+      <created>1675863430692</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1675863430693</updated>
+    </task>
+    <option name="localTasksCounter" value="277" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored adminPanelController" />
     <MESSAGE value="refactored carViewerController" />
     <MESSAGE value="refactored MainController" />
     <MESSAGE value="refactored registrationController" />
@@ -550,7 +554,8 @@
     <MESSAGE value="added car validation in business logic" />
     <MESSAGE value="Added validation for user in BL" />
     <MESSAGE value="Added validation for ReservationManager in BL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation for ReservationManager in BL" />
+    <MESSAGE value="added tests for carmanager" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests for carmanager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,7 +576,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/AbstractDao.java</url>
-          <line>137</line>
+          <line>157</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

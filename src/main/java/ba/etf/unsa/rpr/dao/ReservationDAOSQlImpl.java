@@ -16,14 +16,26 @@ import java.util.*;
 public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements ReservationDao {
 
 
+    private static ReservationDAOSQlImpl INSTANCE = null;
     /**
      * Default constructor for ReservationDao implementation, makes connection to database
      * Parameters hidden
      */
-    public ReservationDAOSQlImpl(){
+    private ReservationDAOSQlImpl(){
         super("Reservations");
-
     }
+
+    public static ReservationDAOSQlImpl getInstance(){
+        if(INSTANCE == null)
+            INSTANCE = new ReservationDAOSQlImpl();
+        return INSTANCE;
+    }
+
+    public static void removeInstance(){
+        if(INSTANCE !=null)
+            INSTANCE = null;
+    }
+
 
     /**
      * Method that inserts reservation into db
@@ -104,8 +116,8 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
             reservation.setId(rs.getInt("id"));
             reservation.setReservationDate(rs.getDate("reservation_date"));
             reservation.setArrivalDate(rs.getDate("arrival_date"));
-            reservation.setUser(new UserDaoSQLImpl().getById(rs.getInt("user_fk")));
-            reservation.setCar(new CarDaoSQLImpl().getById(rs.getInt("car_fk")));
+            reservation.setUser(UserDaoSQLImpl.getInstance().getById(rs.getInt("user_fk")));
+            reservation.setCar(CarDaoSQLImpl.getInstance().getById(rs.getInt("car_fk")));
             return reservation;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -139,8 +151,8 @@ public class ReservationDAOSQlImpl extends AbstractDao<Reservation> implements R
                     reservation.setId(rs.getInt("id"));
                     reservation.setReservationDate(rs.getDate("reservation_date"));
                     reservation.setArrivalDate(rs.getDate("arrival_date"));
-                    reservation.setUser(new UserDaoSQLImpl().getById(rs.getInt("user_fk")));
-                    reservation.setCar(new CarDaoSQLImpl().getById(rs.getInt("car_fk")));
+                    reservation.setUser(UserDaoSQLImpl.getInstance().getById(rs.getInt("user_fk")));
+                    reservation.setCar(CarDaoSQLImpl.getInstance().getById(rs.getInt("car_fk")));
                     reservations.add(reservation);
             }
             rs.close();

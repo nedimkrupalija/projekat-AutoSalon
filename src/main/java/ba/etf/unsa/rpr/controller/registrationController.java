@@ -43,7 +43,7 @@ public class registrationController {
 
     @FXML
     public void initialize(){
-        users = (ArrayList<User>) new UserDaoSQLImpl().getAll();
+        users = (ArrayList<User>) UserDaoSQLImpl.getInstance().getAll();
         nameLabel.setText("");
         passLabel.setText("");
         nameTextField.textProperty().addListener((observableValue, s, newValue) -> {
