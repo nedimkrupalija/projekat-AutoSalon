@@ -19,6 +19,11 @@ import java.util.List;
 
 public class CarManager {
 
+    /**
+     * Validating car params (name, year, power)
+     * @param car
+     * @throws CarException
+     */
     public void validateCar(Car car) throws CarException {
 
         if(car.getName().length()>45||

@@ -18,6 +18,11 @@ import java.util.List;
 
 public class UserManager {
 
+    /**
+     * Validating user name is not numbers
+     * @param user
+     * @throws UserException
+     */
     public void validateUser(User user) throws UserException {
         if(!user.getName().matches("[a-zA-Z]+")){
             throw new UserException("Greska pri validaciji podataka!");
