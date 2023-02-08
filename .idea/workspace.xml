@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="bugfix">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added car validation in business logic">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/AppCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/CarManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/business/UserManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +36,11 @@
       <MavenGeneralSettings>
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="gui-app" />
+      </list>
     </option>
   </component>
   <component name="ProjectId" id="2IW1lQ9ShkSlf75Ysl0U3jUCxBn" />
@@ -81,8 +85,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean install" />
       <command value="mvn clean javafx:run" />
+      <command value="mvn clean install" />
     </option>
   </component>
   <component name="RunManager">
@@ -109,14 +113,7 @@
       <workItem from="1674642249938" duration="29000" />
       <workItem from="1675728601331" duration="629000" />
       <workItem from="1675729487920" duration="1077000" />
-      <workItem from="1675777661074" duration="8188000" />
-    </task>
-    <task id="LOCAL-00224" summary="impl preparation for insert">
-      <created>1671836428415</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1671836428415</updated>
+      <workItem from="1675777661074" duration="9773000" />
     </task>
     <task id="LOCAL-00225" summary="impl insert in AbstractDao">
       <created>1671836515949</created>
@@ -454,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673539454949</updated>
     </task>
-    <option name="localTasksCounter" value="273" />
+    <task id="LOCAL-00273" summary="added car validation in business logic">
+      <created>1675814051664</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1675814051664</updated>
+    </task>
+    <option name="localTasksCounter" value="274" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +476,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method to UserManager" />
     <MESSAGE value="added method isreserved to ReservationManager" />
     <MESSAGE value="added method to update date in db to ReservationManager" />
     <MESSAGE value="refactored adminPanelController" />
@@ -497,7 +500,8 @@
     <MESSAGE value="impl. action for removing reservation" />
     <MESSAGE value="impl action for going back to user panel" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="added car validation in business logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added car validation in business logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

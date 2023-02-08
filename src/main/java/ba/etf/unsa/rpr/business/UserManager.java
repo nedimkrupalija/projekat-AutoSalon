@@ -18,6 +18,13 @@ import java.util.List;
 
 public class UserManager {
 
+    public void validateUser(User user) throws UserException {
+        if(!user.getName().matches("[a-zA-Z]+")){
+            throw new UserException("Greska pri validaciji podataka!");
+        }
+
+    }
+
     /**
      * Get all reservations from db
      * @return list of reservations
@@ -35,7 +42,11 @@ public class UserManager {
      * @throws UserException exc
      */
     public void delete(int id) throws Exception {
-        DaoFactory.userDao().delete(id);
+        try{
+            DaoFactory.userDao().delete(id);
+        } catch (Exception e) {
+           throw new UserException("Korisnik s tim ID-om ne postoji!");
+        }
     }
 
     /**
@@ -44,7 +55,16 @@ public class UserManager {
      * @throws Exception ex
      */
     public void insert(User item) throws Exception {
-        DaoFactory.userDao().insert(item);
+        if(item.getId()!=0){
+            throw new UserException("ID se sam popunjava!");
+        }
+        try{
+            validateUser(item);
+            DaoFactory.userDao().insert(item);
+        }
+        catch (Exception e){
+            throw new UserException("Greska pri unosu korisnika!");
+        }
     }
 
     /**
@@ -65,7 +85,13 @@ public class UserManager {
      * @throws Exception exc
      */
     public User update(User item, int id) throws Exception {
-        return DaoFactory.userDao().update(item,id);
+        try {
+
+            return DaoFactory.userDao().update(item, id);
+        }
+        catch (Exception e){
+            throw new UserException("Greska pri izmjeni korisnika!");
+        }
     }
 
     /**
