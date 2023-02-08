@@ -72,6 +72,7 @@ public class App {
                 System.out.println(e.getMessage());
                 System.exit(1);
             }
+            System.out.println("Vozilo uspjesno uneseno!");
         }
         else if((cl.hasOption(addUser.getLongOpt())||(cl.hasOption(addUser.getOpt())))){
             UserManager userManager = new UserManager();
@@ -84,7 +85,9 @@ public class App {
               userManager.insert(user);
             }catch (Exception e) {
                 System.out.println(e.getMessage());
+                System.exit(2);
             }
+            System.out.println("Korisnik uspjeno dodan!");
         }
         else{
             printFormattedOptions(options);

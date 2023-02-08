@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="tests for reservations">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/AppCLI.java" afterDir="false" />
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="updated pom.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +38,12 @@
     </option>
     <option name="enabledProfiles">
       <list>
-        <option value="gui-app" />
+        <option value="cli-app" />
       </list>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IW1lQ9ShkSlf75Ysl0U3jUCxBn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,7 +61,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/projekat",
+    "last_opened_file_path": "C:/Users/Nedim Krupalija/RPR/quote-maker",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -67,7 +69,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33793104",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -78,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nedim Krupalija\RPR\projekat\src\main\resources" />
       <recent name="C:\Users\Nedim Krupalija\RPR\projekat\src\main\resources\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -100,7 +103,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ReservationManagerTest.getByid">
     <configuration name="AppFX" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.AppFX" />
@@ -142,8 +145,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReservationManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.ReservationManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationManagerTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.ReservationManagerTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationManagerTest.getByid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.unsa.rpr.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.unsa.rpr.business" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.unsa.rpr.business.ReservationManagerTest" />
+      <option name="METHOD_NAME" value="getByid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReservationManagerTest.getByid" />
+        <item itemvalue="JUnit.ReservationManagerTest.getAll" />
+        <item itemvalue="JUnit.ReservationManagerTest" />
         <item itemvalue="JUnit.CarManagerTest.insertTestCar" />
         <item itemvalue="JUnit.CarManagerTest.getByidTestIvalidID" />
       </list>
@@ -163,21 +216,8 @@
       <workItem from="1675728601331" duration="629000" />
       <workItem from="1675729487920" duration="1077000" />
       <workItem from="1675777661074" duration="11693000" />
-      <workItem from="1675861746388" duration="8241000" />
-    </task>
-    <task id="LOCAL-00230" summary="impl. row2obj in CarDaoSQLImpl">
-      <created>1671837294100</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1671837294100</updated>
-    </task>
-    <task id="LOCAL-00231" summary="impl obj2row in CarDaoSQLImpl">
-      <created>1671837924409</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1671837924409</updated>
+      <workItem from="1675861746388" duration="8457000" />
+      <workItem from="1675874149180" duration="1334000" />
     </task>
     <task id="LOCAL-00232" summary="impl. row2obj in ReservationDAOSQlImpl">
       <created>1671838963361</created>
@@ -508,7 +548,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675868868169</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="Added CLI">
+      <created>1675873844770</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1675873844770</updated>
+    </task>
+    <task id="LOCAL-00280" summary="updated pom.xml">
+      <created>1675873993991</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1675873993991</updated>
+    </task>
+    <option name="localTasksCounter" value="281" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,8 +580,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored registrationController" />
-    <MESSAGE value="refactored reservationViewController" />
     <MESSAGE value="added css for admin panel" />
     <MESSAGE value="added css for carViewer" />
     <MESSAGE value="added user panel design" />
@@ -551,7 +603,9 @@
     <MESSAGE value="added tests for carmanager" />
     <MESSAGE value="singleton design pattern for DB connection and DAO classes" />
     <MESSAGE value="tests for reservations" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests for reservations" />
+    <MESSAGE value="Added CLI" />
+    <MESSAGE value="updated pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

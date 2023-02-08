@@ -35,7 +35,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            finally {
+          /*  finally {
                 Runtime.getRuntime().addShutdownHook(new Thread(){
                     @Override
                     public void run(){
@@ -46,7 +46,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                         }
                     }
                 });
-            }
+            }*/
 
         }
     }
