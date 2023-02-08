@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="Rename">
+    <list default="true" id="9ed57661-4e7b-44e2-a5ae-b1a3371b3df8" name="Changes" comment="added javadoc dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/unsa/rpr/domain/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,13 +221,7 @@
       <workItem from="1675875516485" duration="294000" />
       <workItem from="1675886821275" duration="4648000" />
       <workItem from="1675891619280" duration="658000" />
-    </task>
-    <task id="LOCAL-00236" summary="bugfix">
-      <created>1671843005952</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1671843005952</updated>
+      <workItem from="1675892321851" duration="1026000" />
     </task>
     <task id="LOCAL-00237" summary="added plugin into pom.xml">
       <created>1672054535145</created>
@@ -564,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675891267115</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="added javadoc dependency">
+      <created>1675892535602</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1675892535603</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impl. method that gets not reservated cars" />
     <MESSAGE value="refactored setting some fields" />
     <MESSAGE value="bugfixes in db conn" />
     <MESSAGE value="impl. listener on listview" />
@@ -607,7 +608,8 @@
     <MESSAGE value="added mocking tests" />
     <MESSAGE value="Updated javadoc" />
     <MESSAGE value="Rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename" />
+    <MESSAGE value="added javadoc dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="added javadoc dependency" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -35,7 +35,7 @@ public class Car implements Idable{
 
     @Override
     public String toString() {
-        return "id: " + id + ",   " + name +",   " + color + ",   " + year + ",   " + hP + "kw.";
+        return "id: " + id + ",   " + name +",   " + color + ",   " + year + ",   " + hP + "hp.";
     }
 
     @Override
